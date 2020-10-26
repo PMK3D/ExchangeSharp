@@ -28,7 +28,7 @@ if( A3DStatus.A3D_SUCCESS == API.A3DAsmModelFileGet( model_file, ref d ) ) {
 ```
 ## Prerequisites
 In order to build and use ExchangeSharp, the following software components are required:
-* [HOOPS Exchange 2020](https://developer.techsoft3d.com/hoops/exchange/downloads/latest/)
+* [HOOPS Exchange 2020 SP2](https://developer.techsoft3d.com/hoops/exchange/downloads/latest/)
 * [.NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 * [CMake](https://cmake.org/download/)
 * C/C++ compiler for your platform
