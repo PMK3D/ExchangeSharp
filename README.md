@@ -53,6 +53,9 @@ In order to build and use ExchangeSharp, the following software components are r
 	1. `ExchangeSharp.dll` can be found in the `bin/Debug/netcoreapp3.1` folder.
 
 ## Building and Running the Examples
+1. Change to `examples/DriverApp`
+1. `dotnet build`
+1. `dotnet run --exchange "/path/to/exchange/bin/win64" "/path/to/exchange/samples/data/prc/helloworld.prc"`
 
 
 
