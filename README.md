@@ -11,7 +11,7 @@ ExchangeSharp is implemented in the namespace `TS3D.Exchange.Direct`.
 ExchangeSharp was created using `libclang` to parse the Exchange headers. By traversing the declarations, we have reasonable certainty for complete coverage.
 
 ### What do you mean by "Direct"?
-ExchangeSharp utilitizes the [P/Invoke](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) approach for providing a cross-platform is binding for the C# language. It does this by declaring all of the data types used by the native Exchange library in a compatible C# form.
+ExchangeSharp utilitizes the [P/Invoke](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) approach for providing a cross-platform binding for the C# language. It does this by declaring all of the data types used by the native Exchange library in a compatible C# form.
 
 "Direct" implies that the C# syntax you will use to access Exchange will closely resemble its C counterpart.
 
