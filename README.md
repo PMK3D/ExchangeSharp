@@ -6,6 +6,8 @@ This is a direct C# language binding for HOOPS Exchange. It should be a consider
 
 ExchangeSharp is implemented in the namespace `TS3D.Exchange.Direct`. 
 
+> Functionality found in `A3DSDKDraw.h` is _not_ included.
+
 ### What do you mean by "Direct"?
 ExchangeSharp utilitizes the [P/Invoke](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) approach for providing a cross-platform is binding for the C# language. It does this by declaring all of the data types used by the native Exchange library in a compatible C# form.
 
@@ -13,8 +15,8 @@ ExchangeSharp utilitizes the [P/Invoke](https://docs.microsoft.com/en-us/dotnet/
 
 This approach has several advantages.
 
-1. Memory: Data is not copied. It is directly mapped using `struct` objects.
-1. Speed: There is no "middle" code. When you call an Exchange function using C#, you are directly invoking the code and nothing between.
+1. Memory: Data is not copied. It is directly mapped using `struct` objects. (See `ExchangeSharp/Direct/Structs.cs`)
+1. Speed: There is no "middle" code. When you call an Exchange function using C#, you are directly invoking the code and nothing between. (See `ExchangeSharp/Direct/API.cs`)
 1. Familiar: The code you write will look familiar:
 ```csharp
 A3DAsmModelFileData d;
