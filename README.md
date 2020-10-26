@@ -8,6 +8,8 @@ ExchangeSharp is implemented in the namespace `TS3D.Exchange.Direct`.
 
 > Functionality found in `A3DSDKDraw.h` is _not_ included.
 
+ExchangeSharp was created using `libclang` to parse the Exchange headers. By traversing the declarations, we have reasonable certainty for complete coverage.
+
 ### What do you mean by "Direct"?
 ExchangeSharp utilitizes the [P/Invoke](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) approach for providing a cross-platform is binding for the C# language. It does this by declaring all of the data types used by the native Exchange library in a compatible C# form.
 
@@ -60,7 +62,10 @@ In order to build and use ExchangeSharp, the following software components are r
 1. `dotnet build`
 1. `dotnet run --exchange "/path/to/exchange/bin/win64" "/path/to/exchange/samples/data/prc/helloworld.prc"`
 
+# What is `ExchangeCppLayer` and why is it needed?
+A fundamental part of Exchange is the use of C-style structs passed as `void*` to the API. To ensure memory is handled correctly, the caller must first initialize the struct size field using the `A3D_INITIALIZE_DATA` macro. This macro is declared in the header and is therefore inaccessible outside a C/C++ module that includes it.
 
+In order to ensure correct struct sizing, `ExchangeCppLayer` is used to validate struct sized coming from C# and calls the "official" `A3D_INITIALIZE_DATA`.
 
 
 
