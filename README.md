@@ -2,7 +2,7 @@
 C# language binding for HOOPS Exchange
 
 ## Description
-This is a direct C# language binding for HOOPS Exchange. It should be a considered pre-alpha implementation. Expect that you may need to modify delegate declarations in order to make some functionality accessible.
+This is a direct C# language binding for HOOPS Exchange. It should be a considered pre-alpha implementation. Expect that you may need to modify delegate declarations (found in `ExchangeSharp/Direct/API.cs`) in order to make some functionality accessible.
 
 ExchangeSharp is implemented in the namespace `TS3D.Exchange.Direct`. 
 
@@ -66,6 +66,16 @@ In order to build and use ExchangeSharp, the following software components are r
 A fundamental part of Exchange is the use of C-style structs passed as `void*` to the API. To ensure memory is handled correctly, the caller must first initialize the struct size field using the `A3D_INITIALIZE_DATA` macro. This macro is declared in the header and is therefore inaccessible outside a C/C++ module that includes it.
 
 In order to ensure correct struct sizing, `ExchangeCppLayer` is used to validate struct sized coming from C# and calls the "official" `A3D_INITIALIZE_DATA`.
+
+# What is `Classes.cs`?
+Similar to the [ExchangeToolkit](https://labs.techsoft3d.com/project/exchange-toolkit/), ExchangeSharp includes classes with the postfix "Wrapper". These classes call `API.Initialize` and `Get` in the constructor, and they free upon destruction. Using these classes results in code that looks like this:
+
+```csharp
+A3DAsmModelFileWrapper d( model_file );
+// Use object here
+```
+
+Structs that do not have corresponding `Get` function (`A3DVector3dData` for example) are wrapped as well.
 
 
 
