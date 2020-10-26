@@ -54,6 +54,7 @@ In order to build and use ExchangeSharp, the following software components are r
 
 ## Building and Running the Examples
 1. Change to `examples/DriverApp`
+1. Copy `hoops_license.cs` to this folder.
 1. `dotnet build`
 1. `dotnet run --exchange "/path/to/exchange/bin/win64" "/path/to/exchange/samples/data/prc/helloworld.prc"`
 
