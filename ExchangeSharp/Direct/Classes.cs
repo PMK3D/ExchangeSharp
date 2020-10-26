@@ -2,14 +2,14 @@ using System;
 
 namespace TS3D.Exchange.Direct
 {
-    public class A3DVector2dDataWrapper
+    public class A3DVector2dWrapper
     {
-        public A3DVector2dDataWrapper()
+        public A3DVector2dWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DVector2dDataWrapper()
+        ~A3DVector2dWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -18,14 +18,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DVector2dData _d;
     }
-    public class A3DVector3dDataWrapper
+    public class A3DVector3dWrapper
     {
-        public A3DVector3dDataWrapper()
+        public A3DVector3dWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DVector3dDataWrapper()
+        ~A3DVector3dWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -35,14 +35,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DVector3dData _d;
     }
-    public class A3DIntervalDataWrapper
+    public class A3DIntervalWrapper
     {
-        public A3DIntervalDataWrapper()
+        public A3DIntervalWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DIntervalDataWrapper()
+        ~A3DIntervalWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -51,14 +51,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DIntervalData _d;
     }
-    public class A3DDomainDataWrapper
+    public class A3DDomainWrapper
     {
-        public A3DDomainDataWrapper()
+        public A3DDomainWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DDomainDataWrapper()
+        ~A3DDomainWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -67,14 +67,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDomainData _d;
     }
-    public class A3DBoundingBoxDataWrapper
+    public class A3DBoundingBoxWrapper
     {
-        public A3DBoundingBoxDataWrapper()
+        public A3DBoundingBoxWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DBoundingBoxDataWrapper()
+        ~A3DBoundingBoxWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -83,14 +83,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DBoundingBoxData _d;
     }
-    public class A3DParameterizationDataWrapper
+    public class A3DParameterizationWrapper
     {
-        public A3DParameterizationDataWrapper()
+        public A3DParameterizationWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DParameterizationDataWrapper()
+        ~A3DParameterizationWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -100,14 +100,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DParameterizationData _d;
     }
-    public class A3DUVParameterizationDataWrapper
+    public class A3DUVParameterizationWrapper
     {
-        public A3DUVParameterizationDataWrapper()
+        public A3DUVParameterizationWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DUVParameterizationDataWrapper()
+        ~A3DUVParameterizationWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -120,14 +120,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DUVParameterizationData _d;
     }
-    public class A3DTessBaseDataWrapper
+    public class A3DTessBaseWrapper
     {
-        public A3DTessBaseDataWrapper()
+        public A3DTessBaseWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTessBaseDataWrapper(IntPtr p)
+        public A3DTessBaseWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -136,7 +136,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTessBaseDataWrapper()
+        ~A3DTessBaseWrapper()
         {
             API.A3DTessBaseGet( IntPtr.Zero, ref _d );
         }
@@ -147,14 +147,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTessBaseData _d;
     }
-    public class A3DTessFaceDataWrapper
+    public class A3DTessFaceWrapper
     {
-        public A3DTessFaceDataWrapper()
+        public A3DTessFaceWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DTessFaceDataWrapper()
+        ~A3DTessFaceWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -175,14 +175,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTessFaceData _d;
     }
-    public class A3DTess3DDataWrapper
+    public class A3DTess3DWrapper
     {
-        public A3DTess3DDataWrapper()
+        public A3DTess3DWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTess3DDataWrapper(IntPtr p)
+        public A3DTess3DWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -191,7 +191,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTess3DDataWrapper()
+        ~A3DTess3DWrapper()
         {
             API.A3DTess3DGet( IntPtr.Zero, ref _d );
         }
@@ -213,14 +213,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTess3DData _d;
     }
-    public class A3DTess3DWireDataWrapper
+    public class A3DTess3DWireWrapper
     {
-        public A3DTess3DWireDataWrapper()
+        public A3DTess3DWireWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTess3DWireDataWrapper(IntPtr p)
+        public A3DTess3DWireWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -229,7 +229,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTess3DWireDataWrapper()
+        ~A3DTess3DWireWrapper()
         {
             API.A3DTess3DWireGet( IntPtr.Zero, ref _d );
         }
@@ -243,14 +243,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTess3DWireData _d;
     }
-    public class A3DTessMarkupDataWrapper
+    public class A3DTessMarkupWrapper
     {
-        public A3DTessMarkupDataWrapper()
+        public A3DTessMarkupWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTessMarkupDataWrapper(IntPtr p)
+        public A3DTessMarkupWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -259,7 +259,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTessMarkupDataWrapper()
+        ~A3DTessMarkupWrapper()
         {
             API.A3DTessMarkupGet( IntPtr.Zero, ref _d );
         }
@@ -273,14 +273,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTessMarkupData _d;
     }
-    public class A3DGraphicsDataWrapper
+    public class A3DGraphicsWrapper
     {
-        public A3DGraphicsDataWrapper()
+        public A3DGraphicsWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DGraphicsDataWrapper(IntPtr p)
+        public A3DGraphicsWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -289,7 +289,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DGraphicsDataWrapper()
+        ~A3DGraphicsWrapper()
         {
             API.A3DGraphicsGet( IntPtr.Zero, ref _d );
         }
@@ -300,14 +300,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphicsData _d;
     }
-    public class A3DGraphStyleDataWrapper
+    public class A3DGraphStyleWrapper
     {
-        public A3DGraphStyleDataWrapper()
+        public A3DGraphStyleWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DGraphStyleDataWrapper()
+        ~A3DGraphStyleWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -326,14 +326,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphStyleData _d;
     }
-    public class A3DGraphRgbColorDataWrapper
+    public class A3DGraphRgbColorWrapper
     {
-        public A3DGraphRgbColorDataWrapper()
+        public A3DGraphRgbColorWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DGraphRgbColorDataWrapper()
+        ~A3DGraphRgbColorWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -343,14 +343,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphRgbColorData _d;
     }
-    public class A3DGraphLinePatternDataWrapper
+    public class A3DGraphLinePatternWrapper
     {
-        public A3DGraphLinePatternDataWrapper()
+        public A3DGraphLinePatternWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DGraphLinePatternDataWrapper()
+        ~A3DGraphLinePatternWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -361,14 +361,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphLinePatternData _d;
     }
-    public class A3DGraphMaterialDataWrapper
+    public class A3DGraphMaterialWrapper
     {
-        public A3DGraphMaterialDataWrapper()
+        public A3DGraphMaterialWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DGraphMaterialDataWrapper()
+        ~A3DGraphMaterialWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -384,14 +384,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphMaterialData _d;
     }
-    public class A3DGraphPictureDataWrapper
+    public class A3DGraphPictureWrapper
     {
-        public A3DGraphPictureDataWrapper()
+        public A3DGraphPictureWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DGraphPictureDataWrapper()
+        ~A3DGraphPictureWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -403,14 +403,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphPictureData _d;
     }
-    public class A3DGraphDottingPatternDataWrapper
+    public class A3DGraphDottingPatternWrapper
     {
-        public A3DGraphDottingPatternDataWrapper()
+        public A3DGraphDottingPatternWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DGraphDottingPatternDataWrapper()
+        ~A3DGraphDottingPatternWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -421,14 +421,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphDottingPatternData _d;
     }
-    public class A3DGraphHatchingPatternLineDataWrapper
+    public class A3DGraphHatchingPatternLineWrapper
     {
-        public A3DGraphHatchingPatternLineDataWrapper()
+        public A3DGraphHatchingPatternLineWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DGraphHatchingPatternLineDataWrapper()
+        ~A3DGraphHatchingPatternLineWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -439,14 +439,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphHatchingPatternLineData _d;
     }
-    public class A3DGraphHatchingPatternDataWrapper
+    public class A3DGraphHatchingPatternWrapper
     {
-        public A3DGraphHatchingPatternDataWrapper()
+        public A3DGraphHatchingPatternWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DGraphHatchingPatternDataWrapper()
+        ~A3DGraphHatchingPatternWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -456,14 +456,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphHatchingPatternData _d;
     }
-    public class A3DGraphSolidPatternDataWrapper
+    public class A3DGraphSolidPatternWrapper
     {
-        public A3DGraphSolidPatternDataWrapper()
+        public A3DGraphSolidPatternWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DGraphSolidPatternDataWrapper()
+        ~A3DGraphSolidPatternWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -473,14 +473,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphSolidPatternData _d;
     }
-    public class A3DGraphVPicturePatternDataWrapper
+    public class A3DGraphVPicturePatternWrapper
     {
-        public A3DGraphVPicturePatternDataWrapper()
+        public A3DGraphVPicturePatternWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DGraphVPicturePatternDataWrapper()
+        ~A3DGraphVPicturePatternWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -489,14 +489,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphVPicturePatternData _d;
     }
-    public class A3DGraphCameraDataWrapper
+    public class A3DGraphCameraWrapper
     {
-        public A3DGraphCameraDataWrapper()
+        public A3DGraphCameraWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DGraphCameraDataWrapper(IntPtr p)
+        public A3DGraphCameraWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -505,7 +505,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DGraphCameraDataWrapper()
+        ~A3DGraphCameraWrapper()
         {
             API.A3DGraphCameraGet( IntPtr.Zero, ref _d );
         }
@@ -523,14 +523,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphCameraData _d;
     }
-    public class A3DGraphAmbientLightDataWrapper
+    public class A3DGraphAmbientLightWrapper
     {
-        public A3DGraphAmbientLightDataWrapper()
+        public A3DGraphAmbientLightWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DGraphAmbientLightDataWrapper(IntPtr p)
+        public A3DGraphAmbientLightWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -539,7 +539,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DGraphAmbientLightDataWrapper()
+        ~A3DGraphAmbientLightWrapper()
         {
             API.A3DGraphAmbientLightGet( IntPtr.Zero, ref _d );
         }
@@ -550,14 +550,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphAmbientLightData _d;
     }
-    public class A3DGraphPointLightDataWrapper
+    public class A3DGraphPointLightWrapper
     {
-        public A3DGraphPointLightDataWrapper()
+        public A3DGraphPointLightWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DGraphPointLightDataWrapper(IntPtr p)
+        public A3DGraphPointLightWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -566,7 +566,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DGraphPointLightDataWrapper()
+        ~A3DGraphPointLightWrapper()
         {
             API.A3DGraphPointLightGet( IntPtr.Zero, ref _d );
         }
@@ -581,14 +581,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphPointLightData _d;
     }
-    public class A3DGraphSpotLightDataWrapper
+    public class A3DGraphSpotLightWrapper
     {
-        public A3DGraphSpotLightDataWrapper()
+        public A3DGraphSpotLightWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DGraphSpotLightDataWrapper(IntPtr p)
+        public A3DGraphSpotLightWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -597,7 +597,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DGraphSpotLightDataWrapper()
+        ~A3DGraphSpotLightWrapper()
         {
             API.A3DGraphSpotLightGet( IntPtr.Zero, ref _d );
         }
@@ -615,14 +615,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphSpotLightData _d;
     }
-    public class A3DGraphDirectionalLightDataWrapper
+    public class A3DGraphDirectionalLightWrapper
     {
-        public A3DGraphDirectionalLightDataWrapper()
+        public A3DGraphDirectionalLightWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DGraphDirectionalLightDataWrapper(IntPtr p)
+        public A3DGraphDirectionalLightWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -631,7 +631,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DGraphDirectionalLightDataWrapper()
+        ~A3DGraphDirectionalLightWrapper()
         {
             API.A3DGraphDirectionalLightGet( IntPtr.Zero, ref _d );
         }
@@ -644,14 +644,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphDirectionalLightData _d;
     }
-    public class A3DGraphSceneDisplayParametersDataWrapper
+    public class A3DGraphSceneDisplayParametersWrapper
     {
-        public A3DGraphSceneDisplayParametersDataWrapper()
+        public A3DGraphSceneDisplayParametersWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DGraphSceneDisplayParametersDataWrapper(IntPtr p)
+        public A3DGraphSceneDisplayParametersWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -660,7 +660,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DGraphSceneDisplayParametersDataWrapper()
+        ~A3DGraphSceneDisplayParametersWrapper()
         {
             API.A3DGraphSceneDisplayParametersGet( IntPtr.Zero, ref _d );
         }
@@ -681,14 +681,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphSceneDisplayParametersData _d;
     }
-    public class A3DMiscCascadedAttributesDataWrapper
+    public class A3DMiscCascadedAttributesWrapper
     {
-        public A3DMiscCascadedAttributesDataWrapper()
+        public A3DMiscCascadedAttributesWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMiscCascadedAttributesDataWrapper(IntPtr p)
+        public A3DMiscCascadedAttributesWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -697,7 +697,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMiscCascadedAttributesDataWrapper()
+        ~A3DMiscCascadedAttributesWrapper()
         {
             API.A3DMiscCascadedAttributesGet( IntPtr.Zero, ref _d );
         }
@@ -710,14 +710,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscCascadedAttributesData _d;
     }
-    public class A3DMiscGeneralTransformationDataWrapper
+    public class A3DMiscGeneralTransformationWrapper
     {
-        public A3DMiscGeneralTransformationDataWrapper()
+        public A3DMiscGeneralTransformationWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMiscGeneralTransformationDataWrapper(IntPtr p)
+        public A3DMiscGeneralTransformationWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -726,7 +726,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMiscGeneralTransformationDataWrapper()
+        ~A3DMiscGeneralTransformationWrapper()
         {
             API.A3DMiscGeneralTransformationGet( IntPtr.Zero, ref _d );
         }
@@ -743,14 +743,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscGeneralTransformationData _d;
     }
-    public class A3DMiscCartesianTransformationDataWrapper
+    public class A3DMiscCartesianTransformationWrapper
     {
-        public A3DMiscCartesianTransformationDataWrapper()
+        public A3DMiscCartesianTransformationWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMiscCartesianTransformationDataWrapper(IntPtr p)
+        public A3DMiscCartesianTransformationWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -759,7 +759,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMiscCartesianTransformationDataWrapper()
+        ~A3DMiscCartesianTransformationWrapper()
         {
             API.A3DMiscCartesianTransformationGet( IntPtr.Zero, ref _d );
         }
@@ -772,14 +772,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscCartesianTransformationData _d;
     }
-    public class A3DMiscEntityReferenceDataWrapper
+    public class A3DMiscEntityReferenceWrapper
     {
-        public A3DMiscEntityReferenceDataWrapper()
+        public A3DMiscEntityReferenceWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMiscEntityReferenceDataWrapper(IntPtr p)
+        public A3DMiscEntityReferenceWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -788,7 +788,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMiscEntityReferenceDataWrapper()
+        ~A3DMiscEntityReferenceWrapper()
         {
             API.A3DMiscEntityReferenceGet( IntPtr.Zero, ref _d );
         }
@@ -798,14 +798,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscEntityReferenceData _d;
     }
-    public class A3DMiscReferenceOnTopologyDataWrapper
+    public class A3DMiscReferenceOnTopologyWrapper
     {
-        public A3DMiscReferenceOnTopologyDataWrapper()
+        public A3DMiscReferenceOnTopologyWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMiscReferenceOnTopologyDataWrapper(IntPtr p)
+        public A3DMiscReferenceOnTopologyWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -814,7 +814,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMiscReferenceOnTopologyDataWrapper()
+        ~A3DMiscReferenceOnTopologyWrapper()
         {
             API.A3DMiscReferenceOnTopologyGet( IntPtr.Zero, ref _d );
         }
@@ -826,14 +826,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscReferenceOnTopologyData _d;
     }
-    public class A3DMiscReferenceOnTessDataWrapper
+    public class A3DMiscReferenceOnTessWrapper
     {
-        public A3DMiscReferenceOnTessDataWrapper()
+        public A3DMiscReferenceOnTessWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMiscReferenceOnTessDataWrapper(IntPtr p)
+        public A3DMiscReferenceOnTessWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -842,7 +842,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMiscReferenceOnTessDataWrapper()
+        ~A3DMiscReferenceOnTessWrapper()
         {
             API.A3DMiscReferenceOnTessGet( IntPtr.Zero, ref _d );
         }
@@ -855,14 +855,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscReferenceOnTessData _d;
     }
-    public class A3DMiscReferenceOnCsysItemDataWrapper
+    public class A3DMiscReferenceOnCsysItemWrapper
     {
-        public A3DMiscReferenceOnCsysItemDataWrapper()
+        public A3DMiscReferenceOnCsysItemWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMiscReferenceOnCsysItemDataWrapper(IntPtr p)
+        public A3DMiscReferenceOnCsysItemWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -871,7 +871,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMiscReferenceOnCsysItemDataWrapper()
+        ~A3DMiscReferenceOnCsysItemWrapper()
         {
             API.A3DMiscReferenceOnCsysItemGet( IntPtr.Zero, ref _d );
         }
@@ -881,14 +881,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscReferenceOnCsysItemData _d;
     }
-    public class A3DMiscPhysicMaterialDataWrapper
+    public class A3DMiscPhysicMaterialWrapper
     {
-        public A3DMiscPhysicMaterialDataWrapper()
+        public A3DMiscPhysicMaterialWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMiscPhysicMaterialDataWrapper()
+        ~A3DMiscPhysicMaterialWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -896,14 +896,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscPhysicMaterialData _d;
     }
-    public class A3DMiscMaterialFiberDataWrapper
+    public class A3DMiscMaterialFiberWrapper
     {
-        public A3DMiscMaterialFiberDataWrapper()
+        public A3DMiscMaterialFiberWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMiscMaterialFiberDataWrapper()
+        ~A3DMiscMaterialFiberWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -923,14 +923,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscMaterialFiberData _d;
     }
-    public class A3DMiscMaterialHoneyCombDataWrapper
+    public class A3DMiscMaterialHoneyCombWrapper
     {
-        public A3DMiscMaterialHoneyCombDataWrapper()
+        public A3DMiscMaterialHoneyCombWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMiscMaterialHoneyCombDataWrapper()
+        ~A3DMiscMaterialHoneyCombWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -943,14 +943,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscMaterialHoneyCombData _d;
     }
-    public class A3DMiscMaterialIsotropicDataWrapper
+    public class A3DMiscMaterialIsotropicWrapper
     {
-        public A3DMiscMaterialIsotropicDataWrapper()
+        public A3DMiscMaterialIsotropicWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMiscMaterialIsotropicDataWrapper()
+        ~A3DMiscMaterialIsotropicWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -961,14 +961,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscMaterialIsotropicData _d;
     }
-    public class A3DMiscMaterialOrthotropic2DDataWrapper
+    public class A3DMiscMaterialOrthotropic2DWrapper
     {
-        public A3DMiscMaterialOrthotropic2DDataWrapper()
+        public A3DMiscMaterialOrthotropic2DWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMiscMaterialOrthotropic2DDataWrapper()
+        ~A3DMiscMaterialOrthotropic2DWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -992,14 +992,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscMaterialOrthotropic2DData _d;
     }
-    public class A3DMiscMaterialOrthotropic3DDataWrapper
+    public class A3DMiscMaterialOrthotropic3DWrapper
     {
-        public A3DMiscMaterialOrthotropic3DDataWrapper()
+        public A3DMiscMaterialOrthotropic3DWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMiscMaterialOrthotropic3DDataWrapper()
+        ~A3DMiscMaterialOrthotropic3DWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1025,14 +1025,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscMaterialOrthotropic3DData _d;
     }
-    public class A3DMiscMaterialAnisotropicDataWrapper
+    public class A3DMiscMaterialAnisotropicWrapper
     {
-        public A3DMiscMaterialAnisotropicDataWrapper()
+        public A3DMiscMaterialAnisotropicWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMiscMaterialAnisotropicDataWrapper()
+        ~A3DMiscMaterialAnisotropicWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1051,14 +1051,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscMaterialAnisotropicData _d;
     }
-    public class A3DMiscMaterialPropertiesDataWrapper
+    public class A3DMiscMaterialPropertiesWrapper
     {
-        public A3DMiscMaterialPropertiesDataWrapper()
+        public A3DMiscMaterialPropertiesWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMiscMaterialPropertiesDataWrapper()
+        ~A3DMiscMaterialPropertiesWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1074,14 +1074,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscMaterialPropertiesData _d;
     }
-    public class A3DAsmModelFileDataWrapper
+    public class A3DAsmModelFileWrapper
     {
-        public A3DAsmModelFileDataWrapper()
+        public A3DAsmModelFileWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DAsmModelFileDataWrapper(IntPtr p)
+        public A3DAsmModelFileWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -1090,7 +1090,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DAsmModelFileDataWrapper()
+        ~A3DAsmModelFileWrapper()
         {
             API.A3DAsmModelFileGet( IntPtr.Zero, ref _d );
         }
@@ -1103,14 +1103,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DAsmModelFileData _d;
     }
-    public class A3DAsmProductOccurrenceDataWrapper
+    public class A3DAsmProductOccurrenceWrapper
     {
-        public A3DAsmProductOccurrenceDataWrapper()
+        public A3DAsmProductOccurrenceWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DAsmProductOccurrenceDataWrapper(IntPtr p)
+        public A3DAsmProductOccurrenceWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -1119,7 +1119,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DAsmProductOccurrenceDataWrapper()
+        ~A3DAsmProductOccurrenceWrapper()
         {
             API.A3DAsmProductOccurrenceGet( IntPtr.Zero, ref _d );
         }
@@ -1332,14 +1332,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DAsmProductOccurrenceDataJT _d;
     }
-    public class A3DAsmPartDefinitionDataWrapper
+    public class A3DAsmPartDefinitionWrapper
     {
-        public A3DAsmPartDefinitionDataWrapper()
+        public A3DAsmPartDefinitionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DAsmPartDefinitionDataWrapper(IntPtr p)
+        public A3DAsmPartDefinitionWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -1348,7 +1348,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DAsmPartDefinitionDataWrapper()
+        ~A3DAsmPartDefinitionWrapper()
         {
             API.A3DAsmPartDefinitionGet( IntPtr.Zero, ref _d );
         }
@@ -1366,14 +1366,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DAsmPartDefinitionData _d;
     }
-    public class A3DAsmLayerFilterItemDataWrapper
+    public class A3DAsmLayerFilterItemWrapper
     {
-        public A3DAsmLayerFilterItemDataWrapper()
+        public A3DAsmLayerFilterItemWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DAsmLayerFilterItemDataWrapper()
+        ~A3DAsmLayerFilterItemWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1383,14 +1383,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DAsmLayerFilterItemData _d;
     }
-    public class A3DAsmEntityFilterItemDataWrapper
+    public class A3DAsmEntityFilterItemWrapper
     {
-        public A3DAsmEntityFilterItemDataWrapper()
+        public A3DAsmEntityFilterItemWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DAsmEntityFilterItemDataWrapper()
+        ~A3DAsmEntityFilterItemWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1400,14 +1400,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DAsmEntityFilterItemData _d;
     }
-    public class A3DAsmFilterDataWrapper
+    public class A3DAsmFilterWrapper
     {
-        public A3DAsmFilterDataWrapper()
+        public A3DAsmFilterWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DAsmFilterDataWrapper(IntPtr p)
+        public A3DAsmFilterWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -1416,7 +1416,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DAsmFilterDataWrapper()
+        ~A3DAsmFilterWrapper()
         {
             API.A3DAsmFilterGet( IntPtr.Zero, ref _d );
         }
@@ -1427,14 +1427,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DAsmFilterData _d;
     }
-    public class A3DRWParamsGeneralDataWrapper
+    public class A3DRWParamsGeneralWrapper
     {
-        public A3DRWParamsGeneralDataWrapper()
+        public A3DRWParamsGeneralWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsGeneralDataWrapper()
+        ~A3DRWParamsGeneralWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1456,14 +1456,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsGeneralData _d;
     }
-    public class A3DRWParamsPmiDataWrapper
+    public class A3DRWParamsPmiWrapper
     {
-        public A3DRWParamsPmiDataWrapper()
+        public A3DRWParamsPmiWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsPmiDataWrapper()
+        ~A3DRWParamsPmiWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1478,14 +1478,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsPmiData _d;
     }
-    public class A3DRWParamsTessellationDataWrapper
+    public class A3DRWParamsTessellationWrapper
     {
-        public A3DRWParamsTessellationDataWrapper()
+        public A3DRWParamsTessellationWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsTessellationDataWrapper()
+        ~A3DRWParamsTessellationWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1505,14 +1505,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsTessellationData _d;
     }
-    public class A3DRWParamsSearchDirDataWrapper
+    public class A3DRWParamsSearchDirWrapper
     {
-        public A3DRWParamsSearchDirDataWrapper()
+        public A3DRWParamsSearchDirWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsSearchDirDataWrapper()
+        ~A3DRWParamsSearchDirWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1522,14 +1522,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsSearchDirData _d;
     }
-    public class A3DRWParamsAssemblyDataWrapper
+    public class A3DRWParamsAssemblyWrapper
     {
-        public A3DRWParamsAssemblyDataWrapper()
+        public A3DRWParamsAssemblyWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsAssemblyDataWrapper()
+        ~A3DRWParamsAssemblyWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1542,14 +1542,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsAssemblyData _d;
     }
-    public class A3DRWParamsMultiEntriesDataWrapper
+    public class A3DRWParamsMultiEntriesWrapper
     {
-        public A3DRWParamsMultiEntriesDataWrapper()
+        public A3DRWParamsMultiEntriesWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsMultiEntriesDataWrapper()
+        ~A3DRWParamsMultiEntriesWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1559,14 +1559,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsMultiEntriesData _d;
     }
-    public class A3DRWParamsCatiaV4DataWrapper
+    public class A3DRWParamsCatiaV4Wrapper
     {
-        public A3DRWParamsCatiaV4DataWrapper()
+        public A3DRWParamsCatiaV4Wrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsCatiaV4DataWrapper()
+        ~A3DRWParamsCatiaV4Wrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1575,14 +1575,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsCatiaV4Data _d;
     }
-    public class A3DRWParamsCatiaV5DataWrapper
+    public class A3DRWParamsCatiaV5Wrapper
     {
-        public A3DRWParamsCatiaV5DataWrapper()
+        public A3DRWParamsCatiaV5Wrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsCatiaV5DataWrapper()
+        ~A3DRWParamsCatiaV5Wrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1592,14 +1592,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsCatiaV5Data _d;
     }
-    public class A3DRWParamsUnigraphicsDataWrapper
+    public class A3DRWParamsUnigraphicsWrapper
     {
-        public A3DRWParamsUnigraphicsDataWrapper()
+        public A3DRWParamsUnigraphicsWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsUnigraphicsDataWrapper()
+        ~A3DRWParamsUnigraphicsWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1610,14 +1610,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsUnigraphicsData _d;
     }
-    public class A3DRWParamsProEDataWrapper
+    public class A3DRWParamsProEWrapper
     {
-        public A3DRWParamsProEDataWrapper()
+        public A3DRWParamsProEWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsProEDataWrapper()
+        ~A3DRWParamsProEWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1638,14 +1638,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsProEData _d;
     }
-    public class A3DRWValidationPropertiesThresholdDataWrapper
+    public class A3DRWValidationPropertiesThresholdWrapper
     {
-        public A3DRWValidationPropertiesThresholdDataWrapper()
+        public A3DRWValidationPropertiesThresholdWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWValidationPropertiesThresholdDataWrapper()
+        ~A3DRWValidationPropertiesThresholdWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1668,14 +1668,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWValidationPropertiesThresholdData _d;
     }
-    public class A3DRWParamsStepDataWrapper
+    public class A3DRWParamsStepWrapper
     {
-        public A3DRWParamsStepDataWrapper()
+        public A3DRWParamsStepWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsStepDataWrapper()
+        ~A3DRWParamsStepWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1692,14 +1692,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsStepData _d;
     }
-    public class A3DRWParamsIGESDataWrapper
+    public class A3DRWParamsIGESWrapper
     {
-        public A3DRWParamsIGESDataWrapper()
+        public A3DRWParamsIGESWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsIGESDataWrapper()
+        ~A3DRWParamsIGESWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1707,14 +1707,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsIGESData _d;
     }
-    public class A3DRWParamsIFCDataWrapper
+    public class A3DRWParamsIFCWrapper
     {
-        public A3DRWParamsIFCDataWrapper()
+        public A3DRWParamsIFCWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsIFCDataWrapper()
+        ~A3DRWParamsIFCWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1727,14 +1727,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsIFCData _d;
     }
-    public class A3DRWParamsJTDataWrapper
+    public class A3DRWParamsJTWrapper
     {
-        public A3DRWParamsJTDataWrapper()
+        public A3DRWParamsJTWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsJTDataWrapper()
+        ~A3DRWParamsJTWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1742,14 +1742,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsJTData _d;
     }
-    public class A3DRWParamsParasolidDataWrapper
+    public class A3DRWParamsParasolidWrapper
     {
-        public A3DRWParamsParasolidDataWrapper()
+        public A3DRWParamsParasolidWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsParasolidDataWrapper()
+        ~A3DRWParamsParasolidWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1757,14 +1757,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsParasolidData _d;
     }
-    public class A3DRWParamsSolidworksDataWrapper
+    public class A3DRWParamsSolidworksWrapper
     {
-        public A3DRWParamsSolidworksDataWrapper()
+        public A3DRWParamsSolidworksWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsSolidworksDataWrapper()
+        ~A3DRWParamsSolidworksWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1773,14 +1773,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsSolidworksData _d;
     }
-    public class A3DRWParamsInventorDataWrapper
+    public class A3DRWParamsInventorWrapper
     {
-        public A3DRWParamsInventorDataWrapper()
+        public A3DRWParamsInventorWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsInventorDataWrapper()
+        ~A3DRWParamsInventorWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1788,14 +1788,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsInventorData _d;
     }
-    public class A3DRWParamsRhinoDataWrapper
+    public class A3DRWParamsRhinoWrapper
     {
-        public A3DRWParamsRhinoDataWrapper()
+        public A3DRWParamsRhinoWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsRhinoDataWrapper()
+        ~A3DRWParamsRhinoWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1803,14 +1803,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsRhinoData _d;
     }
-    public class A3DRWParamsRevitDataWrapper
+    public class A3DRWParamsRevitWrapper
     {
-        public A3DRWParamsRevitDataWrapper()
+        public A3DRWParamsRevitWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsRevitDataWrapper()
+        ~A3DRWParamsRevitWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1818,14 +1818,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsRevitData _d;
     }
-    public class A3DRWParamsSpecificLoadDataWrapper
+    public class A3DRWParamsSpecificLoadWrapper
     {
-        public A3DRWParamsSpecificLoadDataWrapper()
+        public A3DRWParamsSpecificLoadWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsSpecificLoadDataWrapper()
+        ~A3DRWParamsSpecificLoadWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1845,14 +1845,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsSpecificLoadData _d;
     }
-    public class A3DRWParamsIncrementalLoadDataWrapper
+    public class A3DRWParamsIncrementalLoadWrapper
     {
-        public A3DRWParamsIncrementalLoadDataWrapper()
+        public A3DRWParamsIncrementalLoadWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsIncrementalLoadDataWrapper()
+        ~A3DRWParamsIncrementalLoadWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1864,14 +1864,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsIncrementalLoadData _d;
     }
-    public class A3DRWParamsLoadDataWrapper
+    public class A3DRWParamsLoadWrapper
     {
-        public A3DRWParamsLoadDataWrapper()
+        public A3DRWParamsLoadWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsLoadDataWrapper()
+        ~A3DRWParamsLoadWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1885,14 +1885,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsLoadData _d;
     }
-    public class A3DStream3DPDFDataWrapper
+    public class A3DStream3DPDFWrapper
     {
-        public A3DStream3DPDFDataWrapper()
+        public A3DStream3DPDFWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DStream3DPDFDataWrapper()
+        ~A3DStream3DPDFWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1903,14 +1903,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DStream3DPDFData _d;
     }
-    public class A3DRWParamsExportPrcDataWrapper
+    public class A3DRWParamsExportPrcWrapper
     {
-        public A3DRWParamsExportPrcDataWrapper()
+        public A3DRWParamsExportPrcWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsExportPrcDataWrapper()
+        ~A3DRWParamsExportPrcWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1922,14 +1922,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsExportPrcData _d;
     }
-    public class A3DRWParamsExportU3DDataWrapper
+    public class A3DRWParamsExportU3DWrapper
     {
-        public A3DRWParamsExportU3DDataWrapper()
+        public A3DRWParamsExportU3DWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsExportU3DDataWrapper()
+        ~A3DRWParamsExportU3DWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1939,14 +1939,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsExportU3DData _d;
     }
-    public class A3DRWParamsExportStepDataWrapper
+    public class A3DRWParamsExportStepWrapper
     {
-        public A3DRWParamsExportStepDataWrapper()
+        public A3DRWParamsExportStepWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsExportStepDataWrapper()
+        ~A3DRWParamsExportStepWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1969,14 +1969,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsExportStepData _d;
     }
-    public class A3DRWParamsExportJTDataWrapper
+    public class A3DRWParamsExportJTWrapper
     {
-        public A3DRWParamsExportJTDataWrapper()
+        public A3DRWParamsExportJTWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsExportJTDataWrapper()
+        ~A3DRWParamsExportJTWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -1987,14 +1987,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsExportJTData _d;
     }
-    public class A3DRWParamsExportIgesDataWrapper
+    public class A3DRWParamsExportIgesWrapper
     {
-        public A3DRWParamsExportIgesDataWrapper()
+        public A3DRWParamsExportIgesWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsExportIgesDataWrapper()
+        ~A3DRWParamsExportIgesWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2008,14 +2008,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsExportIgesData _d;
     }
-    public class A3DRWParamsExportStlDataWrapper
+    public class A3DRWParamsExportStlWrapper
     {
-        public A3DRWParamsExportStlDataWrapper()
+        public A3DRWParamsExportStlWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsExportStlDataWrapper()
+        ~A3DRWParamsExportStlWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2036,14 +2036,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsExportStlData _d;
     }
-    public class A3DRWParamsExport3mfDataWrapper
+    public class A3DRWParamsExport3mfWrapper
     {
-        public A3DRWParamsExport3mfDataWrapper()
+        public A3DRWParamsExport3mfWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsExport3mfDataWrapper()
+        ~A3DRWParamsExport3mfWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2055,14 +2055,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsExport3mfData _d;
     }
-    public class A3DRWParamsExportXMLDataWrapper
+    public class A3DRWParamsExportXMLWrapper
     {
-        public A3DRWParamsExportXMLDataWrapper()
+        public A3DRWParamsExportXMLWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsExportXMLDataWrapper()
+        ~A3DRWParamsExportXMLWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2073,14 +2073,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsExportXMLData _d;
     }
-    public class A3DRWParamsExportObjDataWrapper
+    public class A3DRWParamsExportObjWrapper
     {
-        public A3DRWParamsExportObjDataWrapper()
+        public A3DRWParamsExportObjWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsExportObjDataWrapper()
+        ~A3DRWParamsExportObjWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2088,14 +2088,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsExportObjData _d;
     }
-    public class A3DRWParamsExportFbxDataWrapper
+    public class A3DRWParamsExportFbxWrapper
     {
-        public A3DRWParamsExportFbxDataWrapper()
+        public A3DRWParamsExportFbxWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsExportFbxDataWrapper()
+        ~A3DRWParamsExportFbxWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2104,14 +2104,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsExportFbxData _d;
     }
-    public class A3DSewOptionsDataWrapper
+    public class A3DSewOptionsWrapper
     {
-        public A3DSewOptionsDataWrapper()
+        public A3DSewOptionsWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DSewOptionsDataWrapper()
+        ~A3DSewOptionsWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2119,14 +2119,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSewOptionsData _d;
     }
-    public class A3DFaceUVPointInsideManagerDataWrapper
+    public class A3DFaceUVPointInsideManagerWrapper
     {
-        public A3DFaceUVPointInsideManagerDataWrapper()
+        public A3DFaceUVPointInsideManagerWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DFaceUVPointInsideManagerDataWrapper()
+        ~A3DFaceUVPointInsideManagerWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2134,14 +2134,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFaceUVPointInsideManagerData _d;
     }
-    public class A3DProjectedPointCloudDataWrapper
+    public class A3DProjectedPointCloudWrapper
     {
-        public A3DProjectedPointCloudDataWrapper()
+        public A3DProjectedPointCloudWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DProjectedPointCloudDataWrapper()
+        ~A3DProjectedPointCloudWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2175,14 +2175,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DProjectPointCloudManagerDataFromRI _d;
     }
-    public class A3DPlanarSectionDataWrapper
+    public class A3DPlanarSectionWrapper
     {
-        public A3DPlanarSectionDataWrapper()
+        public A3DPlanarSectionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DPlanarSectionDataWrapper()
+        ~A3DPlanarSectionWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2193,14 +2193,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DPlanarSectionData _d;
     }
-    public class A3DCompareInputDataWrapper
+    public class A3DCompareInputWrapper
     {
-        public A3DCompareInputDataWrapper()
+        public A3DCompareInputWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DCompareInputDataWrapper()
+        ~A3DCompareInputWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2214,14 +2214,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCompareInputData _d;
     }
-    public class A3DCompareOutputDataWrapper
+    public class A3DCompareOutputWrapper
     {
-        public A3DCompareOutputDataWrapper()
+        public A3DCompareOutputWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DCompareOutputDataWrapper()
+        ~A3DCompareOutputWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2236,14 +2236,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCompareOutputData _d;
     }
-    public class A3DMultiPlanarSectionDataWrapper
+    public class A3DMultiPlanarSectionWrapper
     {
-        public A3DMultiPlanarSectionDataWrapper()
+        public A3DMultiPlanarSectionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMultiPlanarSectionDataWrapper()
+        ~A3DMultiPlanarSectionWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2254,14 +2254,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMultiPlanarSectionData _d;
     }
-    public class A3DHLRViewPlaneDataWrapper
+    public class A3DHLRViewPlaneWrapper
     {
-        public A3DHLRViewPlaneDataWrapper()
+        public A3DHLRViewPlaneWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DHLRViewPlaneDataWrapper()
+        ~A3DHLRViewPlaneWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2296,14 +2296,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DHLRViewPlaneData _d;
     }
-    public class A3DHLRCurveDataWrapper
+    public class A3DHLRCurveWrapper
     {
-        public A3DHLRCurveDataWrapper()
+        public A3DHLRCurveWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DHLRCurveDataWrapper()
+        ~A3DHLRCurveWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2322,14 +2322,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DHLRCurveData _d;
     }
-    public class A3DHLRSectionFaceDataWrapper
+    public class A3DHLRSectionFaceWrapper
     {
-        public A3DHLRSectionFaceDataWrapper()
+        public A3DHLRSectionFaceWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DHLRSectionFaceDataWrapper()
+        ~A3DHLRSectionFaceWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2340,14 +2340,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DHLRSectionFaceData _d;
     }
-    public class A3DHLRRepresentationItemDataWrapper
+    public class A3DHLRRepresentationItemWrapper
     {
-        public A3DHLRRepresentationItemDataWrapper()
+        public A3DHLRRepresentationItemWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DHLRRepresentationItemDataWrapper(IntPtr p)
+        public A3DHLRRepresentationItemWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2356,7 +2356,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DHLRRepresentationItemDataWrapper()
+        ~A3DHLRRepresentationItemWrapper()
         {
             API.A3DHLRRepresentationItemGet( IntPtr.Zero, ref _d );
         }
@@ -2378,14 +2378,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DHLRRepresentationItemData _d;
     }
-    public class A3DHLROptionsDataWrapper
+    public class A3DHLROptionsWrapper
     {
-        public A3DHLROptionsDataWrapper()
+        public A3DHLROptionsWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DHLROptionsDataWrapper()
+        ~A3DHLROptionsWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2396,14 +2396,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DHLROptionsData _d;
     }
-    public class A3DTransfoRepresentationItemDataWrapper
+    public class A3DTransfoRepresentationItemWrapper
     {
-        public A3DTransfoRepresentationItemDataWrapper()
+        public A3DTransfoRepresentationItemWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DTransfoRepresentationItemDataWrapper()
+        ~A3DTransfoRepresentationItemWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2412,14 +2412,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTransfoRepresentationItemData _d;
     }
-    public class A3DCollisionGroupDataWrapper
+    public class A3DCollisionGroupWrapper
     {
-        public A3DCollisionGroupDataWrapper()
+        public A3DCollisionGroupWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DCollisionGroupDataWrapper()
+        ~A3DCollisionGroupWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2428,14 +2428,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCollisionGroupData _d;
     }
-    public class A3DCollisionParameterDataWrapper
+    public class A3DCollisionParameterWrapper
     {
-        public A3DCollisionParameterDataWrapper()
+        public A3DCollisionParameterWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DCollisionParameterDataWrapper()
+        ~A3DCollisionParameterWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2445,14 +2445,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCollisionParameterData _d;
     }
-    public class A3DCollisionResultDataWrapper
+    public class A3DCollisionResultWrapper
     {
-        public A3DCollisionResultDataWrapper()
+        public A3DCollisionResultWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DCollisionResultDataWrapper()
+        ~A3DCollisionResultWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2462,14 +2462,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCollisionResultData _d;
     }
-    public class A3DMkpLeaderDataWrapper
+    public class A3DMkpLeaderWrapper
     {
-        public A3DMkpLeaderDataWrapper()
+        public A3DMkpLeaderWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMkpLeaderDataWrapper(IntPtr p)
+        public A3DMkpLeaderWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2478,7 +2478,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMkpLeaderDataWrapper()
+        ~A3DMkpLeaderWrapper()
         {
             API.A3DMkpLeaderGet( IntPtr.Zero, ref _d );
         }
@@ -2488,14 +2488,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMkpLeaderData _d;
     }
-    public class A3DMkpAnnotationItemDataWrapper
+    public class A3DMkpAnnotationItemWrapper
     {
-        public A3DMkpAnnotationItemDataWrapper()
+        public A3DMkpAnnotationItemWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMkpAnnotationItemDataWrapper(IntPtr p)
+        public A3DMkpAnnotationItemWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2504,7 +2504,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMkpAnnotationItemDataWrapper()
+        ~A3DMkpAnnotationItemWrapper()
         {
             API.A3DMkpAnnotationItemGet( IntPtr.Zero, ref _d );
         }
@@ -2513,14 +2513,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMkpAnnotationItemData _d;
     }
-    public class A3DMkpAnnotationSetDataWrapper
+    public class A3DMkpAnnotationSetWrapper
     {
-        public A3DMkpAnnotationSetDataWrapper()
+        public A3DMkpAnnotationSetWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMkpAnnotationSetDataWrapper(IntPtr p)
+        public A3DMkpAnnotationSetWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2529,7 +2529,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMkpAnnotationSetDataWrapper()
+        ~A3DMkpAnnotationSetWrapper()
         {
             API.A3DMkpAnnotationSetGet( IntPtr.Zero, ref _d );
         }
@@ -2539,14 +2539,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMkpAnnotationSetData _d;
     }
-    public class A3DMkpAnnotationReferenceDataWrapper
+    public class A3DMkpAnnotationReferenceWrapper
     {
-        public A3DMkpAnnotationReferenceDataWrapper()
+        public A3DMkpAnnotationReferenceWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMkpAnnotationReferenceDataWrapper(IntPtr p)
+        public A3DMkpAnnotationReferenceWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2555,7 +2555,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMkpAnnotationReferenceDataWrapper()
+        ~A3DMkpAnnotationReferenceWrapper()
         {
             API.A3DMkpAnnotationReferenceGet( IntPtr.Zero, ref _d );
         }
@@ -2565,14 +2565,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMkpAnnotationReferenceData _d;
     }
-    public class A3DMkpViewDataWrapper
+    public class A3DMkpViewWrapper
     {
-        public A3DMkpViewDataWrapper()
+        public A3DMkpViewWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMkpViewDataWrapper(IntPtr p)
+        public A3DMkpViewWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2581,7 +2581,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMkpViewDataWrapper()
+        ~A3DMkpViewWrapper()
         {
             API.A3DMkpViewGet( IntPtr.Zero, ref _d );
         }
@@ -2599,14 +2599,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMkpViewData _d;
     }
-    public class A3DMkpViewFlagsDataWrapper
+    public class A3DMkpViewFlagsWrapper
     {
-        public A3DMkpViewFlagsDataWrapper()
+        public A3DMkpViewFlagsWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMkpViewFlagsDataWrapper()
+        ~A3DMkpViewFlagsWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2619,14 +2619,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMkpViewFlagsData _d;
     }
-    public class A3DMiscMarkupLinkedItemDataWrapper
+    public class A3DMiscMarkupLinkedItemWrapper
     {
-        public A3DMiscMarkupLinkedItemDataWrapper()
+        public A3DMiscMarkupLinkedItemWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMiscMarkupLinkedItemDataWrapper(IntPtr p)
+        public A3DMiscMarkupLinkedItemWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2635,7 +2635,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMiscMarkupLinkedItemDataWrapper()
+        ~A3DMiscMarkupLinkedItemWrapper()
         {
             API.A3DMiscMarkupLinkedItemGet( IntPtr.Zero, ref _d );
         }
@@ -2649,14 +2649,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscMarkupLinkedItemData _d;
     }
-    public class A3DMkpMarkupDataWrapper
+    public class A3DMkpMarkupWrapper
     {
-        public A3DMkpMarkupDataWrapper()
+        public A3DMkpMarkupWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMkpMarkupDataWrapper(IntPtr p)
+        public A3DMkpMarkupWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2665,7 +2665,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMkpMarkupDataWrapper()
+        ~A3DMkpMarkupWrapper()
         {
             API.A3DMkpMarkupGet( IntPtr.Zero, ref _d );
         }
@@ -2680,14 +2680,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMkpMarkupData _d;
     }
-    public class A3DMkpRTFFieldDataWrapper
+    public class A3DMkpRTFFieldWrapper
     {
-        public A3DMkpRTFFieldDataWrapper()
+        public A3DMkpRTFFieldWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMkpRTFFieldDataWrapper(IntPtr p)
+        public A3DMkpRTFFieldWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2696,7 +2696,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMkpRTFFieldDataWrapper()
+        ~A3DMkpRTFFieldWrapper()
         {
             API.A3DMkpRTFFieldGet( IntPtr.Zero, ref _d );
         }
@@ -2719,14 +2719,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMkpRTFFieldData _d;
     }
-    public class A3DFontKeyDataWrapper
+    public class A3DFontKeyWrapper
     {
-        public A3DFontKeyDataWrapper()
+        public A3DFontKeyWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DFontKeyDataWrapper()
+        ~A3DFontKeyWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2737,14 +2737,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFontKeyData _d;
     }
-    public class A3DFontDataWrapper
+    public class A3DFontWrapper
     {
-        public A3DFontDataWrapper()
+        public A3DFontWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DFontDataWrapper()
+        ~A3DFontWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2756,14 +2756,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFontData _d;
     }
-    public class A3DGraphTextureTransformationDataWrapper
+    public class A3DGraphTextureTransformationWrapper
     {
-        public A3DGraphTextureTransformationDataWrapper()
+        public A3DGraphTextureTransformationWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DGraphTextureTransformationDataWrapper(IntPtr p)
+        public A3DGraphTextureTransformationWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2772,7 +2772,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DGraphTextureTransformationDataWrapper()
+        ~A3DGraphTextureTransformationWrapper()
         {
             API.A3DGraphTextureTransformationGet( IntPtr.Zero, ref _d );
         }
@@ -2792,14 +2792,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphTextureTransformationData _d;
     }
-    public class A3DGraphTextureDefinitionDataWrapper
+    public class A3DGraphTextureDefinitionWrapper
     {
-        public A3DGraphTextureDefinitionDataWrapper()
+        public A3DGraphTextureDefinitionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DGraphTextureDefinitionDataWrapper()
+        ~A3DGraphTextureDefinitionWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2831,14 +2831,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphTextureDefinitionData _d;
     }
-    public class A3DGraphTextureApplicationDataWrapper
+    public class A3DGraphTextureApplicationWrapper
     {
-        public A3DGraphTextureApplicationDataWrapper()
+        public A3DGraphTextureApplicationWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DGraphTextureApplicationDataWrapper()
+        ~A3DGraphTextureApplicationWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2849,14 +2849,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGraphTextureApplicationData _d;
     }
-    public class A3DDrawCallbacksDataWrapper
+    public class A3DDrawCallbacksWrapper
     {
-        public A3DDrawCallbacksDataWrapper()
+        public A3DDrawCallbacksWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DDrawCallbacksDataWrapper()
+        ~A3DDrawCallbacksWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -2905,14 +2905,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDrawCallbacksData _d;
     }
-    public class A3DDrawingModelDataWrapper
+    public class A3DDrawingModelWrapper
     {
-        public A3DDrawingModelDataWrapper()
+        public A3DDrawingModelWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DDrawingModelDataWrapper(IntPtr p)
+        public A3DDrawingModelWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2921,7 +2921,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DDrawingModelDataWrapper()
+        ~A3DDrawingModelWrapper()
         {
             API.A3DDrawingModelGet( IntPtr.Zero, ref _d );
         }
@@ -2932,14 +2932,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDrawingModelData _d;
     }
-    public class A3DDrawingSheetFormatDataWrapper
+    public class A3DDrawingSheetFormatWrapper
     {
-        public A3DDrawingSheetFormatDataWrapper()
+        public A3DDrawingSheetFormatWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DDrawingSheetFormatDataWrapper(IntPtr p)
+        public A3DDrawingSheetFormatWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2948,7 +2948,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DDrawingSheetFormatDataWrapper()
+        ~A3DDrawingSheetFormatWrapper()
         {
             API.A3DDrawingSheetFormatGet( IntPtr.Zero, ref _d );
         }
@@ -2958,14 +2958,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDrawingSheetFormatData _d;
     }
-    public class A3DDrawingSheetDataWrapper
+    public class A3DDrawingSheetWrapper
     {
-        public A3DDrawingSheetDataWrapper()
+        public A3DDrawingSheetWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DDrawingSheetDataWrapper(IntPtr p)
+        public A3DDrawingSheetWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -2974,7 +2974,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DDrawingSheetDataWrapper()
+        ~A3DDrawingSheetWrapper()
         {
             API.A3DDrawingSheetGet( IntPtr.Zero, ref _d );
         }
@@ -2994,14 +2994,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDrawingSheetData _d;
     }
-    public class A3DDrawingClipFrameDataWrapper
+    public class A3DDrawingClipFrameWrapper
     {
-        public A3DDrawingClipFrameDataWrapper()
+        public A3DDrawingClipFrameWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DDrawingClipFrameDataWrapper(IntPtr p)
+        public A3DDrawingClipFrameWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3010,7 +3010,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DDrawingClipFrameDataWrapper()
+        ~A3DDrawingClipFrameWrapper()
         {
             API.A3DDrawingClipFrameGet( IntPtr.Zero, ref _d );
         }
@@ -3024,14 +3024,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDrawingClipFrameData _d;
     }
-    public class A3DDrawingViewDataWrapper
+    public class A3DDrawingViewWrapper
     {
-        public A3DDrawingViewDataWrapper()
+        public A3DDrawingViewWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DDrawingViewDataWrapper(IntPtr p)
+        public A3DDrawingViewWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3040,7 +3040,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DDrawingViewDataWrapper()
+        ~A3DDrawingViewWrapper()
         {
             API.A3DDrawingViewGet( IntPtr.Zero, ref _d );
         }
@@ -3061,14 +3061,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDrawingViewData _d;
     }
-    public class A3DDrawingBlockBasicDataWrapper
+    public class A3DDrawingBlockBasicWrapper
     {
-        public A3DDrawingBlockBasicDataWrapper()
+        public A3DDrawingBlockBasicWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DDrawingBlockBasicDataWrapper(IntPtr p)
+        public A3DDrawingBlockBasicWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3077,7 +3077,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DDrawingBlockBasicDataWrapper()
+        ~A3DDrawingBlockBasicWrapper()
         {
             API.A3DDrawingBlockBasicGet( IntPtr.Zero, ref _d );
         }
@@ -3091,14 +3091,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDrawingBlockBasicData _d;
     }
-    public class A3DDrawingBlockOperatorDataWrapper
+    public class A3DDrawingBlockOperatorWrapper
     {
-        public A3DDrawingBlockOperatorDataWrapper()
+        public A3DDrawingBlockOperatorWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DDrawingBlockOperatorDataWrapper(IntPtr p)
+        public A3DDrawingBlockOperatorWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3107,7 +3107,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DDrawingBlockOperatorDataWrapper()
+        ~A3DDrawingBlockOperatorWrapper()
         {
             API.A3DDrawingBlockOperatorGet( IntPtr.Zero, ref _d );
         }
@@ -3123,14 +3123,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDrawingBlockOperatorData _d;
     }
-    public class A3DDrawingCurveDataWrapper
+    public class A3DDrawingCurveWrapper
     {
-        public A3DDrawingCurveDataWrapper()
+        public A3DDrawingCurveWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DDrawingCurveDataWrapper(IntPtr p)
+        public A3DDrawingCurveWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3139,7 +3139,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DDrawingCurveDataWrapper()
+        ~A3DDrawingCurveWrapper()
         {
             API.A3DDrawingCurveGet( IntPtr.Zero, ref _d );
         }
@@ -3150,14 +3150,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDrawingCurveData _d;
     }
-    public class A3DDrawingFilledAreaDataWrapper
+    public class A3DDrawingFilledAreaWrapper
     {
-        public A3DDrawingFilledAreaDataWrapper()
+        public A3DDrawingFilledAreaWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DDrawingFilledAreaDataWrapper(IntPtr p)
+        public A3DDrawingFilledAreaWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3166,7 +3166,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DDrawingFilledAreaDataWrapper()
+        ~A3DDrawingFilledAreaWrapper()
         {
             API.A3DDrawingFilledAreaGet( IntPtr.Zero, ref _d );
         }
@@ -3179,14 +3179,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDrawingFilledAreaData _d;
     }
-    public class A3DDrawingPictureDataWrapper
+    public class A3DDrawingPictureWrapper
     {
-        public A3DDrawingPictureDataWrapper()
+        public A3DDrawingPictureWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DDrawingPictureDataWrapper(IntPtr p)
+        public A3DDrawingPictureWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3195,7 +3195,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DDrawingPictureDataWrapper()
+        ~A3DDrawingPictureWrapper()
         {
             API.A3DDrawingPictureGet( IntPtr.Zero, ref _d );
         }
@@ -3206,14 +3206,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDrawingPictureData _d;
     }
-    public class A3DDrawingVerticesDataWrapper
+    public class A3DDrawingVerticesWrapper
     {
-        public A3DDrawingVerticesDataWrapper()
+        public A3DDrawingVerticesWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DDrawingVerticesDataWrapper(IntPtr p)
+        public A3DDrawingVerticesWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3222,7 +3222,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DDrawingVerticesDataWrapper()
+        ~A3DDrawingVerticesWrapper()
         {
             API.A3DDrawingVerticesGet( IntPtr.Zero, ref _d );
         }
@@ -3232,14 +3232,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DDrawingVerticesData _d;
     }
-    public class A3DThumbnailDataWrapper
+    public class A3DThumbnailWrapper
     {
-        public A3DThumbnailDataWrapper()
+        public A3DThumbnailWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DThumbnailDataWrapper()
+        ~A3DThumbnailWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -3249,14 +3249,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DThumbnailData _d;
     }
-    public class A3DFileInformationDataWrapper
+    public class A3DFileInformationWrapper
     {
-        public A3DFileInformationDataWrapper()
+        public A3DFileInformationWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DFileInformationDataWrapper()
+        ~A3DFileInformationWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -3269,14 +3269,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFileInformationData _d;
     }
-    public class A3DFileContextDataWrapper
+    public class A3DFileContextWrapper
     {
-        public A3DFileContextDataWrapper()
+        public A3DFileContextWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DFileContextDataWrapper()
+        ~A3DFileContextWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -3286,14 +3286,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFileContextData _d;
     }
-    public class A3DRWParamsExportParasolidDataWrapper
+    public class A3DRWParamsExportParasolidWrapper
     {
-        public A3DRWParamsExportParasolidDataWrapper()
+        public A3DRWParamsExportParasolidWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsExportParasolidDataWrapper()
+        ~A3DRWParamsExportParasolidWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -3308,14 +3308,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsExportParasolidData _d;
     }
-    public class A3DRWParamsTranslateToPkPartsDataWrapper
+    public class A3DRWParamsTranslateToPkPartsWrapper
     {
-        public A3DRWParamsTranslateToPkPartsDataWrapper()
+        public A3DRWParamsTranslateToPkPartsWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsTranslateToPkPartsDataWrapper()
+        ~A3DRWParamsTranslateToPkPartsWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -3336,14 +3336,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsTranslateToPkPartsData _d;
     }
-    public class A3DRWParamsExportAcisDataWrapper
+    public class A3DRWParamsExportAcisWrapper
     {
-        public A3DRWParamsExportAcisDataWrapper()
+        public A3DRWParamsExportAcisWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DRWParamsExportAcisDataWrapper()
+        ~A3DRWParamsExportAcisWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -3353,14 +3353,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRWParamsExportAcisData _d;
     }
-    public class A3DRiRepresentationItemDataWrapper
+    public class A3DRiRepresentationItemWrapper
     {
-        public A3DRiRepresentationItemDataWrapper()
+        public A3DRiRepresentationItemWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DRiRepresentationItemDataWrapper(IntPtr p)
+        public A3DRiRepresentationItemWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3369,7 +3369,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DRiRepresentationItemDataWrapper()
+        ~A3DRiRepresentationItemWrapper()
         {
             API.A3DRiRepresentationItemGet( IntPtr.Zero, ref _d );
         }
@@ -3379,14 +3379,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRiRepresentationItemData _d;
     }
-    public class A3DRiSetDataWrapper
+    public class A3DRiSetWrapper
     {
-        public A3DRiSetDataWrapper()
+        public A3DRiSetWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DRiSetDataWrapper(IntPtr p)
+        public A3DRiSetWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3395,7 +3395,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DRiSetDataWrapper()
+        ~A3DRiSetWrapper()
         {
             API.A3DRiSetGet( IntPtr.Zero, ref _d );
         }
@@ -3405,14 +3405,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRiSetData _d;
     }
-    public class A3DRiPointSetDataWrapper
+    public class A3DRiPointSetWrapper
     {
-        public A3DRiPointSetDataWrapper()
+        public A3DRiPointSetWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DRiPointSetDataWrapper(IntPtr p)
+        public A3DRiPointSetWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3421,7 +3421,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DRiPointSetDataWrapper()
+        ~A3DRiPointSetWrapper()
         {
             API.A3DRiPointSetGet( IntPtr.Zero, ref _d );
         }
@@ -3431,14 +3431,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRiPointSetData _d;
     }
-    public class A3DRiDirectionDataWrapper
+    public class A3DRiDirectionWrapper
     {
-        public A3DRiDirectionDataWrapper()
+        public A3DRiDirectionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DRiDirectionDataWrapper(IntPtr p)
+        public A3DRiDirectionWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3447,7 +3447,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DRiDirectionDataWrapper()
+        ~A3DRiDirectionWrapper()
         {
             API.A3DRiDirectionGet( IntPtr.Zero, ref _d );
         }
@@ -3458,14 +3458,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRiDirectionData _d;
     }
-    public class A3DRiCoordinateSystemDataWrapper
+    public class A3DRiCoordinateSystemWrapper
     {
-        public A3DRiCoordinateSystemDataWrapper()
+        public A3DRiCoordinateSystemWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DRiCoordinateSystemDataWrapper(IntPtr p)
+        public A3DRiCoordinateSystemWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3474,7 +3474,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DRiCoordinateSystemDataWrapper()
+        ~A3DRiCoordinateSystemWrapper()
         {
             API.A3DRiCoordinateSystemGet( IntPtr.Zero, ref _d );
         }
@@ -3483,14 +3483,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRiCoordinateSystemData _d;
     }
-    public class A3DRiCurveDataWrapper
+    public class A3DRiCurveWrapper
     {
-        public A3DRiCurveDataWrapper()
+        public A3DRiCurveWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DRiCurveDataWrapper(IntPtr p)
+        public A3DRiCurveWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3499,7 +3499,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DRiCurveDataWrapper()
+        ~A3DRiCurveWrapper()
         {
             API.A3DRiCurveGet( IntPtr.Zero, ref _d );
         }
@@ -3508,14 +3508,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRiCurveData _d;
     }
-    public class A3DRiPlaneDataWrapper
+    public class A3DRiPlaneWrapper
     {
-        public A3DRiPlaneDataWrapper()
+        public A3DRiPlaneWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DRiPlaneDataWrapper(IntPtr p)
+        public A3DRiPlaneWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3524,7 +3524,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DRiPlaneDataWrapper()
+        ~A3DRiPlaneWrapper()
         {
             API.A3DRiPlaneGet( IntPtr.Zero, ref _d );
         }
@@ -3533,14 +3533,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRiPlaneData _d;
     }
-    public class A3DRiBrepModelDataWrapper
+    public class A3DRiBrepModelWrapper
     {
-        public A3DRiBrepModelDataWrapper()
+        public A3DRiBrepModelWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DRiBrepModelDataWrapper(IntPtr p)
+        public A3DRiBrepModelWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3549,7 +3549,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DRiBrepModelDataWrapper()
+        ~A3DRiBrepModelWrapper()
         {
             API.A3DRiBrepModelGet( IntPtr.Zero, ref _d );
         }
@@ -3559,14 +3559,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRiBrepModelData _d;
     }
-    public class A3DRiPolyBrepModelDataWrapper
+    public class A3DRiPolyBrepModelWrapper
     {
-        public A3DRiPolyBrepModelDataWrapper()
+        public A3DRiPolyBrepModelWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DRiPolyBrepModelDataWrapper(IntPtr p)
+        public A3DRiPolyBrepModelWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3575,7 +3575,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DRiPolyBrepModelDataWrapper()
+        ~A3DRiPolyBrepModelWrapper()
         {
             API.A3DRiPolyBrepModelGet( IntPtr.Zero, ref _d );
         }
@@ -3584,14 +3584,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRiPolyBrepModelData _d;
     }
-    public class A3DRiPolyWireDataWrapper
+    public class A3DRiPolyWireWrapper
     {
-        public A3DRiPolyWireDataWrapper()
+        public A3DRiPolyWireWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DRiPolyWireDataWrapper(IntPtr p)
+        public A3DRiPolyWireWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3600,7 +3600,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DRiPolyWireDataWrapper()
+        ~A3DRiPolyWireWrapper()
         {
             API.A3DRiPolyWireGet( IntPtr.Zero, ref _d );
         }
@@ -3608,14 +3608,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRiPolyWireData _d;
     }
-    public class A3DFRMFeatureTreeDataWrapper
+    public class A3DFRMFeatureTreeWrapper
     {
-        public A3DFRMFeatureTreeDataWrapper()
+        public A3DFRMFeatureTreeWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DFRMFeatureTreeDataWrapper(IntPtr p)
+        public A3DFRMFeatureTreeWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3624,7 +3624,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DFRMFeatureTreeDataWrapper()
+        ~A3DFRMFeatureTreeWrapper()
         {
             API.A3DFRMFeatureTreeGet( IntPtr.Zero, ref _d );
         }
@@ -3638,14 +3638,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFRMFeatureTreeData _d;
     }
-    public class A3DFRMParameterDataWrapper
+    public class A3DFRMParameterWrapper
     {
-        public A3DFRMParameterDataWrapper()
+        public A3DFRMParameterWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DFRMParameterDataWrapper(IntPtr p)
+        public A3DFRMParameterWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3654,7 +3654,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DFRMParameterDataWrapper()
+        ~A3DFRMParameterWrapper()
         {
             API.A3DFRMParameterGet( IntPtr.Zero, ref _d );
         }
@@ -3665,14 +3665,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFRMParameterData _d;
     }
-    public class A3DFRMFeatureTypeDataWrapper
+    public class A3DFRMFeatureTypeWrapper
     {
-        public A3DFRMFeatureTypeDataWrapper()
+        public A3DFRMFeatureTypeWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DFRMFeatureTypeDataWrapper()
+        ~A3DFRMFeatureTypeWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -3682,14 +3682,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFRMFeatureTypeData _d;
     }
-    public class A3DFRMStringDataWrapper
+    public class A3DFRMStringWrapper
     {
-        public A3DFRMStringDataWrapper()
+        public A3DFRMStringWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DFRMStringDataWrapper()
+        ~A3DFRMStringWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -3698,14 +3698,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFRMStringData _d;
     }
-    public class A3DFRMDoubleDataWrapper
+    public class A3DFRMDoubleWrapper
     {
-        public A3DFRMDoubleDataWrapper()
+        public A3DFRMDoubleWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DFRMDoubleDataWrapper()
+        ~A3DFRMDoubleWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -3714,14 +3714,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFRMDoubleData _d;
     }
-    public class A3DFRMIntegerDataWrapper
+    public class A3DFRMIntegerWrapper
     {
-        public A3DFRMIntegerDataWrapper()
+        public A3DFRMIntegerWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DFRMIntegerDataWrapper()
+        ~A3DFRMIntegerWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -3730,14 +3730,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFRMIntegerData _d;
     }
-    public class A3DFRMFeatureLinkedItemDataWrapper
+    public class A3DFRMFeatureLinkedItemWrapper
     {
-        public A3DFRMFeatureLinkedItemDataWrapper()
+        public A3DFRMFeatureLinkedItemWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DFRMFeatureLinkedItemDataWrapper(IntPtr p)
+        public A3DFRMFeatureLinkedItemWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3746,7 +3746,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DFRMFeatureLinkedItemDataWrapper()
+        ~A3DFRMFeatureLinkedItemWrapper()
         {
             API.A3DFRMFeatureLinkedItemGet( IntPtr.Zero, ref _d );
         }
@@ -3757,14 +3757,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFRMFeatureLinkedItemData _d;
     }
-    public class A3DFRMFeatureDataWrapper
+    public class A3DFRMFeatureWrapper
     {
-        public A3DFRMFeatureDataWrapper()
+        public A3DFRMFeatureWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DFRMFeatureDataWrapper(IntPtr p)
+        public A3DFRMFeatureWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3773,7 +3773,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DFRMFeatureDataWrapper()
+        ~A3DFRMFeatureWrapper()
         {
             API.A3DFRMFeatureGet( IntPtr.Zero, ref _d );
         }
@@ -3789,14 +3789,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFRMFeatureData _d;
     }
-    public class A3DFRMFeatureGeomEntitiesDataWrapper
+    public class A3DFRMFeatureGeomEntitiesWrapper
     {
-        public A3DFRMFeatureGeomEntitiesDataWrapper()
+        public A3DFRMFeatureGeomEntitiesWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DFRMFeatureGeomEntitiesDataWrapper()
+        ~A3DFRMFeatureGeomEntitiesWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -3805,14 +3805,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DFRMFeatureGeomEntitiesData _d;
     }
-    public class A3DCrvNurbsDataWrapper
+    public class A3DCrvNurbsWrapper
     {
-        public A3DCrvNurbsDataWrapper()
+        public A3DCrvNurbsWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvNurbsDataWrapper(IntPtr p)
+        public A3DCrvNurbsWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3821,7 +3821,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvNurbsDataWrapper()
+        ~A3DCrvNurbsWrapper()
         {
             API.A3DCrvNurbsGet( IntPtr.Zero, ref _d );
         }
@@ -3840,14 +3840,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvNurbsData _d;
     }
-    public class A3DCrvLineDataWrapper
+    public class A3DCrvLineWrapper
     {
-        public A3DCrvLineDataWrapper()
+        public A3DCrvLineWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvLineDataWrapper(IntPtr p)
+        public A3DCrvLineWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3856,7 +3856,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvLineDataWrapper()
+        ~A3DCrvLineWrapper()
         {
             API.A3DCrvLineGet( IntPtr.Zero, ref _d );
         }
@@ -3867,14 +3867,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvLineData _d;
     }
-    public class A3DCrvCircleDataWrapper
+    public class A3DCrvCircleWrapper
     {
-        public A3DCrvCircleDataWrapper()
+        public A3DCrvCircleWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvCircleDataWrapper(IntPtr p)
+        public A3DCrvCircleWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3883,7 +3883,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvCircleDataWrapper()
+        ~A3DCrvCircleWrapper()
         {
             API.A3DCrvCircleGet( IntPtr.Zero, ref _d );
         }
@@ -3895,14 +3895,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvCircleData _d;
     }
-    public class A3DCrvEllipseDataWrapper
+    public class A3DCrvEllipseWrapper
     {
-        public A3DCrvEllipseDataWrapper()
+        public A3DCrvEllipseWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvEllipseDataWrapper(IntPtr p)
+        public A3DCrvEllipseWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3911,7 +3911,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvEllipseDataWrapper()
+        ~A3DCrvEllipseWrapper()
         {
             API.A3DCrvEllipseGet( IntPtr.Zero, ref _d );
         }
@@ -3924,14 +3924,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvEllipseData _d;
     }
-    public class A3DCrvParabolaDataWrapper
+    public class A3DCrvParabolaWrapper
     {
-        public A3DCrvParabolaDataWrapper()
+        public A3DCrvParabolaWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvParabolaDataWrapper(IntPtr p)
+        public A3DCrvParabolaWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3940,7 +3940,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvParabolaDataWrapper()
+        ~A3DCrvParabolaWrapper()
         {
             API.A3DCrvParabolaGet( IntPtr.Zero, ref _d );
         }
@@ -3953,14 +3953,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvParabolaData _d;
     }
-    public class A3DCrvHyperbolaDataWrapper
+    public class A3DCrvHyperbolaWrapper
     {
-        public A3DCrvHyperbolaDataWrapper()
+        public A3DCrvHyperbolaWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvHyperbolaDataWrapper(IntPtr p)
+        public A3DCrvHyperbolaWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3969,7 +3969,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvHyperbolaDataWrapper()
+        ~A3DCrvHyperbolaWrapper()
         {
             API.A3DCrvHyperbolaGet( IntPtr.Zero, ref _d );
         }
@@ -3983,14 +3983,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvHyperbolaData _d;
     }
-    public class A3DCrvPolyLineDataWrapper
+    public class A3DCrvPolyLineWrapper
     {
-        public A3DCrvPolyLineDataWrapper()
+        public A3DCrvPolyLineWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvPolyLineDataWrapper(IntPtr p)
+        public A3DCrvPolyLineWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -3999,7 +3999,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvPolyLineDataWrapper()
+        ~A3DCrvPolyLineWrapper()
         {
             API.A3DCrvPolyLineGet( IntPtr.Zero, ref _d );
         }
@@ -4012,14 +4012,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvPolyLineData _d;
     }
-    public class A3DCrvCompositeDataWrapper
+    public class A3DCrvCompositeWrapper
     {
-        public A3DCrvCompositeDataWrapper()
+        public A3DCrvCompositeWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvCompositeDataWrapper(IntPtr p)
+        public A3DCrvCompositeWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4028,7 +4028,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvCompositeDataWrapper()
+        ~A3DCrvCompositeWrapper()
         {
             API.A3DCrvCompositeGet( IntPtr.Zero, ref _d );
         }
@@ -4043,14 +4043,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvCompositeData _d;
     }
-    public class A3DCrvEquationDataWrapper
+    public class A3DCrvEquationWrapper
     {
-        public A3DCrvEquationDataWrapper()
+        public A3DCrvEquationWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvEquationDataWrapper(IntPtr p)
+        public A3DCrvEquationWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4059,7 +4059,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvEquationDataWrapper()
+        ~A3DCrvEquationWrapper()
         {
             API.A3DCrvEquationGet( IntPtr.Zero, ref _d );
         }
@@ -4074,14 +4074,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvEquationData _d;
     }
-    public class A3DCrvTransformDataWrapper
+    public class A3DCrvTransformWrapper
     {
-        public A3DCrvTransformDataWrapper()
+        public A3DCrvTransformWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvTransformDataWrapper(IntPtr p)
+        public A3DCrvTransformWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4090,7 +4090,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvTransformDataWrapper()
+        ~A3DCrvTransformWrapper()
         {
             API.A3DCrvTransformGet( IntPtr.Zero, ref _d );
         }
@@ -4103,14 +4103,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvTransformData _d;
     }
-    public class A3DCrvOnSurfDataWrapper
+    public class A3DCrvOnSurfWrapper
     {
-        public A3DCrvOnSurfDataWrapper()
+        public A3DCrvOnSurfWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvOnSurfDataWrapper(IntPtr p)
+        public A3DCrvOnSurfWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4119,7 +4119,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvOnSurfDataWrapper()
+        ~A3DCrvOnSurfWrapper()
         {
             API.A3DCrvOnSurfGet( IntPtr.Zero, ref _d );
         }
@@ -4132,14 +4132,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvOnSurfData _d;
     }
-    public class A3DCrvOffsetDataWrapper
+    public class A3DCrvOffsetWrapper
     {
-        public A3DCrvOffsetDataWrapper()
+        public A3DCrvOffsetWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvOffsetDataWrapper(IntPtr p)
+        public A3DCrvOffsetWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4148,7 +4148,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvOffsetDataWrapper()
+        ~A3DCrvOffsetWrapper()
         {
             API.A3DCrvOffsetGet( IntPtr.Zero, ref _d );
         }
@@ -4162,14 +4162,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvOffsetData _d;
     }
-    public class A3DCrvHelixPitchCstDataWrapper
+    public class A3DCrvHelixPitchCstWrapper
     {
-        public A3DCrvHelixPitchCstDataWrapper()
+        public A3DCrvHelixPitchCstWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DCrvHelixPitchCstDataWrapper()
+        ~A3DCrvHelixPitchCstWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -4182,14 +4182,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvHelixPitchCstData _d;
     }
-    public class A3DCrvHelixPitchVarDataWrapper
+    public class A3DCrvHelixPitchVarWrapper
     {
-        public A3DCrvHelixPitchVarDataWrapper()
+        public A3DCrvHelixPitchVarWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DCrvHelixPitchVarDataWrapper()
+        ~A3DCrvHelixPitchVarWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -4207,14 +4207,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvHelixPitchVarData _d;
     }
-    public class A3DCrvHelixDataWrapper
+    public class A3DCrvHelixWrapper
     {
-        public A3DCrvHelixDataWrapper()
+        public A3DCrvHelixWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvHelixDataWrapper(IntPtr p)
+        public A3DCrvHelixWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4223,7 +4223,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvHelixDataWrapper()
+        ~A3DCrvHelixWrapper()
         {
             API.A3DCrvHelixGet( IntPtr.Zero, ref _d );
         }
@@ -4237,14 +4237,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvHelixData _d;
     }
-    public class A3DCrossingPointsCrvIntersectionDataWrapper
+    public class A3DCrossingPointsCrvIntersectionWrapper
     {
-        public A3DCrossingPointsCrvIntersectionDataWrapper()
+        public A3DCrossingPointsCrvIntersectionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DCrossingPointsCrvIntersectionDataWrapper()
+        ~A3DCrossingPointsCrvIntersectionWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -4258,14 +4258,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrossingPointsCrvIntersectionData _d;
     }
-    public class A3DCrvIntersectionDataWrapper
+    public class A3DCrvIntersectionWrapper
     {
-        public A3DCrvIntersectionDataWrapper()
+        public A3DCrvIntersectionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvIntersectionDataWrapper(IntPtr p)
+        public A3DCrvIntersectionWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4274,7 +4274,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvIntersectionDataWrapper()
+        ~A3DCrvIntersectionWrapper()
         {
             API.A3DCrvIntersectionGet( IntPtr.Zero, ref _d );
         }
@@ -4299,14 +4299,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvIntersectionData _d;
     }
-    public class A3DCrvBlend02BoundaryDataWrapper
+    public class A3DCrvBlend02BoundaryWrapper
     {
-        public A3DCrvBlend02BoundaryDataWrapper()
+        public A3DCrvBlend02BoundaryWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DCrvBlend02BoundaryDataWrapper(IntPtr p)
+        public A3DCrvBlend02BoundaryWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4315,7 +4315,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DCrvBlend02BoundaryDataWrapper()
+        ~A3DCrvBlend02BoundaryWrapper()
         {
             API.A3DCrvBlend02BoundaryGet( IntPtr.Zero, ref _d );
         }
@@ -4342,14 +4342,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCrvBlend02BoundaryData _d;
     }
-    public class A3DSurfNurbsDataWrapper
+    public class A3DSurfNurbsWrapper
     {
-        public A3DSurfNurbsDataWrapper()
+        public A3DSurfNurbsWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfNurbsDataWrapper(IntPtr p)
+        public A3DSurfNurbsWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4358,7 +4358,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfNurbsDataWrapper()
+        ~A3DSurfNurbsWrapper()
         {
             API.A3DSurfNurbsGet( IntPtr.Zero, ref _d );
         }
@@ -4378,14 +4378,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfNurbsData _d;
     }
-    public class A3DSurfSphereDataWrapper
+    public class A3DSurfSphereWrapper
     {
-        public A3DSurfSphereDataWrapper()
+        public A3DSurfSphereWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfSphereDataWrapper(IntPtr p)
+        public A3DSurfSphereWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4394,7 +4394,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfSphereDataWrapper()
+        ~A3DSurfSphereWrapper()
         {
             API.A3DSurfSphereGet( IntPtr.Zero, ref _d );
         }
@@ -4405,14 +4405,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfSphereData _d;
     }
-    public class A3DSurfCylinderDataWrapper
+    public class A3DSurfCylinderWrapper
     {
-        public A3DSurfCylinderDataWrapper()
+        public A3DSurfCylinderWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfCylinderDataWrapper(IntPtr p)
+        public A3DSurfCylinderWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4421,7 +4421,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfCylinderDataWrapper()
+        ~A3DSurfCylinderWrapper()
         {
             API.A3DSurfCylinderGet( IntPtr.Zero, ref _d );
         }
@@ -4432,14 +4432,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfCylinderData _d;
     }
-    public class A3DSurfTorusDataWrapper
+    public class A3DSurfTorusWrapper
     {
-        public A3DSurfTorusDataWrapper()
+        public A3DSurfTorusWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfTorusDataWrapper(IntPtr p)
+        public A3DSurfTorusWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4448,7 +4448,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfTorusDataWrapper()
+        ~A3DSurfTorusWrapper()
         {
             API.A3DSurfTorusGet( IntPtr.Zero, ref _d );
         }
@@ -4460,14 +4460,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfTorusData _d;
     }
-    public class A3DSurfRevolutionDataWrapper
+    public class A3DSurfRevolutionWrapper
     {
-        public A3DSurfRevolutionDataWrapper()
+        public A3DSurfRevolutionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfRevolutionDataWrapper(IntPtr p)
+        public A3DSurfRevolutionWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4476,7 +4476,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfRevolutionDataWrapper()
+        ~A3DSurfRevolutionWrapper()
         {
             API.A3DSurfRevolutionGet( IntPtr.Zero, ref _d );
         }
@@ -4489,14 +4489,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfRevolutionData _d;
     }
-    public class A3DSurfExtrusionDataWrapper
+    public class A3DSurfExtrusionWrapper
     {
-        public A3DSurfExtrusionDataWrapper()
+        public A3DSurfExtrusionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfExtrusionDataWrapper(IntPtr p)
+        public A3DSurfExtrusionWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4505,7 +4505,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfExtrusionDataWrapper()
+        ~A3DSurfExtrusionWrapper()
         {
             API.A3DSurfExtrusionGet( IntPtr.Zero, ref _d );
         }
@@ -4517,14 +4517,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfExtrusionData _d;
     }
-    public class A3DSurfOffsetDataWrapper
+    public class A3DSurfOffsetWrapper
     {
-        public A3DSurfOffsetDataWrapper()
+        public A3DSurfOffsetWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfOffsetDataWrapper(IntPtr p)
+        public A3DSurfOffsetWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4533,7 +4533,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfOffsetDataWrapper()
+        ~A3DSurfOffsetWrapper()
         {
             API.A3DSurfOffsetGet( IntPtr.Zero, ref _d );
         }
@@ -4545,14 +4545,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfOffsetData _d;
     }
-    public class A3DSurfPlaneDataWrapper
+    public class A3DSurfPlaneWrapper
     {
-        public A3DSurfPlaneDataWrapper()
+        public A3DSurfPlaneWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfPlaneDataWrapper(IntPtr p)
+        public A3DSurfPlaneWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4561,7 +4561,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfPlaneDataWrapper()
+        ~A3DSurfPlaneWrapper()
         {
             API.A3DSurfPlaneGet( IntPtr.Zero, ref _d );
         }
@@ -4571,14 +4571,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfPlaneData _d;
     }
-    public class A3DSurfBlend01DataWrapper
+    public class A3DSurfBlend01Wrapper
     {
-        public A3DSurfBlend01DataWrapper()
+        public A3DSurfBlend01Wrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfBlend01DataWrapper(IntPtr p)
+        public A3DSurfBlend01Wrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4587,7 +4587,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfBlend01DataWrapper()
+        ~A3DSurfBlend01Wrapper()
         {
             API.A3DSurfBlend01Get( IntPtr.Zero, ref _d );
         }
@@ -4600,14 +4600,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfBlend01Data _d;
     }
-    public class A3DSurfBlend02DataWrapper
+    public class A3DSurfBlend02Wrapper
     {
-        public A3DSurfBlend02DataWrapper()
+        public A3DSurfBlend02Wrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfBlend02DataWrapper(IntPtr p)
+        public A3DSurfBlend02Wrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4616,7 +4616,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfBlend02DataWrapper()
+        ~A3DSurfBlend02Wrapper()
         {
             API.A3DSurfBlend02Get( IntPtr.Zero, ref _d );
         }
@@ -4639,14 +4639,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfBlend02Data _d;
     }
-    public class A3DSurfBlend03DataWrapper
+    public class A3DSurfBlend03Wrapper
     {
-        public A3DSurfBlend03DataWrapper()
+        public A3DSurfBlend03Wrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfBlend03DataWrapper(IntPtr p)
+        public A3DSurfBlend03Wrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4655,7 +4655,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfBlend03DataWrapper()
+        ~A3DSurfBlend03Wrapper()
         {
             API.A3DSurfBlend03Get( IntPtr.Zero, ref _d );
         }
@@ -4693,14 +4693,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfBlend03Data _d;
     }
-    public class A3DSurfConeDataWrapper
+    public class A3DSurfConeWrapper
     {
-        public A3DSurfConeDataWrapper()
+        public A3DSurfConeWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfConeDataWrapper(IntPtr p)
+        public A3DSurfConeWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4709,7 +4709,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfConeDataWrapper()
+        ~A3DSurfConeWrapper()
         {
             API.A3DSurfConeGet( IntPtr.Zero, ref _d );
         }
@@ -4722,14 +4722,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfConeData _d;
     }
-    public class A3DSurfCylindricalDataWrapper
+    public class A3DSurfCylindricalWrapper
     {
-        public A3DSurfCylindricalDataWrapper()
+        public A3DSurfCylindricalWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfCylindricalDataWrapper(IntPtr p)
+        public A3DSurfCylindricalWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4738,7 +4738,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfCylindricalDataWrapper()
+        ~A3DSurfCylindricalWrapper()
         {
             API.A3DSurfCylindricalGet( IntPtr.Zero, ref _d );
         }
@@ -4749,14 +4749,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfCylindricalData _d;
     }
-    public class A3DSurfRuledDataWrapper
+    public class A3DSurfRuledWrapper
     {
-        public A3DSurfRuledDataWrapper()
+        public A3DSurfRuledWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfRuledDataWrapper(IntPtr p)
+        public A3DSurfRuledWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4765,7 +4765,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfRuledDataWrapper()
+        ~A3DSurfRuledWrapper()
         {
             API.A3DSurfRuledGet( IntPtr.Zero, ref _d );
         }
@@ -4777,14 +4777,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfRuledData _d;
     }
-    public class A3DSurfPipeDataWrapper
+    public class A3DSurfPipeWrapper
     {
-        public A3DSurfPipeDataWrapper()
+        public A3DSurfPipeWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfPipeDataWrapper(IntPtr p)
+        public A3DSurfPipeWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4793,7 +4793,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfPipeDataWrapper()
+        ~A3DSurfPipeWrapper()
         {
             API.A3DSurfPipeGet( IntPtr.Zero, ref _d );
         }
@@ -4806,14 +4806,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfPipeData _d;
     }
-    public class A3DSurfTransformDataWrapper
+    public class A3DSurfTransformWrapper
     {
-        public A3DSurfTransformDataWrapper()
+        public A3DSurfTransformWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfTransformDataWrapper(IntPtr p)
+        public A3DSurfTransformWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4822,7 +4822,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfTransformDataWrapper()
+        ~A3DSurfTransformWrapper()
         {
             API.A3DSurfTransformGet( IntPtr.Zero, ref _d );
         }
@@ -4834,14 +4834,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfTransformData _d;
     }
-    public class A3DSurfFromCurvesDataWrapper
+    public class A3DSurfFromCurvesWrapper
     {
-        public A3DSurfFromCurvesDataWrapper()
+        public A3DSurfFromCurvesWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DSurfFromCurvesDataWrapper(IntPtr p)
+        public A3DSurfFromCurvesWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4850,7 +4850,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DSurfFromCurvesDataWrapper()
+        ~A3DSurfFromCurvesWrapper()
         {
             API.A3DSurfFromCurvesGet( IntPtr.Zero, ref _d );
         }
@@ -4863,14 +4863,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DSurfFromCurvesData _d;
     }
-    public class A3DGlobalDataWrapper
+    public class A3DGlobalWrapper
     {
-        public A3DGlobalDataWrapper()
+        public A3DGlobalWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DGlobalDataWrapper(IntPtr p)
+        public A3DGlobalWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4879,7 +4879,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DGlobalDataWrapper()
+        ~A3DGlobalWrapper()
         {
             API.A3DGlobalGet( IntPtr.Zero, ref _d );
         }
@@ -4895,14 +4895,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DGlobalData _d;
     }
-    public class A3DMDPosition3DDataWrapper
+    public class A3DMDPosition3DWrapper
     {
-        public A3DMDPosition3DDataWrapper()
+        public A3DMDPosition3DWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDPosition3DDataWrapper(IntPtr p)
+        public A3DMDPosition3DWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4911,7 +4911,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDPosition3DDataWrapper()
+        ~A3DMDPosition3DWrapper()
         {
             API.A3DMDPosition3DGet( IntPtr.Zero, ref _d );
         }
@@ -4920,14 +4920,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDPosition3DData _d;
     }
-    public class A3DMDPosition2DDataWrapper
+    public class A3DMDPosition2DWrapper
     {
-        public A3DMDPosition2DDataWrapper()
+        public A3DMDPosition2DWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDPosition2DDataWrapper(IntPtr p)
+        public A3DMDPosition2DWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4936,7 +4936,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDPosition2DDataWrapper()
+        ~A3DMDPosition2DWrapper()
         {
             API.A3DMDPosition2DGet( IntPtr.Zero, ref _d );
         }
@@ -4947,14 +4947,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDPosition2DData _d;
     }
-    public class A3DMDPositionReferenceDataWrapper
+    public class A3DMDPositionReferenceWrapper
     {
-        public A3DMDPositionReferenceDataWrapper()
+        public A3DMDPositionReferenceWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDPositionReferenceDataWrapper(IntPtr p)
+        public A3DMDPositionReferenceWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4963,7 +4963,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDPositionReferenceDataWrapper()
+        ~A3DMDPositionReferenceWrapper()
         {
             API.A3DMDPositionReferenceGet( IntPtr.Zero, ref _d );
         }
@@ -4974,14 +4974,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDPositionReferenceData _d;
     }
-    public class A3DMDLeaderSymbolDataWrapper
+    public class A3DMDLeaderSymbolWrapper
     {
-        public A3DMDLeaderSymbolDataWrapper()
+        public A3DMDLeaderSymbolWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDLeaderSymbolDataWrapper(IntPtr p)
+        public A3DMDLeaderSymbolWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -4990,7 +4990,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDLeaderSymbolDataWrapper()
+        ~A3DMDLeaderSymbolWrapper()
         {
             API.A3DMDLeaderSymbolGet( IntPtr.Zero, ref _d );
         }
@@ -5001,14 +5001,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDLeaderSymbolData _d;
     }
-    public class A3DMDMarkupLeaderStubDataWrapper
+    public class A3DMDMarkupLeaderStubWrapper
     {
-        public A3DMDMarkupLeaderStubDataWrapper()
+        public A3DMDMarkupLeaderStubWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDMarkupLeaderStubDataWrapper(IntPtr p)
+        public A3DMDMarkupLeaderStubWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5017,7 +5017,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDMarkupLeaderStubDataWrapper()
+        ~A3DMDMarkupLeaderStubWrapper()
         {
             API.A3DMDMarkupLeaderStubGet( IntPtr.Zero, ref _d );
         }
@@ -5028,14 +5028,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDMarkupLeaderStubData _d;
     }
-    public class A3DMDLeaderDefinitionDataWrapper
+    public class A3DMDLeaderDefinitionWrapper
     {
-        public A3DMDLeaderDefinitionDataWrapper()
+        public A3DMDLeaderDefinitionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDLeaderDefinitionDataWrapper(IntPtr p)
+        public A3DMDLeaderDefinitionWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5044,7 +5044,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDLeaderDefinitionDataWrapper()
+        ~A3DMDLeaderDefinitionWrapper()
         {
             API.A3DMDLeaderDefinitionGet( IntPtr.Zero, ref _d );
         }
@@ -5062,14 +5062,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDLeaderDefinitionData _d;
     }
-    public class A3DMDTextPropertiesDataWrapper
+    public class A3DMDTextPropertiesWrapper
     {
-        public A3DMDTextPropertiesDataWrapper()
+        public A3DMDTextPropertiesWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDTextPropertiesDataWrapper(IntPtr p)
+        public A3DMDTextPropertiesWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5078,7 +5078,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDTextPropertiesDataWrapper()
+        ~A3DMDTextPropertiesWrapper()
         {
             API.A3DMDTextPropertiesGet( IntPtr.Zero, ref _d );
         }
@@ -5099,14 +5099,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDTextPropertiesData _d;
     }
-    public class A3DMarkupDefinitionDataWrapper
+    public class A3DMarkupDefinitionWrapper
     {
-        public A3DMarkupDefinitionDataWrapper()
+        public A3DMarkupDefinitionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupDefinitionDataWrapper(IntPtr p)
+        public A3DMarkupDefinitionWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5115,7 +5115,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupDefinitionDataWrapper()
+        ~A3DMarkupDefinitionWrapper()
         {
             API.A3DMarkupDefinitionGet( IntPtr.Zero, ref _d );
         }
@@ -5129,14 +5129,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupDefinitionData _d;
     }
-    public class A3DMDDimensionValueFormatDataWrapper
+    public class A3DMDDimensionValueFormatWrapper
     {
-        public A3DMDDimensionValueFormatDataWrapper()
+        public A3DMDDimensionValueFormatWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDDimensionValueFormatDataWrapper(IntPtr p)
+        public A3DMDDimensionValueFormatWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5145,7 +5145,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDDimensionValueFormatDataWrapper()
+        ~A3DMDDimensionValueFormatWrapper()
         {
             API.A3DMDDimensionValueFormatGet( IntPtr.Zero, ref _d );
         }
@@ -5186,14 +5186,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDDimensionValueFormatData _d;
     }
-    public class A3DMDDimensionSimpleToleranceFormatDataWrapper
+    public class A3DMDDimensionSimpleToleranceFormatWrapper
     {
-        public A3DMDDimensionSimpleToleranceFormatDataWrapper()
+        public A3DMDDimensionSimpleToleranceFormatWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDDimensionSimpleToleranceFormatDataWrapper(IntPtr p)
+        public A3DMDDimensionSimpleToleranceFormatWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5202,7 +5202,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDDimensionSimpleToleranceFormatDataWrapper()
+        ~A3DMDDimensionSimpleToleranceFormatWrapper()
         {
             API.A3DMDDimensionSimpleToleranceFormatGet( IntPtr.Zero, ref _d );
         }
@@ -5229,14 +5229,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDDimensionSimpleToleranceFormatData _d;
     }
-    public class A3DMDDimensionCombinedToleranceFormatDataWrapper
+    public class A3DMDDimensionCombinedToleranceFormatWrapper
     {
-        public A3DMDDimensionCombinedToleranceFormatDataWrapper()
+        public A3DMDDimensionCombinedToleranceFormatWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDDimensionCombinedToleranceFormatDataWrapper(IntPtr p)
+        public A3DMDDimensionCombinedToleranceFormatWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5245,7 +5245,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDDimensionCombinedToleranceFormatDataWrapper()
+        ~A3DMDDimensionCombinedToleranceFormatWrapper()
         {
             API.A3DMDDimensionCombinedToleranceFormatGet( IntPtr.Zero, ref _d );
         }
@@ -5267,14 +5267,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDDimensionCombinedToleranceFormatData _d;
     }
-    public class A3DMDDimensionValueDataWrapper
+    public class A3DMDDimensionValueWrapper
     {
-        public A3DMDDimensionValueDataWrapper()
+        public A3DMDDimensionValueWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDDimensionValueDataWrapper(IntPtr p)
+        public A3DMDDimensionValueWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5283,7 +5283,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDDimensionValueDataWrapper()
+        ~A3DMDDimensionValueWrapper()
         {
             API.A3DMDDimensionValueGet( IntPtr.Zero, ref _d );
         }
@@ -5310,14 +5310,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDDimensionValueData _d;
     }
-    public class A3DMDDimensionSecondPartDataWrapper
+    public class A3DMDDimensionSecondPartWrapper
     {
-        public A3DMDDimensionSecondPartDataWrapper()
+        public A3DMDDimensionSecondPartWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDDimensionSecondPartDataWrapper(IntPtr p)
+        public A3DMDDimensionSecondPartWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5326,7 +5326,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDDimensionSecondPartDataWrapper()
+        ~A3DMDDimensionSecondPartWrapper()
         {
             API.A3DMDDimensionSecondPartGet( IntPtr.Zero, ref _d );
         }
@@ -5337,14 +5337,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDDimensionSecondPartData _d;
     }
-    public class A3DMDDimensionForeshortenedDataWrapper
+    public class A3DMDDimensionForeshortenedWrapper
     {
-        public A3DMDDimensionForeshortenedDataWrapper()
+        public A3DMDDimensionForeshortenedWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDDimensionForeshortenedDataWrapper(IntPtr p)
+        public A3DMDDimensionForeshortenedWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5353,7 +5353,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDDimensionForeshortenedDataWrapper()
+        ~A3DMDDimensionForeshortenedWrapper()
         {
             API.A3DMDDimensionForeshortenedGet( IntPtr.Zero, ref _d );
         }
@@ -5366,14 +5366,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDDimensionForeshortenedData _d;
     }
-    public class A3DMDDimensionLineSymbolDataWrapper
+    public class A3DMDDimensionLineSymbolWrapper
     {
-        public A3DMDDimensionLineSymbolDataWrapper()
+        public A3DMDDimensionLineSymbolWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDDimensionLineSymbolDataWrapper(IntPtr p)
+        public A3DMDDimensionLineSymbolWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5382,7 +5382,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDDimensionLineSymbolDataWrapper()
+        ~A3DMDDimensionLineSymbolWrapper()
         {
             API.A3DMDDimensionLineSymbolGet( IntPtr.Zero, ref _d );
         }
@@ -5395,14 +5395,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDDimensionLineSymbolData _d;
     }
-    public class A3DMDDimensionLineDataWrapper
+    public class A3DMDDimensionLineWrapper
     {
-        public A3DMDDimensionLineDataWrapper()
+        public A3DMDDimensionLineWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDDimensionLineDataWrapper(IntPtr p)
+        public A3DMDDimensionLineWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5411,7 +5411,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDDimensionLineDataWrapper()
+        ~A3DMDDimensionLineWrapper()
         {
             API.A3DMDDimensionLineGet( IntPtr.Zero, ref _d );
         }
@@ -5431,14 +5431,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDDimensionLineData _d;
     }
-    public class A3DMDDimensionFunnelDataWrapper
+    public class A3DMDDimensionFunnelWrapper
     {
-        public A3DMDDimensionFunnelDataWrapper()
+        public A3DMDDimensionFunnelWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDDimensionFunnelDataWrapper(IntPtr p)
+        public A3DMDDimensionFunnelWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5447,7 +5447,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDDimensionFunnelDataWrapper()
+        ~A3DMDDimensionFunnelWrapper()
         {
             API.A3DMDDimensionFunnelGet( IntPtr.Zero, ref _d );
         }
@@ -5460,14 +5460,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDDimensionFunnelData _d;
     }
-    public class A3DMDDimensionExtremityDataWrapper
+    public class A3DMDDimensionExtremityWrapper
     {
-        public A3DMDDimensionExtremityDataWrapper()
+        public A3DMDDimensionExtremityWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDDimensionExtremityDataWrapper(IntPtr p)
+        public A3DMDDimensionExtremityWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5476,7 +5476,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDDimensionExtremityDataWrapper()
+        ~A3DMDDimensionExtremityWrapper()
         {
             API.A3DMDDimensionExtremityGet( IntPtr.Zero, ref _d );
         }
@@ -5487,14 +5487,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDDimensionExtremityData _d;
     }
-    public class A3DMDDimensionExtentionLineDataWrapper
+    public class A3DMDDimensionExtentionLineWrapper
     {
-        public A3DMDDimensionExtentionLineDataWrapper()
+        public A3DMDDimensionExtentionLineWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDDimensionExtentionLineDataWrapper(IntPtr p)
+        public A3DMDDimensionExtentionLineWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5503,7 +5503,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDDimensionExtentionLineDataWrapper()
+        ~A3DMDDimensionExtentionLineWrapper()
         {
             API.A3DMDDimensionExtentionLineGet( IntPtr.Zero, ref _d );
         }
@@ -5517,14 +5517,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDDimensionExtentionLineData _d;
     }
-    public class A3DMarkupDimensionDataWrapper
+    public class A3DMarkupDimensionWrapper
     {
-        public A3DMarkupDimensionDataWrapper()
+        public A3DMarkupDimensionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupDimensionDataWrapper(IntPtr p)
+        public A3DMarkupDimensionWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5533,7 +5533,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupDimensionDataWrapper()
+        ~A3DMarkupDimensionWrapper()
         {
             API.A3DMarkupDimensionGet( IntPtr.Zero, ref _d );
         }
@@ -5563,14 +5563,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupDimensionData _d;
     }
-    public class A3DMarkupRoughnessDataWrapper
+    public class A3DMarkupRoughnessWrapper
     {
-        public A3DMarkupRoughnessDataWrapper()
+        public A3DMarkupRoughnessWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupRoughnessDataWrapper(IntPtr p)
+        public A3DMarkupRoughnessWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5579,7 +5579,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupRoughnessDataWrapper()
+        ~A3DMarkupRoughnessWrapper()
         {
             API.A3DMarkupRoughnessGet( IntPtr.Zero, ref _d );
         }
@@ -5600,14 +5600,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupRoughnessData _d;
     }
-    public class A3DMarkupBalloonDataWrapper
+    public class A3DMarkupBalloonWrapper
     {
-        public A3DMarkupBalloonDataWrapper()
+        public A3DMarkupBalloonWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupBalloonDataWrapper(IntPtr p)
+        public A3DMarkupBalloonWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5616,7 +5616,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupBalloonDataWrapper()
+        ~A3DMarkupBalloonWrapper()
         {
             API.A3DMarkupBalloonGet( IntPtr.Zero, ref _d );
         }
@@ -5632,14 +5632,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupBalloonData _d;
     }
-    public class A3DMarkupFastenerDataWrapper
+    public class A3DMarkupFastenerWrapper
     {
-        public A3DMarkupFastenerDataWrapper()
+        public A3DMarkupFastenerWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupFastenerDataWrapper(IntPtr p)
+        public A3DMarkupFastenerWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5648,7 +5648,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupFastenerDataWrapper()
+        ~A3DMarkupFastenerWrapper()
         {
             API.A3DMarkupFastenerGet( IntPtr.Zero, ref _d );
         }
@@ -5677,14 +5677,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupFastenerData _d;
     }
-    public class A3DMarkupLocatorDataWrapper
+    public class A3DMarkupLocatorWrapper
     {
-        public A3DMarkupLocatorDataWrapper()
+        public A3DMarkupLocatorWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupLocatorDataWrapper(IntPtr p)
+        public A3DMarkupLocatorWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5693,7 +5693,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupLocatorDataWrapper()
+        ~A3DMarkupLocatorWrapper()
         {
             API.A3DMarkupLocatorGet( IntPtr.Zero, ref _d );
         }
@@ -5722,14 +5722,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupLocatorData _d;
     }
-    public class A3DMarkupMeasurementPointDataWrapper
+    public class A3DMarkupMeasurementPointWrapper
     {
-        public A3DMarkupMeasurementPointDataWrapper()
+        public A3DMarkupMeasurementPointWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupMeasurementPointDataWrapper(IntPtr p)
+        public A3DMarkupMeasurementPointWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5738,7 +5738,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupMeasurementPointDataWrapper()
+        ~A3DMarkupMeasurementPointWrapper()
         {
             API.A3DMarkupMeasurementPointGet( IntPtr.Zero, ref _d );
         }
@@ -5756,14 +5756,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupMeasurementPointData _d;
     }
-    public class A3DMDTextPositionDataWrapper
+    public class A3DMDTextPositionWrapper
     {
-        public A3DMDTextPositionDataWrapper()
+        public A3DMDTextPositionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDTextPositionDataWrapper(IntPtr p)
+        public A3DMDTextPositionWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5772,7 +5772,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDTextPositionDataWrapper()
+        ~A3DMDTextPositionWrapper()
         {
             API.A3DMDTextPositionGet( IntPtr.Zero, ref _d );
         }
@@ -5783,14 +5783,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDTextPositionData _d;
     }
-    public class A3DMarkupTextDataWrapper
+    public class A3DMarkupTextWrapper
     {
-        public A3DMarkupTextDataWrapper()
+        public A3DMarkupTextWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupTextDataWrapper(IntPtr p)
+        public A3DMarkupTextWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5799,7 +5799,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupTextDataWrapper()
+        ~A3DMarkupTextWrapper()
         {
             API.A3DMarkupTextGet( IntPtr.Zero, ref _d );
         }
@@ -5816,14 +5816,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupTextData _d;
     }
-    public class A3DMarkupCoordinateDataWrapper
+    public class A3DMarkupCoordinateWrapper
     {
-        public A3DMarkupCoordinateDataWrapper()
+        public A3DMarkupCoordinateWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupCoordinateDataWrapper(IntPtr p)
+        public A3DMarkupCoordinateWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5832,7 +5832,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupCoordinateDataWrapper()
+        ~A3DMarkupCoordinateWrapper()
         {
             API.A3DMarkupCoordinateGet( IntPtr.Zero, ref _d );
         }
@@ -5845,14 +5845,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupCoordinateData _d;
     }
-    public class A3DMarkupRichTextDataWrapper
+    public class A3DMarkupRichTextWrapper
     {
-        public A3DMarkupRichTextDataWrapper()
+        public A3DMarkupRichTextWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupRichTextDataWrapper(IntPtr p)
+        public A3DMarkupRichTextWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5861,7 +5861,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupRichTextDataWrapper()
+        ~A3DMarkupRichTextWrapper()
         {
             API.A3DMarkupRichTextGet( IntPtr.Zero, ref _d );
         }
@@ -5877,14 +5877,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupRichTextData _d;
     }
-    public class A3DMarkupDatumDataWrapper
+    public class A3DMarkupDatumWrapper
     {
-        public A3DMarkupDatumDataWrapper()
+        public A3DMarkupDatumWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupDatumDataWrapper(IntPtr p)
+        public A3DMarkupDatumWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5893,7 +5893,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupDatumDataWrapper()
+        ~A3DMarkupDatumWrapper()
         {
             API.A3DMarkupDatumGet( IntPtr.Zero, ref _d );
         }
@@ -5911,14 +5911,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupDatumData _d;
     }
-    public class A3DMDFCFDraftingRowDataWrapper
+    public class A3DMDFCFDraftingRowWrapper
     {
-        public A3DMDFCFDraftingRowDataWrapper()
+        public A3DMDFCFDraftingRowWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDFCFDraftingRowDataWrapper(IntPtr p)
+        public A3DMDFCFDraftingRowWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5927,7 +5927,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDFCFDraftingRowDataWrapper()
+        ~A3DMDFCFDraftingRowWrapper()
         {
             API.A3DMDFCFDraftingRowGet( IntPtr.Zero, ref _d );
         }
@@ -5938,14 +5938,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDFCFDraftingRowData _d;
     }
-    public class A3DMDFCValueDataWrapper
+    public class A3DMDFCValueWrapper
     {
-        public A3DMDFCValueDataWrapper()
+        public A3DMDFCValueWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDFCValueDataWrapper(IntPtr p)
+        public A3DMDFCValueWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5954,7 +5954,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDFCValueDataWrapper()
+        ~A3DMDFCValueWrapper()
         {
             API.A3DMDFCValueGet( IntPtr.Zero, ref _d );
         }
@@ -5965,14 +5965,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDFCValueData _d;
     }
-    public class A3DMDFCTolerancePerUnitDataWrapper
+    public class A3DMDFCTolerancePerUnitWrapper
     {
-        public A3DMDFCTolerancePerUnitDataWrapper()
+        public A3DMDFCTolerancePerUnitWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDFCTolerancePerUnitDataWrapper(IntPtr p)
+        public A3DMDFCTolerancePerUnitWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -5981,7 +5981,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDFCTolerancePerUnitDataWrapper()
+        ~A3DMDFCTolerancePerUnitWrapper()
         {
             API.A3DMDFCTolerancePerUnitGet( IntPtr.Zero, ref _d );
         }
@@ -5992,14 +5992,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDFCTolerancePerUnitData _d;
     }
-    public class A3DMDFCProjectedZoneDataWrapper
+    public class A3DMDFCProjectedZoneWrapper
     {
-        public A3DMDFCProjectedZoneDataWrapper()
+        public A3DMDFCProjectedZoneWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDFCProjectedZoneDataWrapper(IntPtr p)
+        public A3DMDFCProjectedZoneWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6008,7 +6008,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDFCProjectedZoneDataWrapper()
+        ~A3DMDFCProjectedZoneWrapper()
         {
             API.A3DMDFCProjectedZoneGet( IntPtr.Zero, ref _d );
         }
@@ -6018,14 +6018,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDFCProjectedZoneData _d;
     }
-    public class A3DMDFCFToleranceValueDataWrapper
+    public class A3DMDFCFToleranceValueWrapper
     {
-        public A3DMDFCFToleranceValueDataWrapper()
+        public A3DMDFCFToleranceValueWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDFCFToleranceValueDataWrapper(IntPtr p)
+        public A3DMDFCFToleranceValueWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6034,7 +6034,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDFCFToleranceValueDataWrapper()
+        ~A3DMDFCFToleranceValueWrapper()
         {
             API.A3DMDFCFToleranceValueGet( IntPtr.Zero, ref _d );
         }
@@ -6052,14 +6052,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDFCFToleranceValueData _d;
     }
-    public class A3DMDFCFRowDatumDataWrapper
+    public class A3DMDFCFRowDatumWrapper
     {
-        public A3DMDFCFRowDatumDataWrapper()
+        public A3DMDFCFRowDatumWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDFCFRowDatumDataWrapper(IntPtr p)
+        public A3DMDFCFRowDatumWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6068,7 +6068,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDFCFRowDatumDataWrapper()
+        ~A3DMDFCFRowDatumWrapper()
         {
             API.A3DMDFCFRowDatumGet( IntPtr.Zero, ref _d );
         }
@@ -6080,14 +6080,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDFCFRowDatumData _d;
     }
-    public class A3DMDFCFDrawingRowDataWrapper
+    public class A3DMDFCFDrawingRowWrapper
     {
-        public A3DMDFCFDrawingRowDataWrapper()
+        public A3DMDFCFDrawingRowWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDFCFDrawingRowDataWrapper(IntPtr p)
+        public A3DMDFCFDrawingRowWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6096,7 +6096,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDFCFDrawingRowDataWrapper()
+        ~A3DMDFCFDrawingRowWrapper()
         {
             API.A3DMDFCFDrawingRowGet( IntPtr.Zero, ref _d );
         }
@@ -6110,14 +6110,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDFCFDrawingRowData _d;
     }
-    public class A3DMDFCFIndicatorDataWrapper
+    public class A3DMDFCFIndicatorWrapper
     {
-        public A3DMDFCFIndicatorDataWrapper()
+        public A3DMDFCFIndicatorWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDFCFIndicatorDataWrapper(IntPtr p)
+        public A3DMDFCFIndicatorWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6126,7 +6126,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDFCFIndicatorDataWrapper()
+        ~A3DMDFCFIndicatorWrapper()
         {
             API.A3DMDFCFIndicatorGet( IntPtr.Zero, ref _d );
         }
@@ -6137,14 +6137,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDFCFIndicatorData _d;
     }
-    public class A3DMDFeatureControlFrameDataWrapper
+    public class A3DMDFeatureControlFrameWrapper
     {
-        public A3DMDFeatureControlFrameDataWrapper()
+        public A3DMDFeatureControlFrameWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDFeatureControlFrameDataWrapper(IntPtr p)
+        public A3DMDFeatureControlFrameWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6153,7 +6153,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDFeatureControlFrameDataWrapper()
+        ~A3DMDFeatureControlFrameWrapper()
         {
             API.A3DMDFeatureControlFrameGet( IntPtr.Zero, ref _d );
         }
@@ -6165,14 +6165,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDFeatureControlFrameData _d;
     }
-    public class A3DMDToleranceSizeValueDataWrapper
+    public class A3DMDToleranceSizeValueWrapper
     {
-        public A3DMDToleranceSizeValueDataWrapper()
+        public A3DMDToleranceSizeValueWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDToleranceSizeValueDataWrapper(IntPtr p)
+        public A3DMDToleranceSizeValueWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6181,7 +6181,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDToleranceSizeValueDataWrapper()
+        ~A3DMDToleranceSizeValueWrapper()
         {
             API.A3DMDToleranceSizeValueGet( IntPtr.Zero, ref _d );
         }
@@ -6195,14 +6195,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDToleranceSizeValueData _d;
     }
-    public class A3DMDToleranceSizeDataWrapper
+    public class A3DMDToleranceSizeWrapper
     {
-        public A3DMDToleranceSizeDataWrapper()
+        public A3DMDToleranceSizeWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMDToleranceSizeDataWrapper(IntPtr p)
+        public A3DMDToleranceSizeWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6211,7 +6211,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMDToleranceSizeDataWrapper()
+        ~A3DMDToleranceSizeWrapper()
         {
             API.A3DMDToleranceSizeGet( IntPtr.Zero, ref _d );
         }
@@ -6221,14 +6221,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMDToleranceSizeData _d;
     }
-    public class A3DMarkupGDTDataWrapper
+    public class A3DMarkupGDTWrapper
     {
-        public A3DMarkupGDTDataWrapper()
+        public A3DMarkupGDTWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupGDTDataWrapper(IntPtr p)
+        public A3DMarkupGDTWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6237,7 +6237,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupGDTDataWrapper()
+        ~A3DMarkupGDTWrapper()
         {
             API.A3DMarkupGDTGet( IntPtr.Zero, ref _d );
         }
@@ -6252,14 +6252,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupGDTData _d;
     }
-    public class A3DMarkupSpotWeldingDataWrapper
+    public class A3DMarkupSpotWeldingWrapper
     {
-        public A3DMarkupSpotWeldingDataWrapper()
+        public A3DMarkupSpotWeldingWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupSpotWeldingDataWrapper(IntPtr p)
+        public A3DMarkupSpotWeldingWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6268,7 +6268,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupSpotWeldingDataWrapper()
+        ~A3DMarkupSpotWeldingWrapper()
         {
             API.A3DMarkupSpotWeldingGet( IntPtr.Zero, ref _d );
         }
@@ -6289,14 +6289,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupSpotWeldingData _d;
     }
-    public class A3DMarkupLineWeldingDataWrapper
+    public class A3DMarkupLineWeldingWrapper
     {
-        public A3DMarkupLineWeldingDataWrapper()
+        public A3DMarkupLineWeldingWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMarkupLineWeldingDataWrapper(IntPtr p)
+        public A3DMarkupLineWeldingWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6305,7 +6305,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMarkupLineWeldingDataWrapper()
+        ~A3DMarkupLineWeldingWrapper()
         {
             API.A3DMarkupLineWeldingGet( IntPtr.Zero, ref _d );
         }
@@ -6342,14 +6342,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMarkupLineWeldingData _d;
     }
-    public class A3DMathFct1DPolynomDataWrapper
+    public class A3DMathFct1DPolynomWrapper
     {
-        public A3DMathFct1DPolynomDataWrapper()
+        public A3DMathFct1DPolynomWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMathFct1DPolynomDataWrapper(IntPtr p)
+        public A3DMathFct1DPolynomWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6358,7 +6358,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMathFct1DPolynomDataWrapper()
+        ~A3DMathFct1DPolynomWrapper()
         {
             API.A3DMathFct1DPolynomGet( IntPtr.Zero, ref _d );
         }
@@ -6368,14 +6368,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMathFct1DPolynomData _d;
     }
-    public class A3DMathFct1DTrigonometricDataWrapper
+    public class A3DMathFct1DTrigonometricWrapper
     {
-        public A3DMathFct1DTrigonometricDataWrapper()
+        public A3DMathFct1DTrigonometricWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMathFct1DTrigonometricDataWrapper(IntPtr p)
+        public A3DMathFct1DTrigonometricWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6384,7 +6384,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMathFct1DTrigonometricDataWrapper()
+        ~A3DMathFct1DTrigonometricWrapper()
         {
             API.A3DMathFct1DTrigonometricGet( IntPtr.Zero, ref _d );
         }
@@ -6396,14 +6396,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMathFct1DTrigonometricData _d;
     }
-    public class A3DMathFct1DFractionDataWrapper
+    public class A3DMathFct1DFractionWrapper
     {
-        public A3DMathFct1DFractionDataWrapper()
+        public A3DMathFct1DFractionWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMathFct1DFractionDataWrapper(IntPtr p)
+        public A3DMathFct1DFractionWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6412,7 +6412,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMathFct1DFractionDataWrapper()
+        ~A3DMathFct1DFractionWrapper()
         {
             API.A3DMathFct1DFractionGet( IntPtr.Zero, ref _d );
         }
@@ -6422,14 +6422,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMathFct1DFractionData _d;
     }
-    public class A3DMathFct1DArctanCosDataWrapper
+    public class A3DMathFct1DArctanCosWrapper
     {
-        public A3DMathFct1DArctanCosDataWrapper()
+        public A3DMathFct1DArctanCosWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMathFct1DArctanCosDataWrapper(IntPtr p)
+        public A3DMathFct1DArctanCosWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6438,7 +6438,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMathFct1DArctanCosDataWrapper()
+        ~A3DMathFct1DArctanCosWrapper()
         {
             API.A3DMathFct1DArctanCosGet( IntPtr.Zero, ref _d );
         }
@@ -6451,14 +6451,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMathFct1DArctanCosData _d;
     }
-    public class A3DMathFct1DCombinationDataWrapper
+    public class A3DMathFct1DCombinationWrapper
     {
-        public A3DMathFct1DCombinationDataWrapper()
+        public A3DMathFct1DCombinationWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMathFct1DCombinationDataWrapper(IntPtr p)
+        public A3DMathFct1DCombinationWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6467,7 +6467,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMathFct1DCombinationDataWrapper()
+        ~A3DMathFct1DCombinationWrapper()
         {
             API.A3DMathFct1DCombinationGet( IntPtr.Zero, ref _d );
         }
@@ -6478,14 +6478,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMathFct1DCombinationData _d;
     }
-    public class A3DMathFct3DLinearDataWrapper
+    public class A3DMathFct3DLinearWrapper
     {
-        public A3DMathFct3DLinearDataWrapper()
+        public A3DMathFct3DLinearWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMathFct3DLinearDataWrapper(IntPtr p)
+        public A3DMathFct3DLinearWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6494,7 +6494,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMathFct3DLinearDataWrapper()
+        ~A3DMathFct3DLinearWrapper()
         {
             API.A3DMathFct3DLinearGet( IntPtr.Zero, ref _d );
         }
@@ -6520,14 +6520,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMathFct3DLinearData _d;
     }
-    public class A3DMathFct3DNonLinearDataWrapper
+    public class A3DMathFct3DNonLinearWrapper
     {
-        public A3DMathFct3DNonLinearDataWrapper()
+        public A3DMathFct3DNonLinearWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMathFct3DNonLinearDataWrapper(IntPtr p)
+        public A3DMathFct3DNonLinearWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6536,7 +6536,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMathFct3DNonLinearDataWrapper()
+        ~A3DMathFct3DNonLinearWrapper()
         {
             API.A3DMathFct3DNonLinearGet( IntPtr.Zero, ref _d );
         }
@@ -6547,14 +6547,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMathFct3DNonLinearData _d;
     }
-    public class A3DRootBaseDataWrapper
+    public class A3DRootBaseWrapper
     {
-        public A3DRootBaseDataWrapper()
+        public A3DRootBaseWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DRootBaseDataWrapper(IntPtr p)
+        public A3DRootBaseWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6563,7 +6563,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DRootBaseDataWrapper()
+        ~A3DRootBaseWrapper()
         {
             API.A3DRootBaseGet( IntPtr.Zero, ref _d );
         }
@@ -6577,14 +6577,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRootBaseData _d;
     }
-    public class A3DRootBaseWithGraphicsDataWrapper
+    public class A3DRootBaseWithGraphicsWrapper
     {
-        public A3DRootBaseWithGraphicsDataWrapper()
+        public A3DRootBaseWithGraphicsWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DRootBaseWithGraphicsDataWrapper(IntPtr p)
+        public A3DRootBaseWithGraphicsWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6593,7 +6593,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DRootBaseWithGraphicsDataWrapper()
+        ~A3DRootBaseWithGraphicsWrapper()
         {
             API.A3DRootBaseWithGraphicsGet( IntPtr.Zero, ref _d );
         }
@@ -6602,14 +6602,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DRootBaseWithGraphicsData _d;
     }
-    public class A3DMiscSingleAttributeDataWrapper
+    public class A3DMiscSingleAttributeWrapper
     {
-        public A3DMiscSingleAttributeDataWrapper()
+        public A3DMiscSingleAttributeWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMiscSingleAttributeDataWrapper()
+        ~A3DMiscSingleAttributeWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -6621,14 +6621,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscSingleAttributeData _d;
     }
-    public class A3DMiscAttributeDataWrapper
+    public class A3DMiscAttributeWrapper
     {
-        public A3DMiscAttributeDataWrapper()
+        public A3DMiscAttributeWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DMiscAttributeDataWrapper(IntPtr p)
+        public A3DMiscAttributeWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6637,7 +6637,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DMiscAttributeDataWrapper()
+        ~A3DMiscAttributeWrapper()
         {
             API.A3DMiscAttributeGet( IntPtr.Zero, ref _d );
         }
@@ -6649,14 +6649,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscAttributeData _d;
     }
-    public class A3DMiscAttributeBasicUnitDataWrapper
+    public class A3DMiscAttributeBasicUnitWrapper
     {
-        public A3DMiscAttributeBasicUnitDataWrapper()
+        public A3DMiscAttributeBasicUnitWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMiscAttributeBasicUnitDataWrapper()
+        ~A3DMiscAttributeBasicUnitWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -6666,14 +6666,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscAttributeBasicUnitData _d;
     }
-    public class A3DMiscAttributeUnitDataWrapper
+    public class A3DMiscAttributeUnitWrapper
     {
-        public A3DMiscAttributeUnitDataWrapper()
+        public A3DMiscAttributeUnitWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DMiscAttributeUnitDataWrapper()
+        ~A3DMiscAttributeUnitWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -6683,14 +6683,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DMiscAttributeUnitData _d;
     }
-    public class A3DCopyAndAdaptBrepModelDataWrapper
+    public class A3DCopyAndAdaptBrepModelWrapper
     {
-        public A3DCopyAndAdaptBrepModelDataWrapper()
+        public A3DCopyAndAdaptBrepModelWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DCopyAndAdaptBrepModelDataWrapper()
+        ~A3DCopyAndAdaptBrepModelWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -6712,14 +6712,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DCopyAndAdaptBrepModelData _d;
     }
-    public class A3DPhysicalPropertiesDataWrapper
+    public class A3DPhysicalPropertiesWrapper
     {
-        public A3DPhysicalPropertiesDataWrapper()
+        public A3DPhysicalPropertiesWrapper()
         {
             API.Initialize(out _d);
         }
 
-        ~A3DPhysicalPropertiesDataWrapper()
+        ~A3DPhysicalPropertiesWrapper()
         {
         }
         public ushort m_usStructSize=>_d.m_usStructSize;
@@ -6752,14 +6752,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DPhysicalPropertiesData _d;
     }
-    public class A3DTopoBodyDataWrapper
+    public class A3DTopoBodyWrapper
     {
-        public A3DTopoBodyDataWrapper()
+        public A3DTopoBodyWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoBodyDataWrapper(IntPtr p)
+        public A3DTopoBodyWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6768,7 +6768,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoBodyDataWrapper()
+        ~A3DTopoBodyWrapper()
         {
             API.A3DTopoBodyGet( IntPtr.Zero, ref _d );
         }
@@ -6778,14 +6778,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTopoBodyData _d;
     }
-    public class A3DTopoContextDataWrapper
+    public class A3DTopoContextWrapper
     {
-        public A3DTopoContextDataWrapper()
+        public A3DTopoContextWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoContextDataWrapper(IntPtr p)
+        public A3DTopoContextWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6794,7 +6794,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoContextDataWrapper()
+        ~A3DTopoContextWrapper()
         {
             API.A3DTopoContextGet( IntPtr.Zero, ref _d );
         }
@@ -6809,14 +6809,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTopoContextData _d;
     }
-    public class A3DTopoSingleWireBodyDataWrapper
+    public class A3DTopoSingleWireBodyWrapper
     {
-        public A3DTopoSingleWireBodyDataWrapper()
+        public A3DTopoSingleWireBodyWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoSingleWireBodyDataWrapper(IntPtr p)
+        public A3DTopoSingleWireBodyWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6825,7 +6825,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoSingleWireBodyDataWrapper()
+        ~A3DTopoSingleWireBodyWrapper()
         {
             API.A3DTopoSingleWireBodyGet( IntPtr.Zero, ref _d );
         }
@@ -6834,14 +6834,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTopoSingleWireBodyData _d;
     }
-    public class A3DTopoBrepDataDataWrapper
+    public class A3DTopoBrepDataWrapper
     {
-        public A3DTopoBrepDataDataWrapper()
+        public A3DTopoBrepDataWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoBrepDataDataWrapper(IntPtr p)
+        public A3DTopoBrepDataWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6850,7 +6850,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoBrepDataDataWrapper()
+        ~A3DTopoBrepDataWrapper()
         {
             API.A3DTopoBrepDataGet( IntPtr.Zero, ref _d );
         }
@@ -6861,14 +6861,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTopoBrepDataData _d;
     }
-    public class A3DTopoConnexDataWrapper
+    public class A3DTopoConnexWrapper
     {
-        public A3DTopoConnexDataWrapper()
+        public A3DTopoConnexWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoConnexDataWrapper(IntPtr p)
+        public A3DTopoConnexWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6877,7 +6877,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoConnexDataWrapper()
+        ~A3DTopoConnexWrapper()
         {
             API.A3DTopoConnexGet( IntPtr.Zero, ref _d );
         }
@@ -6887,14 +6887,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTopoConnexData _d;
     }
-    public class A3DTopoShellDataWrapper
+    public class A3DTopoShellWrapper
     {
-        public A3DTopoShellDataWrapper()
+        public A3DTopoShellWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoShellDataWrapper(IntPtr p)
+        public A3DTopoShellWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6903,7 +6903,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoShellDataWrapper()
+        ~A3DTopoShellWrapper()
         {
             API.A3DTopoShellGet( IntPtr.Zero, ref _d );
         }
@@ -6915,14 +6915,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTopoShellData _d;
     }
-    public class A3DTopoFaceDataWrapper
+    public class A3DTopoFaceWrapper
     {
-        public A3DTopoFaceDataWrapper()
+        public A3DTopoFaceWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoFaceDataWrapper(IntPtr p)
+        public A3DTopoFaceWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6931,7 +6931,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoFaceDataWrapper()
+        ~A3DTopoFaceWrapper()
         {
             API.A3DTopoFaceGet( IntPtr.Zero, ref _d );
         }
@@ -6946,14 +6946,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTopoFaceData _d;
     }
-    public class A3DTopoLoopDataWrapper
+    public class A3DTopoLoopWrapper
     {
-        public A3DTopoLoopDataWrapper()
+        public A3DTopoLoopWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoLoopDataWrapper(IntPtr p)
+        public A3DTopoLoopWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6962,7 +6962,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoLoopDataWrapper()
+        ~A3DTopoLoopWrapper()
         {
             API.A3DTopoLoopGet( IntPtr.Zero, ref _d );
         }
@@ -6973,14 +6973,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTopoLoopData _d;
     }
-    public class A3DTopoCoEdgeDataWrapper
+    public class A3DTopoCoEdgeWrapper
     {
-        public A3DTopoCoEdgeDataWrapper()
+        public A3DTopoCoEdgeWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoCoEdgeDataWrapper(IntPtr p)
+        public A3DTopoCoEdgeWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -6989,7 +6989,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoCoEdgeDataWrapper()
+        ~A3DTopoCoEdgeWrapper()
         {
             API.A3DTopoCoEdgeGet( IntPtr.Zero, ref _d );
         }
@@ -7002,14 +7002,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTopoCoEdgeData _d;
     }
-    public class A3DTopoEdgeDataWrapper
+    public class A3DTopoEdgeWrapper
     {
-        public A3DTopoEdgeDataWrapper()
+        public A3DTopoEdgeWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoEdgeDataWrapper(IntPtr p)
+        public A3DTopoEdgeWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -7018,7 +7018,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoEdgeDataWrapper()
+        ~A3DTopoEdgeWrapper()
         {
             API.A3DTopoEdgeGet( IntPtr.Zero, ref _d );
         }
@@ -7032,14 +7032,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTopoEdgeData _d;
     }
-    public class A3DTopoWireEdgeDataWrapper
+    public class A3DTopoWireEdgeWrapper
     {
-        public A3DTopoWireEdgeDataWrapper()
+        public A3DTopoWireEdgeWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoWireEdgeDataWrapper(IntPtr p)
+        public A3DTopoWireEdgeWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -7048,7 +7048,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoWireEdgeDataWrapper()
+        ~A3DTopoWireEdgeWrapper()
         {
             API.A3DTopoWireEdgeGet( IntPtr.Zero, ref _d );
         }
@@ -7059,14 +7059,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTopoWireEdgeData _d;
     }
-    public class A3DTopoUniqueVertexDataWrapper
+    public class A3DTopoUniqueVertexWrapper
     {
-        public A3DTopoUniqueVertexDataWrapper()
+        public A3DTopoUniqueVertexWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoUniqueVertexDataWrapper(IntPtr p)
+        public A3DTopoUniqueVertexWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -7075,7 +7075,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoUniqueVertexDataWrapper()
+        ~A3DTopoUniqueVertexWrapper()
         {
             API.A3DTopoUniqueVertexGet( IntPtr.Zero, ref _d );
         }
@@ -7085,14 +7085,14 @@ namespace TS3D.Exchange.Direct
 
         private A3DTopoUniqueVertexData _d;
     }
-    public class A3DTopoMultipleVertexDataWrapper
+    public class A3DTopoMultipleVertexWrapper
     {
-        public A3DTopoMultipleVertexDataWrapper()
+        public A3DTopoMultipleVertexWrapper()
         {
             API.Initialize(out _d);
         }
 
-        public A3DTopoMultipleVertexDataWrapper(IntPtr p)
+        public A3DTopoMultipleVertexWrapper(IntPtr p)
         {
             API.Initialize(out _d);
             if( p != IntPtr.Zero )
@@ -7101,7 +7101,7 @@ namespace TS3D.Exchange.Direct
             }
         }
 
-        ~A3DTopoMultipleVertexDataWrapper()
+        ~A3DTopoMultipleVertexWrapper()
         {
             API.A3DTopoMultipleVertexGet( IntPtr.Zero, ref _d );
         }

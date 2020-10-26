@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\ExchangeSharp\ExchangeSharp.csproj" />
+    <ProjectReference Include="../../ExchangeSharp/ExchangeSharp.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
