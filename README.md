@@ -75,7 +75,7 @@ A3DAsmModelFileWrapper d( model_file );
 // Use object here
 ```
 
-Structs that do not have corresponding `Get` function (`A3DVector3dData` for example) are wrapped as well.
+Structs that do not have corresponding `Get` function (`A3DVector3dData` for example) are wrapped as well. Code provided in the `examples` folder make use of these wrapper classes in order to make the implementation more concise.
 
 
 
