@@ -3,7 +3,7 @@
 #define INITIALIZE_A3D_API
 #define A3DAPI_GETPROCADDRESS
 #include "A3DSDKIncludes.h"
-#include "/opt/local/ts3d/CSharp/ExchangeTest/ExchangeCppLayer/ExchangeCppLayer.h"
+#include "ExchangeCppLayer.h"
 
 static std::string exchange_folder;
 
