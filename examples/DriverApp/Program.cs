@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
+using TS3D.Exchange;
 using TS3D.Exchange.Direct;
 
 namespace DriverApp
@@ -61,9 +62,60 @@ namespace DriverApp
         }
         static void Main(string[] args)
         {   
-            // TS3D.Exchange.Library.SetExchangeLibraryFolder("");
-            if(A3DStatus.A3D_SUCCESS != API.A3DLicPutUnifiedLicense(HOOPS_LICENSE.KEY) ) {
-                Console.WriteLine("Unable to unlock HOOPS Exchange." );
+            string exchange_folder = "";
+            string input_file = null;
+            for(var arg = 0; arg < args.Length; ++arg ) {
+                if( arg < args.Length-1 ) {
+                    if( args[arg] == "--exchange" ) {
+                        exchange_folder = args[++arg];
+                        continue;
+                    }
+                }
+                input_file = args[arg];
+            }
+
+            if( null == input_file ) {
+                Console.WriteLine("Please provide an input file as an argument." );
+                return;
+            }
+
+            try {
+                Library.SetExchangeLibraryFolder(exchange_folder);
+            } catch(System.TypeInitializationException) {
+                Console.WriteLine("Unable to load \"Exchange.layer\".");
+                Console.WriteLine("Please be sure the folder containing \"Exchange.layer\" is included in");
+                Console.Write("the environment variable \"");
+                if( System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform( OSPlatform.Windows ) ) {
+                    Console.Write("PATH");
+                } else if( System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ) {
+                    Console.Write("LD_LIBRARY_PATH");
+                } else if( System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.OSX) ) {
+                    Console.Write("DYLD_LIBRARY_PATH");
+                }
+                Console.WriteLine("\",");
+                Console.WriteLine("or it is located in the current working directory.");
+                return;
+            }
+
+            try {
+                if(A3DStatus.A3D_SUCCESS != API.A3DLicPutUnifiedLicense(HOOPS_LICENSE.KEY) ) {
+                    Console.WriteLine("Unable to unlock HOOPS Exchange." );
+                    return;
+                }
+            } catch(System.TypeInitializationException) {
+                Console.WriteLine("Unable to load Exchange.");
+                Console.WriteLine("Please specify the Exchange bin folder using the command line option '--exchange'.");
+                Console.Write("Alternatively, set the environment variable \"");
+                if( System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform( OSPlatform.Windows ) ) {
+                    Console.Write("PATH");
+                } else if( System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ) {
+                    Console.Write("LD_LIBRARY_PATH");
+                } else if( System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.OSX) ) {
+                    Console.Write("DYLD_LIBRARY_PATH");
+                }
+                Console.WriteLine("\",");
+                Console.WriteLine("to include the Exchange bin folder.");
+                return;
             }
 
             int major_version, minor_version;
@@ -81,7 +133,7 @@ namespace DriverApp
             A3DRWParamsLoadData load_params;
             API.Initialize(out load_params);
             IntPtr model_file;
-            var status = API.A3DAsmModelFileLoadFromFile("/opt/local/ts3d/HOOPS_Exchange_2020_SP2_U2/samples/data/catiaV5/CV5_Micro_engine/_micro engine.CATProduct", ref load_params, out model_file ) ;
+            var status = API.A3DAsmModelFileLoadFromFile(input_file, ref load_params, out model_file ) ;
             if(A3DStatus.A3D_SUCCESS != status) {
                 Console.WriteLine( "Failed to load input file." );
             }
