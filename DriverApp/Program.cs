@@ -68,7 +68,7 @@ namespace DriverApp
         }
         static void Main(string[] args)
         {   
-            TS3D.Exchange.Library.SetExchangeLibraryFolder("/opt/local/ts3d/HOOPS_Exchange_2020_SP2_U2/bin/osx64");
+            // TS3D.Exchange.Library.SetExchangeLibraryFolder("");
             if(A3DStatus.A3D_SUCCESS != TS3D.Exchange.Direct.API.A3DLicPutUnifiedLicense(HOOPS_LICENSE.KEY) ) {
                 Console.WriteLine("Unable to unlock HOOPS Exchange." );
             }
