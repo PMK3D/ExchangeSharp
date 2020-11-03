@@ -83,18 +83,19 @@ if( A3DStatus.A3D_SUCCESS == API.A3DAsmModelFileGet( model_file, ref d ) ) {
 ## Prerequisites
 In order to build and use ExchangeSharp, the following software components are required:
 * [HOOPS Exchange 2020 SP2](https://developer.techsoft3d.com/hoops/exchange/downloads/latest/) (or binary compatible version)
+	* Be sure you have Exchange installed and licensed correctly. 
+	* Unpack the archive.
+ 	* Place `hoops_license.h` _and_ `hoops_license.cs` in the `include` folder.
+	* Build and run the sample applications contained within.
+
 * [.NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## Building ExchangeSharp.dll
-1. Be sure you have Exchange installed and licensed correctly. 
- 	1. Unpack the archive.
- 	1. Place `hoops_license.h` _and_ `hoops_license.cs` in the `include` folder.
-	1. Build and run the sample applications contained within.
 1. Clone the ExchangeSharp repository.
+	* `git clone https://github.com/bflubacherts3d/ExchangeSharp.git`
 1. Build ExchangeSharp
-	1. Change to the `ExchangeSharp` folder.
-	1. Run the command `dotnet build`.
-	1. `ExchangeSharp.dll` can be found in the `bin/Debug/netcoreapp3.1` folder.
+	* `dotnet build`
+1. `ExchangeSharp.dll` can be found in the `bin/Debug/netcoreapp3.1` folder.
 
 ## Building and Running the Examples
 The `examples` folder contains projects that illustrate basic use of ExchangeSharp. To build each project:
