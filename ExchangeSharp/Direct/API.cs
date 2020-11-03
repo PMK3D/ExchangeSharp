@@ -5,2142 +5,1315 @@ namespace TS3D.Exchange.Direct
 {
     public class API
     {
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DVector2dData(ref A3DVector2dData s);
-        public static bool Initialize(out A3DVector2dData s)
-        {
-            s = new A3DVector2dData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DVector2dData));
-            return InitializeA3DVector2dData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DVector3dData(ref A3DVector3dData s);
-        public static bool Initialize(out A3DVector3dData s)
-        {
-            s = new A3DVector3dData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DVector3dData));
-            return InitializeA3DVector3dData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DIntervalData(ref A3DIntervalData s);
-        public static bool Initialize(out A3DIntervalData s)
-        {
-            s = new A3DIntervalData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DIntervalData));
-            return InitializeA3DIntervalData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDomainData(ref A3DDomainData s);
-        public static bool Initialize(out A3DDomainData s)
-        {
-            s = new A3DDomainData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDomainData));
-            return InitializeA3DDomainData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DBoundingBoxData(ref A3DBoundingBoxData s);
-        public static bool Initialize(out A3DBoundingBoxData s)
-        {
-            s = new A3DBoundingBoxData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DBoundingBoxData));
-            return InitializeA3DBoundingBoxData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DParameterizationData(ref A3DParameterizationData s);
-        public static bool Initialize(out A3DParameterizationData s)
-        {
-            s = new A3DParameterizationData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DParameterizationData));
-            return InitializeA3DParameterizationData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DUVParameterizationData(ref A3DUVParameterizationData s);
-        public static bool Initialize(out A3DUVParameterizationData s)
-        {
-            s = new A3DUVParameterizationData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DUVParameterizationData));
-            return InitializeA3DUVParameterizationData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTessBaseData(ref A3DTessBaseData s);
-        public static bool Initialize(out A3DTessBaseData s)
-        {
-            s = new A3DTessBaseData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTessBaseData));
-            return InitializeA3DTessBaseData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTessFaceData(ref A3DTessFaceData s);
-        public static bool Initialize(out A3DTessFaceData s)
-        {
-            s = new A3DTessFaceData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTessFaceData));
-            return InitializeA3DTessFaceData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTess3DData(ref A3DTess3DData s);
-        public static bool Initialize(out A3DTess3DData s)
-        {
-            s = new A3DTess3DData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTess3DData));
-            return InitializeA3DTess3DData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTess3DWireData(ref A3DTess3DWireData s);
-        public static bool Initialize(out A3DTess3DWireData s)
-        {
-            s = new A3DTess3DWireData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTess3DWireData));
-            return InitializeA3DTess3DWireData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTessMarkupData(ref A3DTessMarkupData s);
-        public static bool Initialize(out A3DTessMarkupData s)
-        {
-            s = new A3DTessMarkupData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTessMarkupData));
-            return InitializeA3DTessMarkupData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphicsData(ref A3DGraphicsData s);
-        public static bool Initialize(out A3DGraphicsData s)
-        {
-            s = new A3DGraphicsData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphicsData));
-            return InitializeA3DGraphicsData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphStyleData(ref A3DGraphStyleData s);
-        public static bool Initialize(out A3DGraphStyleData s)
-        {
-            s = new A3DGraphStyleData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphStyleData));
-            return InitializeA3DGraphStyleData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphRgbColorData(ref A3DGraphRgbColorData s);
-        public static bool Initialize(out A3DGraphRgbColorData s)
-        {
-            s = new A3DGraphRgbColorData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphRgbColorData));
-            return InitializeA3DGraphRgbColorData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphLinePatternData(ref A3DGraphLinePatternData s);
-        public static bool Initialize(out A3DGraphLinePatternData s)
-        {
-            s = new A3DGraphLinePatternData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphLinePatternData));
-            return InitializeA3DGraphLinePatternData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphMaterialData(ref A3DGraphMaterialData s);
-        public static bool Initialize(out A3DGraphMaterialData s)
-        {
-            s = new A3DGraphMaterialData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphMaterialData));
-            return InitializeA3DGraphMaterialData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphPictureData(ref A3DGraphPictureData s);
-        public static bool Initialize(out A3DGraphPictureData s)
-        {
-            s = new A3DGraphPictureData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphPictureData));
-            return InitializeA3DGraphPictureData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphDottingPatternData(ref A3DGraphDottingPatternData s);
-        public static bool Initialize(out A3DGraphDottingPatternData s)
-        {
-            s = new A3DGraphDottingPatternData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphDottingPatternData));
-            return InitializeA3DGraphDottingPatternData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphHatchingPatternLineData(ref A3DGraphHatchingPatternLineData s);
-        public static bool Initialize(out A3DGraphHatchingPatternLineData s)
-        {
-            s = new A3DGraphHatchingPatternLineData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphHatchingPatternLineData));
-            return InitializeA3DGraphHatchingPatternLineData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphHatchingPatternData(ref A3DGraphHatchingPatternData s);
-        public static bool Initialize(out A3DGraphHatchingPatternData s)
-        {
-            s = new A3DGraphHatchingPatternData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphHatchingPatternData));
-            return InitializeA3DGraphHatchingPatternData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphSolidPatternData(ref A3DGraphSolidPatternData s);
-        public static bool Initialize(out A3DGraphSolidPatternData s)
-        {
-            s = new A3DGraphSolidPatternData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphSolidPatternData));
-            return InitializeA3DGraphSolidPatternData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphVPicturePatternData(ref A3DGraphVPicturePatternData s);
-        public static bool Initialize(out A3DGraphVPicturePatternData s)
-        {
-            s = new A3DGraphVPicturePatternData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphVPicturePatternData));
-            return InitializeA3DGraphVPicturePatternData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphCameraData(ref A3DGraphCameraData s);
-        public static bool Initialize(out A3DGraphCameraData s)
-        {
-            s = new A3DGraphCameraData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphCameraData));
-            return InitializeA3DGraphCameraData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphAmbientLightData(ref A3DGraphAmbientLightData s);
-        public static bool Initialize(out A3DGraphAmbientLightData s)
-        {
-            s = new A3DGraphAmbientLightData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphAmbientLightData));
-            return InitializeA3DGraphAmbientLightData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphPointLightData(ref A3DGraphPointLightData s);
-        public static bool Initialize(out A3DGraphPointLightData s)
-        {
-            s = new A3DGraphPointLightData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphPointLightData));
-            return InitializeA3DGraphPointLightData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphSpotLightData(ref A3DGraphSpotLightData s);
-        public static bool Initialize(out A3DGraphSpotLightData s)
-        {
-            s = new A3DGraphSpotLightData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphSpotLightData));
-            return InitializeA3DGraphSpotLightData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphDirectionalLightData(ref A3DGraphDirectionalLightData s);
-        public static bool Initialize(out A3DGraphDirectionalLightData s)
-        {
-            s = new A3DGraphDirectionalLightData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphDirectionalLightData));
-            return InitializeA3DGraphDirectionalLightData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphSceneDisplayParametersData(ref A3DGraphSceneDisplayParametersData s);
-        public static bool Initialize(out A3DGraphSceneDisplayParametersData s)
-        {
-            s = new A3DGraphSceneDisplayParametersData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphSceneDisplayParametersData));
-            return InitializeA3DGraphSceneDisplayParametersData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscCascadedAttributesData(ref A3DMiscCascadedAttributesData s);
-        public static bool Initialize(out A3DMiscCascadedAttributesData s)
-        {
-            s = new A3DMiscCascadedAttributesData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscCascadedAttributesData));
-            return InitializeA3DMiscCascadedAttributesData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscGeneralTransformationData(ref A3DMiscGeneralTransformationData s);
-        public static bool Initialize(out A3DMiscGeneralTransformationData s)
-        {
-            s = new A3DMiscGeneralTransformationData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscGeneralTransformationData));
-            return InitializeA3DMiscGeneralTransformationData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscCartesianTransformationData(ref A3DMiscCartesianTransformationData s);
-        public static bool Initialize(out A3DMiscCartesianTransformationData s)
-        {
-            s = new A3DMiscCartesianTransformationData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscCartesianTransformationData));
-            return InitializeA3DMiscCartesianTransformationData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscEntityReferenceData(ref A3DMiscEntityReferenceData s);
-        public static bool Initialize(out A3DMiscEntityReferenceData s)
-        {
-            s = new A3DMiscEntityReferenceData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscEntityReferenceData));
-            return InitializeA3DMiscEntityReferenceData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscReferenceOnTopologyData(ref A3DMiscReferenceOnTopologyData s);
-        public static bool Initialize(out A3DMiscReferenceOnTopologyData s)
-        {
-            s = new A3DMiscReferenceOnTopologyData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscReferenceOnTopologyData));
-            return InitializeA3DMiscReferenceOnTopologyData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscReferenceOnTessData(ref A3DMiscReferenceOnTessData s);
-        public static bool Initialize(out A3DMiscReferenceOnTessData s)
-        {
-            s = new A3DMiscReferenceOnTessData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscReferenceOnTessData));
-            return InitializeA3DMiscReferenceOnTessData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscReferenceOnCsysItemData(ref A3DMiscReferenceOnCsysItemData s);
-        public static bool Initialize(out A3DMiscReferenceOnCsysItemData s)
-        {
-            s = new A3DMiscReferenceOnCsysItemData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscReferenceOnCsysItemData));
-            return InitializeA3DMiscReferenceOnCsysItemData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscPhysicMaterialData(ref A3DMiscPhysicMaterialData s);
-        public static bool Initialize(out A3DMiscPhysicMaterialData s)
-        {
-            s = new A3DMiscPhysicMaterialData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscPhysicMaterialData));
-            return InitializeA3DMiscPhysicMaterialData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscMaterialFiberData(ref A3DMiscMaterialFiberData s);
-        public static bool Initialize(out A3DMiscMaterialFiberData s)
-        {
-            s = new A3DMiscMaterialFiberData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialFiberData));
-            return InitializeA3DMiscMaterialFiberData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscMaterialHoneyCombData(ref A3DMiscMaterialHoneyCombData s);
-        public static bool Initialize(out A3DMiscMaterialHoneyCombData s)
-        {
-            s = new A3DMiscMaterialHoneyCombData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialHoneyCombData));
-            return InitializeA3DMiscMaterialHoneyCombData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscMaterialIsotropicData(ref A3DMiscMaterialIsotropicData s);
-        public static bool Initialize(out A3DMiscMaterialIsotropicData s)
-        {
-            s = new A3DMiscMaterialIsotropicData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialIsotropicData));
-            return InitializeA3DMiscMaterialIsotropicData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscMaterialOrthotropic2DData(ref A3DMiscMaterialOrthotropic2DData s);
-        public static bool Initialize(out A3DMiscMaterialOrthotropic2DData s)
-        {
-            s = new A3DMiscMaterialOrthotropic2DData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialOrthotropic2DData));
-            return InitializeA3DMiscMaterialOrthotropic2DData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscMaterialOrthotropic3DData(ref A3DMiscMaterialOrthotropic3DData s);
-        public static bool Initialize(out A3DMiscMaterialOrthotropic3DData s)
-        {
-            s = new A3DMiscMaterialOrthotropic3DData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialOrthotropic3DData));
-            return InitializeA3DMiscMaterialOrthotropic3DData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscMaterialAnisotropicData(ref A3DMiscMaterialAnisotropicData s);
-        public static bool Initialize(out A3DMiscMaterialAnisotropicData s)
-        {
-            s = new A3DMiscMaterialAnisotropicData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialAnisotropicData));
-            return InitializeA3DMiscMaterialAnisotropicData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscMaterialPropertiesData(ref A3DMiscMaterialPropertiesData s);
-        public static bool Initialize(out A3DMiscMaterialPropertiesData s)
-        {
-            s = new A3DMiscMaterialPropertiesData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialPropertiesData));
-            return InitializeA3DMiscMaterialPropertiesData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmModelFileData(ref A3DAsmModelFileData s);
-        public static bool Initialize(out A3DAsmModelFileData s)
-        {
-            s = new A3DAsmModelFileData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmModelFileData));
-            return InitializeA3DAsmModelFileData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmProductOccurrenceData(ref A3DAsmProductOccurrenceData s);
-        public static bool Initialize(out A3DAsmProductOccurrenceData s)
-        {
-            s = new A3DAsmProductOccurrenceData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceData));
-            return InitializeA3DAsmProductOccurrenceData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmProductOccurrenceDataSLW(ref A3DAsmProductOccurrenceDataSLW s);
-        public static bool Initialize(out A3DAsmProductOccurrenceDataSLW s)
-        {
-            s = new A3DAsmProductOccurrenceDataSLW();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataSLW));
-            return InitializeA3DAsmProductOccurrenceDataSLW(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmProductOccurrenceDataCat(ref A3DAsmProductOccurrenceDataCat s);
-        public static bool Initialize(out A3DAsmProductOccurrenceDataCat s)
-        {
-            s = new A3DAsmProductOccurrenceDataCat();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataCat));
-            return InitializeA3DAsmProductOccurrenceDataCat(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmProductOccurrenceDataCV5(ref A3DAsmProductOccurrenceDataCV5 s);
-        public static bool Initialize(out A3DAsmProductOccurrenceDataCV5 s)
-        {
-            s = new A3DAsmProductOccurrenceDataCV5();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataCV5));
-            return InitializeA3DAsmProductOccurrenceDataCV5(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmProductOccurrenceDataUg(ref A3DAsmProductOccurrenceDataUg s);
-        public static bool Initialize(out A3DAsmProductOccurrenceDataUg s)
-        {
-            s = new A3DAsmProductOccurrenceDataUg();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataUg));
-            return InitializeA3DAsmProductOccurrenceDataUg(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmProductOccurrenceDataProe(ref A3DAsmProductOccurrenceDataProe s);
-        public static bool Initialize(out A3DAsmProductOccurrenceDataProe s)
-        {
-            s = new A3DAsmProductOccurrenceDataProe();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataProe));
-            return InitializeA3DAsmProductOccurrenceDataProe(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmProductOccurrenceDataInv(ref A3DAsmProductOccurrenceDataInv s);
-        public static bool Initialize(out A3DAsmProductOccurrenceDataInv s)
-        {
-            s = new A3DAsmProductOccurrenceDataInv();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataInv));
-            return InitializeA3DAsmProductOccurrenceDataInv(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmProductOccurrenceDataJT(ref A3DAsmProductOccurrenceDataJT s);
-        public static bool Initialize(out A3DAsmProductOccurrenceDataJT s)
-        {
-            s = new A3DAsmProductOccurrenceDataJT();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataJT));
-            return InitializeA3DAsmProductOccurrenceDataJT(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmPartDefinitionData(ref A3DAsmPartDefinitionData s);
-        public static bool Initialize(out A3DAsmPartDefinitionData s)
-        {
-            s = new A3DAsmPartDefinitionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmPartDefinitionData));
-            return InitializeA3DAsmPartDefinitionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmLayerFilterItemData(ref A3DAsmLayerFilterItemData s);
-        public static bool Initialize(out A3DAsmLayerFilterItemData s)
-        {
-            s = new A3DAsmLayerFilterItemData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmLayerFilterItemData));
-            return InitializeA3DAsmLayerFilterItemData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmEntityFilterItemData(ref A3DAsmEntityFilterItemData s);
-        public static bool Initialize(out A3DAsmEntityFilterItemData s)
-        {
-            s = new A3DAsmEntityFilterItemData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmEntityFilterItemData));
-            return InitializeA3DAsmEntityFilterItemData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DAsmFilterData(ref A3DAsmFilterData s);
-        public static bool Initialize(out A3DAsmFilterData s)
-        {
-            s = new A3DAsmFilterData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmFilterData));
-            return InitializeA3DAsmFilterData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsGeneralData(ref A3DRWParamsGeneralData s);
-        public static bool Initialize(out A3DRWParamsGeneralData s)
-        {
-            s = new A3DRWParamsGeneralData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsGeneralData));
-            return InitializeA3DRWParamsGeneralData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsPmiData(ref A3DRWParamsPmiData s);
-        public static bool Initialize(out A3DRWParamsPmiData s)
-        {
-            s = new A3DRWParamsPmiData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsPmiData));
-            return InitializeA3DRWParamsPmiData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsTessellationData(ref A3DRWParamsTessellationData s);
-        public static bool Initialize(out A3DRWParamsTessellationData s)
-        {
-            s = new A3DRWParamsTessellationData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsTessellationData));
-            return InitializeA3DRWParamsTessellationData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsSearchDirData(ref A3DRWParamsSearchDirData s);
-        public static bool Initialize(out A3DRWParamsSearchDirData s)
-        {
-            s = new A3DRWParamsSearchDirData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsSearchDirData));
-            return InitializeA3DRWParamsSearchDirData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsAssemblyData(ref A3DRWParamsAssemblyData s);
-        public static bool Initialize(out A3DRWParamsAssemblyData s)
-        {
-            s = new A3DRWParamsAssemblyData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsAssemblyData));
-            return InitializeA3DRWParamsAssemblyData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsMultiEntriesData(ref A3DRWParamsMultiEntriesData s);
-        public static bool Initialize(out A3DRWParamsMultiEntriesData s)
-        {
-            s = new A3DRWParamsMultiEntriesData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsMultiEntriesData));
-            return InitializeA3DRWParamsMultiEntriesData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsCatiaV4Data(ref A3DRWParamsCatiaV4Data s);
-        public static bool Initialize(out A3DRWParamsCatiaV4Data s)
-        {
-            s = new A3DRWParamsCatiaV4Data();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsCatiaV4Data));
-            return InitializeA3DRWParamsCatiaV4Data(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsCatiaV5Data(ref A3DRWParamsCatiaV5Data s);
-        public static bool Initialize(out A3DRWParamsCatiaV5Data s)
-        {
-            s = new A3DRWParamsCatiaV5Data();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsCatiaV5Data));
-            return InitializeA3DRWParamsCatiaV5Data(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsUnigraphicsData(ref A3DRWParamsUnigraphicsData s);
-        public static bool Initialize(out A3DRWParamsUnigraphicsData s)
-        {
-            s = new A3DRWParamsUnigraphicsData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsUnigraphicsData));
-            return InitializeA3DRWParamsUnigraphicsData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsProEData(ref A3DRWParamsProEData s);
-        public static bool Initialize(out A3DRWParamsProEData s)
-        {
-            s = new A3DRWParamsProEData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsProEData));
-            return InitializeA3DRWParamsProEData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWValidationPropertiesThresholdData(ref A3DRWValidationPropertiesThresholdData s);
-        public static bool Initialize(out A3DRWValidationPropertiesThresholdData s)
-        {
-            s = new A3DRWValidationPropertiesThresholdData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWValidationPropertiesThresholdData));
-            return InitializeA3DRWValidationPropertiesThresholdData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsStepData(ref A3DRWParamsStepData s);
-        public static bool Initialize(out A3DRWParamsStepData s)
-        {
-            s = new A3DRWParamsStepData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsStepData));
-            return InitializeA3DRWParamsStepData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsIGESData(ref A3DRWParamsIGESData s);
-        public static bool Initialize(out A3DRWParamsIGESData s)
-        {
-            s = new A3DRWParamsIGESData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsIGESData));
-            return InitializeA3DRWParamsIGESData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsIFCData(ref A3DRWParamsIFCData s);
-        public static bool Initialize(out A3DRWParamsIFCData s)
-        {
-            s = new A3DRWParamsIFCData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsIFCData));
-            return InitializeA3DRWParamsIFCData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsJTData(ref A3DRWParamsJTData s);
-        public static bool Initialize(out A3DRWParamsJTData s)
-        {
-            s = new A3DRWParamsJTData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsJTData));
-            return InitializeA3DRWParamsJTData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsParasolidData(ref A3DRWParamsParasolidData s);
-        public static bool Initialize(out A3DRWParamsParasolidData s)
-        {
-            s = new A3DRWParamsParasolidData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsParasolidData));
-            return InitializeA3DRWParamsParasolidData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsSolidworksData(ref A3DRWParamsSolidworksData s);
-        public static bool Initialize(out A3DRWParamsSolidworksData s)
-        {
-            s = new A3DRWParamsSolidworksData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsSolidworksData));
-            return InitializeA3DRWParamsSolidworksData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsInventorData(ref A3DRWParamsInventorData s);
-        public static bool Initialize(out A3DRWParamsInventorData s)
-        {
-            s = new A3DRWParamsInventorData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsInventorData));
-            return InitializeA3DRWParamsInventorData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsRhinoData(ref A3DRWParamsRhinoData s);
-        public static bool Initialize(out A3DRWParamsRhinoData s)
-        {
-            s = new A3DRWParamsRhinoData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsRhinoData));
-            return InitializeA3DRWParamsRhinoData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsRevitData(ref A3DRWParamsRevitData s);
-        public static bool Initialize(out A3DRWParamsRevitData s)
-        {
-            s = new A3DRWParamsRevitData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsRevitData));
-            return InitializeA3DRWParamsRevitData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsSpecificLoadData(ref A3DRWParamsSpecificLoadData s);
-        public static bool Initialize(out A3DRWParamsSpecificLoadData s)
-        {
-            s = new A3DRWParamsSpecificLoadData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsSpecificLoadData));
-            return InitializeA3DRWParamsSpecificLoadData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsIncrementalLoadData(ref A3DRWParamsIncrementalLoadData s);
-        public static bool Initialize(out A3DRWParamsIncrementalLoadData s)
-        {
-            s = new A3DRWParamsIncrementalLoadData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsIncrementalLoadData));
-            return InitializeA3DRWParamsIncrementalLoadData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsLoadData(ref A3DRWParamsLoadData s);
-        public static bool Initialize(out A3DRWParamsLoadData s)
-        {
-            s = new A3DRWParamsLoadData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsLoadData));
-            return InitializeA3DRWParamsLoadData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DStream3DPDFData(ref A3DStream3DPDFData s);
-        public static bool Initialize(out A3DStream3DPDFData s)
-        {
-            s = new A3DStream3DPDFData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DStream3DPDFData));
-            return InitializeA3DStream3DPDFData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsExportPrcData(ref A3DRWParamsExportPrcData s);
-        public static bool Initialize(out A3DRWParamsExportPrcData s)
-        {
-            s = new A3DRWParamsExportPrcData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportPrcData));
-            return InitializeA3DRWParamsExportPrcData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsExportU3DData(ref A3DRWParamsExportU3DData s);
-        public static bool Initialize(out A3DRWParamsExportU3DData s)
-        {
-            s = new A3DRWParamsExportU3DData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportU3DData));
-            return InitializeA3DRWParamsExportU3DData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsExportStepData(ref A3DRWParamsExportStepData s);
-        public static bool Initialize(out A3DRWParamsExportStepData s)
-        {
-            s = new A3DRWParamsExportStepData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportStepData));
-            return InitializeA3DRWParamsExportStepData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsExportJTData(ref A3DRWParamsExportJTData s);
-        public static bool Initialize(out A3DRWParamsExportJTData s)
-        {
-            s = new A3DRWParamsExportJTData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportJTData));
-            return InitializeA3DRWParamsExportJTData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsExportIgesData(ref A3DRWParamsExportIgesData s);
-        public static bool Initialize(out A3DRWParamsExportIgesData s)
-        {
-            s = new A3DRWParamsExportIgesData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportIgesData));
-            return InitializeA3DRWParamsExportIgesData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsExportStlData(ref A3DRWParamsExportStlData s);
-        public static bool Initialize(out A3DRWParamsExportStlData s)
-        {
-            s = new A3DRWParamsExportStlData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportStlData));
-            return InitializeA3DRWParamsExportStlData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsExport3mfData(ref A3DRWParamsExport3mfData s);
-        public static bool Initialize(out A3DRWParamsExport3mfData s)
-        {
-            s = new A3DRWParamsExport3mfData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExport3mfData));
-            return InitializeA3DRWParamsExport3mfData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsExportXMLData(ref A3DRWParamsExportXMLData s);
-        public static bool Initialize(out A3DRWParamsExportXMLData s)
-        {
-            s = new A3DRWParamsExportXMLData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportXMLData));
-            return InitializeA3DRWParamsExportXMLData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsExportObjData(ref A3DRWParamsExportObjData s);
-        public static bool Initialize(out A3DRWParamsExportObjData s)
-        {
-            s = new A3DRWParamsExportObjData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportObjData));
-            return InitializeA3DRWParamsExportObjData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsExportFbxData(ref A3DRWParamsExportFbxData s);
-        public static bool Initialize(out A3DRWParamsExportFbxData s)
-        {
-            s = new A3DRWParamsExportFbxData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportFbxData));
-            return InitializeA3DRWParamsExportFbxData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSewOptionsData(ref A3DSewOptionsData s);
-        public static bool Initialize(out A3DSewOptionsData s)
-        {
-            s = new A3DSewOptionsData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSewOptionsData));
-            return InitializeA3DSewOptionsData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFaceUVPointInsideManagerData(ref A3DFaceUVPointInsideManagerData s);
-        public static bool Initialize(out A3DFaceUVPointInsideManagerData s)
-        {
-            s = new A3DFaceUVPointInsideManagerData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFaceUVPointInsideManagerData));
-            return InitializeA3DFaceUVPointInsideManagerData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DProjectedPointCloudData(ref A3DProjectedPointCloudData s);
-        public static bool Initialize(out A3DProjectedPointCloudData s)
-        {
-            s = new A3DProjectedPointCloudData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DProjectedPointCloudData));
-            return InitializeA3DProjectedPointCloudData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DProjectPointCloudManagerDataFromRI(ref A3DProjectPointCloudManagerDataFromRI s);
-        public static bool Initialize(out A3DProjectPointCloudManagerDataFromRI s)
-        {
-            s = new A3DProjectPointCloudManagerDataFromRI();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DProjectPointCloudManagerDataFromRI));
-            return InitializeA3DProjectPointCloudManagerDataFromRI(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DPlanarSectionData(ref A3DPlanarSectionData s);
-        public static bool Initialize(out A3DPlanarSectionData s)
-        {
-            s = new A3DPlanarSectionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DPlanarSectionData));
-            return InitializeA3DPlanarSectionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCompareInputData(ref A3DCompareInputData s);
-        public static bool Initialize(out A3DCompareInputData s)
-        {
-            s = new A3DCompareInputData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCompareInputData));
-            return InitializeA3DCompareInputData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCompareOutputData(ref A3DCompareOutputData s);
-        public static bool Initialize(out A3DCompareOutputData s)
-        {
-            s = new A3DCompareOutputData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCompareOutputData));
-            return InitializeA3DCompareOutputData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMultiPlanarSectionData(ref A3DMultiPlanarSectionData s);
-        public static bool Initialize(out A3DMultiPlanarSectionData s)
-        {
-            s = new A3DMultiPlanarSectionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMultiPlanarSectionData));
-            return InitializeA3DMultiPlanarSectionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DHLRViewPlaneData(ref A3DHLRViewPlaneData s);
-        public static bool Initialize(out A3DHLRViewPlaneData s)
-        {
-            s = new A3DHLRViewPlaneData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DHLRViewPlaneData));
-            return InitializeA3DHLRViewPlaneData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DHLRCurveData(ref A3DHLRCurveData s);
-        public static bool Initialize(out A3DHLRCurveData s)
-        {
-            s = new A3DHLRCurveData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DHLRCurveData));
-            return InitializeA3DHLRCurveData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DHLRSectionFaceData(ref A3DHLRSectionFaceData s);
-        public static bool Initialize(out A3DHLRSectionFaceData s)
-        {
-            s = new A3DHLRSectionFaceData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DHLRSectionFaceData));
-            return InitializeA3DHLRSectionFaceData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DHLRRepresentationItemData(ref A3DHLRRepresentationItemData s);
-        public static bool Initialize(out A3DHLRRepresentationItemData s)
-        {
-            s = new A3DHLRRepresentationItemData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DHLRRepresentationItemData));
-            return InitializeA3DHLRRepresentationItemData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DHLROptionsData(ref A3DHLROptionsData s);
-        public static bool Initialize(out A3DHLROptionsData s)
-        {
-            s = new A3DHLROptionsData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DHLROptionsData));
-            return InitializeA3DHLROptionsData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTransfoRepresentationItemData(ref A3DTransfoRepresentationItemData s);
-        public static bool Initialize(out A3DTransfoRepresentationItemData s)
-        {
-            s = new A3DTransfoRepresentationItemData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTransfoRepresentationItemData));
-            return InitializeA3DTransfoRepresentationItemData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCollisionGroupData(ref A3DCollisionGroupData s);
-        public static bool Initialize(out A3DCollisionGroupData s)
-        {
-            s = new A3DCollisionGroupData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCollisionGroupData));
-            return InitializeA3DCollisionGroupData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCollisionParameterData(ref A3DCollisionParameterData s);
-        public static bool Initialize(out A3DCollisionParameterData s)
-        {
-            s = new A3DCollisionParameterData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCollisionParameterData));
-            return InitializeA3DCollisionParameterData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCollisionResultData(ref A3DCollisionResultData s);
-        public static bool Initialize(out A3DCollisionResultData s)
-        {
-            s = new A3DCollisionResultData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCollisionResultData));
-            return InitializeA3DCollisionResultData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMkpLeaderData(ref A3DMkpLeaderData s);
-        public static bool Initialize(out A3DMkpLeaderData s)
-        {
-            s = new A3DMkpLeaderData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpLeaderData));
-            return InitializeA3DMkpLeaderData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMkpAnnotationItemData(ref A3DMkpAnnotationItemData s);
-        public static bool Initialize(out A3DMkpAnnotationItemData s)
-        {
-            s = new A3DMkpAnnotationItemData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpAnnotationItemData));
-            return InitializeA3DMkpAnnotationItemData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMkpAnnotationSetData(ref A3DMkpAnnotationSetData s);
-        public static bool Initialize(out A3DMkpAnnotationSetData s)
-        {
-            s = new A3DMkpAnnotationSetData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpAnnotationSetData));
-            return InitializeA3DMkpAnnotationSetData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMkpAnnotationReferenceData(ref A3DMkpAnnotationReferenceData s);
-        public static bool Initialize(out A3DMkpAnnotationReferenceData s)
-        {
-            s = new A3DMkpAnnotationReferenceData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpAnnotationReferenceData));
-            return InitializeA3DMkpAnnotationReferenceData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMkpViewData(ref A3DMkpViewData s);
-        public static bool Initialize(out A3DMkpViewData s)
-        {
-            s = new A3DMkpViewData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpViewData));
-            return InitializeA3DMkpViewData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMkpViewFlagsData(ref A3DMkpViewFlagsData s);
-        public static bool Initialize(out A3DMkpViewFlagsData s)
-        {
-            s = new A3DMkpViewFlagsData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpViewFlagsData));
-            return InitializeA3DMkpViewFlagsData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscMarkupLinkedItemData(ref A3DMiscMarkupLinkedItemData s);
-        public static bool Initialize(out A3DMiscMarkupLinkedItemData s)
-        {
-            s = new A3DMiscMarkupLinkedItemData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMarkupLinkedItemData));
-            return InitializeA3DMiscMarkupLinkedItemData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMkpMarkupData(ref A3DMkpMarkupData s);
-        public static bool Initialize(out A3DMkpMarkupData s)
-        {
-            s = new A3DMkpMarkupData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpMarkupData));
-            return InitializeA3DMkpMarkupData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMkpRTFFieldData(ref A3DMkpRTFFieldData s);
-        public static bool Initialize(out A3DMkpRTFFieldData s)
-        {
-            s = new A3DMkpRTFFieldData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpRTFFieldData));
-            return InitializeA3DMkpRTFFieldData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFontKeyData(ref A3DFontKeyData s);
-        public static bool Initialize(out A3DFontKeyData s)
-        {
-            s = new A3DFontKeyData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFontKeyData));
-            return InitializeA3DFontKeyData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFontData(ref A3DFontData s);
-        public static bool Initialize(out A3DFontData s)
-        {
-            s = new A3DFontData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFontData));
-            return InitializeA3DFontData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphTextureTransformationData(ref A3DGraphTextureTransformationData s);
-        public static bool Initialize(out A3DGraphTextureTransformationData s)
-        {
-            s = new A3DGraphTextureTransformationData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphTextureTransformationData));
-            return InitializeA3DGraphTextureTransformationData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphTextureDefinitionData(ref A3DGraphTextureDefinitionData s);
-        public static bool Initialize(out A3DGraphTextureDefinitionData s)
-        {
-            s = new A3DGraphTextureDefinitionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphTextureDefinitionData));
-            return InitializeA3DGraphTextureDefinitionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGraphTextureApplicationData(ref A3DGraphTextureApplicationData s);
-        public static bool Initialize(out A3DGraphTextureApplicationData s)
-        {
-            s = new A3DGraphTextureApplicationData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphTextureApplicationData));
-            return InitializeA3DGraphTextureApplicationData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDrawCallbacksData(ref A3DDrawCallbacksData s);
-        public static bool Initialize(out A3DDrawCallbacksData s)
-        {
-            s = new A3DDrawCallbacksData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawCallbacksData));
-            return InitializeA3DDrawCallbacksData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDrawingModelData(ref A3DDrawingModelData s);
-        public static bool Initialize(out A3DDrawingModelData s)
-        {
-            s = new A3DDrawingModelData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingModelData));
-            return InitializeA3DDrawingModelData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDrawingSheetFormatData(ref A3DDrawingSheetFormatData s);
-        public static bool Initialize(out A3DDrawingSheetFormatData s)
-        {
-            s = new A3DDrawingSheetFormatData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingSheetFormatData));
-            return InitializeA3DDrawingSheetFormatData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDrawingSheetData(ref A3DDrawingSheetData s);
-        public static bool Initialize(out A3DDrawingSheetData s)
-        {
-            s = new A3DDrawingSheetData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingSheetData));
-            return InitializeA3DDrawingSheetData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDrawingClipFrameData(ref A3DDrawingClipFrameData s);
-        public static bool Initialize(out A3DDrawingClipFrameData s)
-        {
-            s = new A3DDrawingClipFrameData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingClipFrameData));
-            return InitializeA3DDrawingClipFrameData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDrawingViewData(ref A3DDrawingViewData s);
-        public static bool Initialize(out A3DDrawingViewData s)
-        {
-            s = new A3DDrawingViewData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingViewData));
-            return InitializeA3DDrawingViewData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDrawingBlockBasicData(ref A3DDrawingBlockBasicData s);
-        public static bool Initialize(out A3DDrawingBlockBasicData s)
-        {
-            s = new A3DDrawingBlockBasicData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingBlockBasicData));
-            return InitializeA3DDrawingBlockBasicData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDrawingBlockOperatorData(ref A3DDrawingBlockOperatorData s);
-        public static bool Initialize(out A3DDrawingBlockOperatorData s)
-        {
-            s = new A3DDrawingBlockOperatorData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingBlockOperatorData));
-            return InitializeA3DDrawingBlockOperatorData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDrawingCurveData(ref A3DDrawingCurveData s);
-        public static bool Initialize(out A3DDrawingCurveData s)
-        {
-            s = new A3DDrawingCurveData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingCurveData));
-            return InitializeA3DDrawingCurveData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDrawingFilledAreaData(ref A3DDrawingFilledAreaData s);
-        public static bool Initialize(out A3DDrawingFilledAreaData s)
-        {
-            s = new A3DDrawingFilledAreaData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingFilledAreaData));
-            return InitializeA3DDrawingFilledAreaData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDrawingPictureData(ref A3DDrawingPictureData s);
-        public static bool Initialize(out A3DDrawingPictureData s)
-        {
-            s = new A3DDrawingPictureData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingPictureData));
-            return InitializeA3DDrawingPictureData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DDrawingVerticesData(ref A3DDrawingVerticesData s);
-        public static bool Initialize(out A3DDrawingVerticesData s)
-        {
-            s = new A3DDrawingVerticesData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingVerticesData));
-            return InitializeA3DDrawingVerticesData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DThumbnailData(ref A3DThumbnailData s);
-        public static bool Initialize(out A3DThumbnailData s)
-        {
-            s = new A3DThumbnailData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DThumbnailData));
-            return InitializeA3DThumbnailData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFileInformationData(ref A3DFileInformationData s);
-        public static bool Initialize(out A3DFileInformationData s)
-        {
-            s = new A3DFileInformationData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFileInformationData));
-            return InitializeA3DFileInformationData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFileContextData(ref A3DFileContextData s);
-        public static bool Initialize(out A3DFileContextData s)
-        {
-            s = new A3DFileContextData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFileContextData));
-            return InitializeA3DFileContextData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsExportParasolidData(ref A3DRWParamsExportParasolidData s);
-        public static bool Initialize(out A3DRWParamsExportParasolidData s)
-        {
-            s = new A3DRWParamsExportParasolidData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportParasolidData));
-            return InitializeA3DRWParamsExportParasolidData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsTranslateToPkPartsData(ref A3DRWParamsTranslateToPkPartsData s);
-        public static bool Initialize(out A3DRWParamsTranslateToPkPartsData s)
-        {
-            s = new A3DRWParamsTranslateToPkPartsData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsTranslateToPkPartsData));
-            return InitializeA3DRWParamsTranslateToPkPartsData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRWParamsExportAcisData(ref A3DRWParamsExportAcisData s);
-        public static bool Initialize(out A3DRWParamsExportAcisData s)
-        {
-            s = new A3DRWParamsExportAcisData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportAcisData));
-            return InitializeA3DRWParamsExportAcisData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRiRepresentationItemData(ref A3DRiRepresentationItemData s);
-        public static bool Initialize(out A3DRiRepresentationItemData s)
-        {
-            s = new A3DRiRepresentationItemData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiRepresentationItemData));
-            return InitializeA3DRiRepresentationItemData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRiSetData(ref A3DRiSetData s);
-        public static bool Initialize(out A3DRiSetData s)
-        {
-            s = new A3DRiSetData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiSetData));
-            return InitializeA3DRiSetData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRiPointSetData(ref A3DRiPointSetData s);
-        public static bool Initialize(out A3DRiPointSetData s)
-        {
-            s = new A3DRiPointSetData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiPointSetData));
-            return InitializeA3DRiPointSetData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRiDirectionData(ref A3DRiDirectionData s);
-        public static bool Initialize(out A3DRiDirectionData s)
-        {
-            s = new A3DRiDirectionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiDirectionData));
-            return InitializeA3DRiDirectionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRiCoordinateSystemData(ref A3DRiCoordinateSystemData s);
-        public static bool Initialize(out A3DRiCoordinateSystemData s)
-        {
-            s = new A3DRiCoordinateSystemData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiCoordinateSystemData));
-            return InitializeA3DRiCoordinateSystemData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRiCurveData(ref A3DRiCurveData s);
-        public static bool Initialize(out A3DRiCurveData s)
-        {
-            s = new A3DRiCurveData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiCurveData));
-            return InitializeA3DRiCurveData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRiPlaneData(ref A3DRiPlaneData s);
-        public static bool Initialize(out A3DRiPlaneData s)
-        {
-            s = new A3DRiPlaneData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiPlaneData));
-            return InitializeA3DRiPlaneData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRiBrepModelData(ref A3DRiBrepModelData s);
-        public static bool Initialize(out A3DRiBrepModelData s)
-        {
-            s = new A3DRiBrepModelData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiBrepModelData));
-            return InitializeA3DRiBrepModelData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRiPolyBrepModelData(ref A3DRiPolyBrepModelData s);
-        public static bool Initialize(out A3DRiPolyBrepModelData s)
-        {
-            s = new A3DRiPolyBrepModelData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiPolyBrepModelData));
-            return InitializeA3DRiPolyBrepModelData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRiPolyWireData(ref A3DRiPolyWireData s);
-        public static bool Initialize(out A3DRiPolyWireData s)
-        {
-            s = new A3DRiPolyWireData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiPolyWireData));
-            return InitializeA3DRiPolyWireData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFRMFeatureTreeData(ref A3DFRMFeatureTreeData s);
-        public static bool Initialize(out A3DFRMFeatureTreeData s)
-        {
-            s = new A3DFRMFeatureTreeData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMFeatureTreeData));
-            return InitializeA3DFRMFeatureTreeData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFRMParameterData(ref A3DFRMParameterData s);
-        public static bool Initialize(out A3DFRMParameterData s)
-        {
-            s = new A3DFRMParameterData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMParameterData));
-            return InitializeA3DFRMParameterData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFRMFeatureTypeData(ref A3DFRMFeatureTypeData s);
-        public static bool Initialize(out A3DFRMFeatureTypeData s)
-        {
-            s = new A3DFRMFeatureTypeData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMFeatureTypeData));
-            return InitializeA3DFRMFeatureTypeData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFRMStringData(ref A3DFRMStringData s);
-        public static bool Initialize(out A3DFRMStringData s)
-        {
-            s = new A3DFRMStringData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMStringData));
-            return InitializeA3DFRMStringData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFRMDoubleData(ref A3DFRMDoubleData s);
-        public static bool Initialize(out A3DFRMDoubleData s)
-        {
-            s = new A3DFRMDoubleData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMDoubleData));
-            return InitializeA3DFRMDoubleData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFRMIntegerData(ref A3DFRMIntegerData s);
-        public static bool Initialize(out A3DFRMIntegerData s)
-        {
-            s = new A3DFRMIntegerData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMIntegerData));
-            return InitializeA3DFRMIntegerData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFRMFeatureLinkedItemData(ref A3DFRMFeatureLinkedItemData s);
-        public static bool Initialize(out A3DFRMFeatureLinkedItemData s)
-        {
-            s = new A3DFRMFeatureLinkedItemData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMFeatureLinkedItemData));
-            return InitializeA3DFRMFeatureLinkedItemData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFRMFeatureData(ref A3DFRMFeatureData s);
-        public static bool Initialize(out A3DFRMFeatureData s)
-        {
-            s = new A3DFRMFeatureData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMFeatureData));
-            return InitializeA3DFRMFeatureData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DFRMFeatureGeomEntitiesData(ref A3DFRMFeatureGeomEntitiesData s);
-        public static bool Initialize(out A3DFRMFeatureGeomEntitiesData s)
-        {
-            s = new A3DFRMFeatureGeomEntitiesData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMFeatureGeomEntitiesData));
-            return InitializeA3DFRMFeatureGeomEntitiesData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvNurbsData(ref A3DCrvNurbsData s);
-        public static bool Initialize(out A3DCrvNurbsData s)
-        {
-            s = new A3DCrvNurbsData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvNurbsData));
-            return InitializeA3DCrvNurbsData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvLineData(ref A3DCrvLineData s);
-        public static bool Initialize(out A3DCrvLineData s)
-        {
-            s = new A3DCrvLineData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvLineData));
-            return InitializeA3DCrvLineData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvCircleData(ref A3DCrvCircleData s);
-        public static bool Initialize(out A3DCrvCircleData s)
-        {
-            s = new A3DCrvCircleData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvCircleData));
-            return InitializeA3DCrvCircleData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvEllipseData(ref A3DCrvEllipseData s);
-        public static bool Initialize(out A3DCrvEllipseData s)
-        {
-            s = new A3DCrvEllipseData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvEllipseData));
-            return InitializeA3DCrvEllipseData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvParabolaData(ref A3DCrvParabolaData s);
-        public static bool Initialize(out A3DCrvParabolaData s)
-        {
-            s = new A3DCrvParabolaData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvParabolaData));
-            return InitializeA3DCrvParabolaData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvHyperbolaData(ref A3DCrvHyperbolaData s);
-        public static bool Initialize(out A3DCrvHyperbolaData s)
-        {
-            s = new A3DCrvHyperbolaData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvHyperbolaData));
-            return InitializeA3DCrvHyperbolaData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvPolyLineData(ref A3DCrvPolyLineData s);
-        public static bool Initialize(out A3DCrvPolyLineData s)
-        {
-            s = new A3DCrvPolyLineData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvPolyLineData));
-            return InitializeA3DCrvPolyLineData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvCompositeData(ref A3DCrvCompositeData s);
-        public static bool Initialize(out A3DCrvCompositeData s)
-        {
-            s = new A3DCrvCompositeData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvCompositeData));
-            return InitializeA3DCrvCompositeData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvEquationData(ref A3DCrvEquationData s);
-        public static bool Initialize(out A3DCrvEquationData s)
-        {
-            s = new A3DCrvEquationData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvEquationData));
-            return InitializeA3DCrvEquationData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvTransformData(ref A3DCrvTransformData s);
-        public static bool Initialize(out A3DCrvTransformData s)
-        {
-            s = new A3DCrvTransformData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvTransformData));
-            return InitializeA3DCrvTransformData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvOnSurfData(ref A3DCrvOnSurfData s);
-        public static bool Initialize(out A3DCrvOnSurfData s)
-        {
-            s = new A3DCrvOnSurfData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvOnSurfData));
-            return InitializeA3DCrvOnSurfData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvOffsetData(ref A3DCrvOffsetData s);
-        public static bool Initialize(out A3DCrvOffsetData s)
-        {
-            s = new A3DCrvOffsetData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvOffsetData));
-            return InitializeA3DCrvOffsetData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvHelixPitchCstData(ref A3DCrvHelixPitchCstData s);
-        public static bool Initialize(out A3DCrvHelixPitchCstData s)
-        {
-            s = new A3DCrvHelixPitchCstData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvHelixPitchCstData));
-            return InitializeA3DCrvHelixPitchCstData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvHelixPitchVarData(ref A3DCrvHelixPitchVarData s);
-        public static bool Initialize(out A3DCrvHelixPitchVarData s)
-        {
-            s = new A3DCrvHelixPitchVarData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvHelixPitchVarData));
-            return InitializeA3DCrvHelixPitchVarData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvHelixData(ref A3DCrvHelixData s);
-        public static bool Initialize(out A3DCrvHelixData s)
-        {
-            s = new A3DCrvHelixData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvHelixData));
-            return InitializeA3DCrvHelixData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrossingPointsCrvIntersectionData(ref A3DCrossingPointsCrvIntersectionData s);
-        public static bool Initialize(out A3DCrossingPointsCrvIntersectionData s)
-        {
-            s = new A3DCrossingPointsCrvIntersectionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrossingPointsCrvIntersectionData));
-            return InitializeA3DCrossingPointsCrvIntersectionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvIntersectionData(ref A3DCrvIntersectionData s);
-        public static bool Initialize(out A3DCrvIntersectionData s)
-        {
-            s = new A3DCrvIntersectionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvIntersectionData));
-            return InitializeA3DCrvIntersectionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCrvBlend02BoundaryData(ref A3DCrvBlend02BoundaryData s);
-        public static bool Initialize(out A3DCrvBlend02BoundaryData s)
-        {
-            s = new A3DCrvBlend02BoundaryData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvBlend02BoundaryData));
-            return InitializeA3DCrvBlend02BoundaryData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfNurbsData(ref A3DSurfNurbsData s);
-        public static bool Initialize(out A3DSurfNurbsData s)
-        {
-            s = new A3DSurfNurbsData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfNurbsData));
-            return InitializeA3DSurfNurbsData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfSphereData(ref A3DSurfSphereData s);
-        public static bool Initialize(out A3DSurfSphereData s)
-        {
-            s = new A3DSurfSphereData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfSphereData));
-            return InitializeA3DSurfSphereData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfCylinderData(ref A3DSurfCylinderData s);
-        public static bool Initialize(out A3DSurfCylinderData s)
-        {
-            s = new A3DSurfCylinderData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfCylinderData));
-            return InitializeA3DSurfCylinderData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfTorusData(ref A3DSurfTorusData s);
-        public static bool Initialize(out A3DSurfTorusData s)
-        {
-            s = new A3DSurfTorusData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfTorusData));
-            return InitializeA3DSurfTorusData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfRevolutionData(ref A3DSurfRevolutionData s);
-        public static bool Initialize(out A3DSurfRevolutionData s)
-        {
-            s = new A3DSurfRevolutionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfRevolutionData));
-            return InitializeA3DSurfRevolutionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfExtrusionData(ref A3DSurfExtrusionData s);
-        public static bool Initialize(out A3DSurfExtrusionData s)
-        {
-            s = new A3DSurfExtrusionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfExtrusionData));
-            return InitializeA3DSurfExtrusionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfOffsetData(ref A3DSurfOffsetData s);
-        public static bool Initialize(out A3DSurfOffsetData s)
-        {
-            s = new A3DSurfOffsetData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfOffsetData));
-            return InitializeA3DSurfOffsetData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfPlaneData(ref A3DSurfPlaneData s);
-        public static bool Initialize(out A3DSurfPlaneData s)
-        {
-            s = new A3DSurfPlaneData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfPlaneData));
-            return InitializeA3DSurfPlaneData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfBlend01Data(ref A3DSurfBlend01Data s);
-        public static bool Initialize(out A3DSurfBlend01Data s)
-        {
-            s = new A3DSurfBlend01Data();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfBlend01Data));
-            return InitializeA3DSurfBlend01Data(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfBlend02Data(ref A3DSurfBlend02Data s);
-        public static bool Initialize(out A3DSurfBlend02Data s)
-        {
-            s = new A3DSurfBlend02Data();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfBlend02Data));
-            return InitializeA3DSurfBlend02Data(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfBlend03Data(ref A3DSurfBlend03Data s);
-        public static bool Initialize(out A3DSurfBlend03Data s)
-        {
-            s = new A3DSurfBlend03Data();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfBlend03Data));
-            return InitializeA3DSurfBlend03Data(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfConeData(ref A3DSurfConeData s);
-        public static bool Initialize(out A3DSurfConeData s)
-        {
-            s = new A3DSurfConeData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfConeData));
-            return InitializeA3DSurfConeData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfCylindricalData(ref A3DSurfCylindricalData s);
-        public static bool Initialize(out A3DSurfCylindricalData s)
-        {
-            s = new A3DSurfCylindricalData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfCylindricalData));
-            return InitializeA3DSurfCylindricalData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfRuledData(ref A3DSurfRuledData s);
-        public static bool Initialize(out A3DSurfRuledData s)
-        {
-            s = new A3DSurfRuledData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfRuledData));
-            return InitializeA3DSurfRuledData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfPipeData(ref A3DSurfPipeData s);
-        public static bool Initialize(out A3DSurfPipeData s)
-        {
-            s = new A3DSurfPipeData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfPipeData));
-            return InitializeA3DSurfPipeData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfTransformData(ref A3DSurfTransformData s);
-        public static bool Initialize(out A3DSurfTransformData s)
-        {
-            s = new A3DSurfTransformData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfTransformData));
-            return InitializeA3DSurfTransformData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DSurfFromCurvesData(ref A3DSurfFromCurvesData s);
-        public static bool Initialize(out A3DSurfFromCurvesData s)
-        {
-            s = new A3DSurfFromCurvesData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfFromCurvesData));
-            return InitializeA3DSurfFromCurvesData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DGlobalData(ref A3DGlobalData s);
-        public static bool Initialize(out A3DGlobalData s)
-        {
-            s = new A3DGlobalData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGlobalData));
-            return InitializeA3DGlobalData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDPosition3DData(ref A3DMDPosition3DData s);
-        public static bool Initialize(out A3DMDPosition3DData s)
-        {
-            s = new A3DMDPosition3DData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDPosition3DData));
-            return InitializeA3DMDPosition3DData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDPosition2DData(ref A3DMDPosition2DData s);
-        public static bool Initialize(out A3DMDPosition2DData s)
-        {
-            s = new A3DMDPosition2DData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDPosition2DData));
-            return InitializeA3DMDPosition2DData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDPositionReferenceData(ref A3DMDPositionReferenceData s);
-        public static bool Initialize(out A3DMDPositionReferenceData s)
-        {
-            s = new A3DMDPositionReferenceData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDPositionReferenceData));
-            return InitializeA3DMDPositionReferenceData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDLeaderSymbolData(ref A3DMDLeaderSymbolData s);
-        public static bool Initialize(out A3DMDLeaderSymbolData s)
-        {
-            s = new A3DMDLeaderSymbolData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDLeaderSymbolData));
-            return InitializeA3DMDLeaderSymbolData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDMarkupLeaderStubData(ref A3DMDMarkupLeaderStubData s);
-        public static bool Initialize(out A3DMDMarkupLeaderStubData s)
-        {
-            s = new A3DMDMarkupLeaderStubData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDMarkupLeaderStubData));
-            return InitializeA3DMDMarkupLeaderStubData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDLeaderDefinitionData(ref A3DMDLeaderDefinitionData s);
-        public static bool Initialize(out A3DMDLeaderDefinitionData s)
-        {
-            s = new A3DMDLeaderDefinitionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDLeaderDefinitionData));
-            return InitializeA3DMDLeaderDefinitionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDTextPropertiesData(ref A3DMDTextPropertiesData s);
-        public static bool Initialize(out A3DMDTextPropertiesData s)
-        {
-            s = new A3DMDTextPropertiesData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDTextPropertiesData));
-            return InitializeA3DMDTextPropertiesData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupDefinitionData(ref A3DMarkupDefinitionData s);
-        public static bool Initialize(out A3DMarkupDefinitionData s)
-        {
-            s = new A3DMarkupDefinitionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupDefinitionData));
-            return InitializeA3DMarkupDefinitionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDDimensionValueFormatData(ref A3DMDDimensionValueFormatData s);
-        public static bool Initialize(out A3DMDDimensionValueFormatData s)
-        {
-            s = new A3DMDDimensionValueFormatData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionValueFormatData));
-            return InitializeA3DMDDimensionValueFormatData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDDimensionSimpleToleranceFormatData(ref A3DMDDimensionSimpleToleranceFormatData s);
-        public static bool Initialize(out A3DMDDimensionSimpleToleranceFormatData s)
-        {
-            s = new A3DMDDimensionSimpleToleranceFormatData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionSimpleToleranceFormatData));
-            return InitializeA3DMDDimensionSimpleToleranceFormatData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDDimensionCombinedToleranceFormatData(ref A3DMDDimensionCombinedToleranceFormatData s);
-        public static bool Initialize(out A3DMDDimensionCombinedToleranceFormatData s)
-        {
-            s = new A3DMDDimensionCombinedToleranceFormatData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionCombinedToleranceFormatData));
-            return InitializeA3DMDDimensionCombinedToleranceFormatData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDDimensionValueData(ref A3DMDDimensionValueData s);
-        public static bool Initialize(out A3DMDDimensionValueData s)
-        {
-            s = new A3DMDDimensionValueData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionValueData));
-            return InitializeA3DMDDimensionValueData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDDimensionSecondPartData(ref A3DMDDimensionSecondPartData s);
-        public static bool Initialize(out A3DMDDimensionSecondPartData s)
-        {
-            s = new A3DMDDimensionSecondPartData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionSecondPartData));
-            return InitializeA3DMDDimensionSecondPartData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDDimensionForeshortenedData(ref A3DMDDimensionForeshortenedData s);
-        public static bool Initialize(out A3DMDDimensionForeshortenedData s)
-        {
-            s = new A3DMDDimensionForeshortenedData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionForeshortenedData));
-            return InitializeA3DMDDimensionForeshortenedData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDDimensionLineSymbolData(ref A3DMDDimensionLineSymbolData s);
-        public static bool Initialize(out A3DMDDimensionLineSymbolData s)
-        {
-            s = new A3DMDDimensionLineSymbolData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionLineSymbolData));
-            return InitializeA3DMDDimensionLineSymbolData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDDimensionLineData(ref A3DMDDimensionLineData s);
-        public static bool Initialize(out A3DMDDimensionLineData s)
-        {
-            s = new A3DMDDimensionLineData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionLineData));
-            return InitializeA3DMDDimensionLineData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDDimensionFunnelData(ref A3DMDDimensionFunnelData s);
-        public static bool Initialize(out A3DMDDimensionFunnelData s)
-        {
-            s = new A3DMDDimensionFunnelData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionFunnelData));
-            return InitializeA3DMDDimensionFunnelData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDDimensionExtremityData(ref A3DMDDimensionExtremityData s);
-        public static bool Initialize(out A3DMDDimensionExtremityData s)
-        {
-            s = new A3DMDDimensionExtremityData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionExtremityData));
-            return InitializeA3DMDDimensionExtremityData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDDimensionExtentionLineData(ref A3DMDDimensionExtentionLineData s);
-        public static bool Initialize(out A3DMDDimensionExtentionLineData s)
-        {
-            s = new A3DMDDimensionExtentionLineData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionExtentionLineData));
-            return InitializeA3DMDDimensionExtentionLineData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupDimensionData(ref A3DMarkupDimensionData s);
-        public static bool Initialize(out A3DMarkupDimensionData s)
-        {
-            s = new A3DMarkupDimensionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupDimensionData));
-            return InitializeA3DMarkupDimensionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupRoughnessData(ref A3DMarkupRoughnessData s);
-        public static bool Initialize(out A3DMarkupRoughnessData s)
-        {
-            s = new A3DMarkupRoughnessData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupRoughnessData));
-            return InitializeA3DMarkupRoughnessData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupBalloonData(ref A3DMarkupBalloonData s);
-        public static bool Initialize(out A3DMarkupBalloonData s)
-        {
-            s = new A3DMarkupBalloonData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupBalloonData));
-            return InitializeA3DMarkupBalloonData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupFastenerData(ref A3DMarkupFastenerData s);
-        public static bool Initialize(out A3DMarkupFastenerData s)
-        {
-            s = new A3DMarkupFastenerData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupFastenerData));
-            return InitializeA3DMarkupFastenerData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupLocatorData(ref A3DMarkupLocatorData s);
-        public static bool Initialize(out A3DMarkupLocatorData s)
-        {
-            s = new A3DMarkupLocatorData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupLocatorData));
-            return InitializeA3DMarkupLocatorData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupMeasurementPointData(ref A3DMarkupMeasurementPointData s);
-        public static bool Initialize(out A3DMarkupMeasurementPointData s)
-        {
-            s = new A3DMarkupMeasurementPointData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupMeasurementPointData));
-            return InitializeA3DMarkupMeasurementPointData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDTextPositionData(ref A3DMDTextPositionData s);
-        public static bool Initialize(out A3DMDTextPositionData s)
-        {
-            s = new A3DMDTextPositionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDTextPositionData));
-            return InitializeA3DMDTextPositionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupTextData(ref A3DMarkupTextData s);
-        public static bool Initialize(out A3DMarkupTextData s)
-        {
-            s = new A3DMarkupTextData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupTextData));
-            return InitializeA3DMarkupTextData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupCoordinateData(ref A3DMarkupCoordinateData s);
-        public static bool Initialize(out A3DMarkupCoordinateData s)
-        {
-            s = new A3DMarkupCoordinateData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupCoordinateData));
-            return InitializeA3DMarkupCoordinateData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupRichTextData(ref A3DMarkupRichTextData s);
-        public static bool Initialize(out A3DMarkupRichTextData s)
-        {
-            s = new A3DMarkupRichTextData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupRichTextData));
-            return InitializeA3DMarkupRichTextData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupDatumData(ref A3DMarkupDatumData s);
-        public static bool Initialize(out A3DMarkupDatumData s)
-        {
-            s = new A3DMarkupDatumData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupDatumData));
-            return InitializeA3DMarkupDatumData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDFCFDraftingRowData(ref A3DMDFCFDraftingRowData s);
-        public static bool Initialize(out A3DMDFCFDraftingRowData s)
-        {
-            s = new A3DMDFCFDraftingRowData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCFDraftingRowData));
-            return InitializeA3DMDFCFDraftingRowData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDFCValueData(ref A3DMDFCValueData s);
-        public static bool Initialize(out A3DMDFCValueData s)
-        {
-            s = new A3DMDFCValueData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCValueData));
-            return InitializeA3DMDFCValueData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDFCTolerancePerUnitData(ref A3DMDFCTolerancePerUnitData s);
-        public static bool Initialize(out A3DMDFCTolerancePerUnitData s)
-        {
-            s = new A3DMDFCTolerancePerUnitData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCTolerancePerUnitData));
-            return InitializeA3DMDFCTolerancePerUnitData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDFCProjectedZoneData(ref A3DMDFCProjectedZoneData s);
-        public static bool Initialize(out A3DMDFCProjectedZoneData s)
-        {
-            s = new A3DMDFCProjectedZoneData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCProjectedZoneData));
-            return InitializeA3DMDFCProjectedZoneData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDFCFToleranceValueData(ref A3DMDFCFToleranceValueData s);
-        public static bool Initialize(out A3DMDFCFToleranceValueData s)
-        {
-            s = new A3DMDFCFToleranceValueData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCFToleranceValueData));
-            return InitializeA3DMDFCFToleranceValueData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDFCFRowDatumData(ref A3DMDFCFRowDatumData s);
-        public static bool Initialize(out A3DMDFCFRowDatumData s)
-        {
-            s = new A3DMDFCFRowDatumData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCFRowDatumData));
-            return InitializeA3DMDFCFRowDatumData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDFCFDrawingRowData(ref A3DMDFCFDrawingRowData s);
-        public static bool Initialize(out A3DMDFCFDrawingRowData s)
-        {
-            s = new A3DMDFCFDrawingRowData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCFDrawingRowData));
-            return InitializeA3DMDFCFDrawingRowData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDFCFIndicatorData(ref A3DMDFCFIndicatorData s);
-        public static bool Initialize(out A3DMDFCFIndicatorData s)
-        {
-            s = new A3DMDFCFIndicatorData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCFIndicatorData));
-            return InitializeA3DMDFCFIndicatorData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDFeatureControlFrameData(ref A3DMDFeatureControlFrameData s);
-        public static bool Initialize(out A3DMDFeatureControlFrameData s)
-        {
-            s = new A3DMDFeatureControlFrameData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFeatureControlFrameData));
-            return InitializeA3DMDFeatureControlFrameData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDToleranceSizeValueData(ref A3DMDToleranceSizeValueData s);
-        public static bool Initialize(out A3DMDToleranceSizeValueData s)
-        {
-            s = new A3DMDToleranceSizeValueData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDToleranceSizeValueData));
-            return InitializeA3DMDToleranceSizeValueData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMDToleranceSizeData(ref A3DMDToleranceSizeData s);
-        public static bool Initialize(out A3DMDToleranceSizeData s)
-        {
-            s = new A3DMDToleranceSizeData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDToleranceSizeData));
-            return InitializeA3DMDToleranceSizeData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupGDTData(ref A3DMarkupGDTData s);
-        public static bool Initialize(out A3DMarkupGDTData s)
-        {
-            s = new A3DMarkupGDTData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupGDTData));
-            return InitializeA3DMarkupGDTData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupSpotWeldingData(ref A3DMarkupSpotWeldingData s);
-        public static bool Initialize(out A3DMarkupSpotWeldingData s)
-        {
-            s = new A3DMarkupSpotWeldingData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupSpotWeldingData));
-            return InitializeA3DMarkupSpotWeldingData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMarkupLineWeldingData(ref A3DMarkupLineWeldingData s);
-        public static bool Initialize(out A3DMarkupLineWeldingData s)
-        {
-            s = new A3DMarkupLineWeldingData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupLineWeldingData));
-            return InitializeA3DMarkupLineWeldingData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMathFct1DPolynomData(ref A3DMathFct1DPolynomData s);
-        public static bool Initialize(out A3DMathFct1DPolynomData s)
-        {
-            s = new A3DMathFct1DPolynomData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct1DPolynomData));
-            return InitializeA3DMathFct1DPolynomData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMathFct1DTrigonometricData(ref A3DMathFct1DTrigonometricData s);
-        public static bool Initialize(out A3DMathFct1DTrigonometricData s)
-        {
-            s = new A3DMathFct1DTrigonometricData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct1DTrigonometricData));
-            return InitializeA3DMathFct1DTrigonometricData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMathFct1DFractionData(ref A3DMathFct1DFractionData s);
-        public static bool Initialize(out A3DMathFct1DFractionData s)
-        {
-            s = new A3DMathFct1DFractionData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct1DFractionData));
-            return InitializeA3DMathFct1DFractionData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMathFct1DArctanCosData(ref A3DMathFct1DArctanCosData s);
-        public static bool Initialize(out A3DMathFct1DArctanCosData s)
-        {
-            s = new A3DMathFct1DArctanCosData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct1DArctanCosData));
-            return InitializeA3DMathFct1DArctanCosData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMathFct1DCombinationData(ref A3DMathFct1DCombinationData s);
-        public static bool Initialize(out A3DMathFct1DCombinationData s)
-        {
-            s = new A3DMathFct1DCombinationData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct1DCombinationData));
-            return InitializeA3DMathFct1DCombinationData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMathFct3DLinearData(ref A3DMathFct3DLinearData s);
-        public static bool Initialize(out A3DMathFct3DLinearData s)
-        {
-            s = new A3DMathFct3DLinearData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct3DLinearData));
-            return InitializeA3DMathFct3DLinearData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMathFct3DNonLinearData(ref A3DMathFct3DNonLinearData s);
-        public static bool Initialize(out A3DMathFct3DNonLinearData s)
-        {
-            s = new A3DMathFct3DNonLinearData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct3DNonLinearData));
-            return InitializeA3DMathFct3DNonLinearData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRootBaseData(ref A3DRootBaseData s);
-        public static bool Initialize(out A3DRootBaseData s)
-        {
-            s = new A3DRootBaseData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRootBaseData));
-            return InitializeA3DRootBaseData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DRootBaseWithGraphicsData(ref A3DRootBaseWithGraphicsData s);
-        public static bool Initialize(out A3DRootBaseWithGraphicsData s)
-        {
-            s = new A3DRootBaseWithGraphicsData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRootBaseWithGraphicsData));
-            return InitializeA3DRootBaseWithGraphicsData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscSingleAttributeData(ref A3DMiscSingleAttributeData s);
-        public static bool Initialize(out A3DMiscSingleAttributeData s)
-        {
-            s = new A3DMiscSingleAttributeData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscSingleAttributeData));
-            return InitializeA3DMiscSingleAttributeData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscAttributeData(ref A3DMiscAttributeData s);
-        public static bool Initialize(out A3DMiscAttributeData s)
-        {
-            s = new A3DMiscAttributeData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscAttributeData));
-            return InitializeA3DMiscAttributeData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscAttributeBasicUnitData(ref A3DMiscAttributeBasicUnitData s);
-        public static bool Initialize(out A3DMiscAttributeBasicUnitData s)
-        {
-            s = new A3DMiscAttributeBasicUnitData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscAttributeBasicUnitData));
-            return InitializeA3DMiscAttributeBasicUnitData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DMiscAttributeUnitData(ref A3DMiscAttributeUnitData s);
-        public static bool Initialize(out A3DMiscAttributeUnitData s)
-        {
-            s = new A3DMiscAttributeUnitData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscAttributeUnitData));
-            return InitializeA3DMiscAttributeUnitData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DCopyAndAdaptBrepModelData(ref A3DCopyAndAdaptBrepModelData s);
-        public static bool Initialize(out A3DCopyAndAdaptBrepModelData s)
-        {
-            s = new A3DCopyAndAdaptBrepModelData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCopyAndAdaptBrepModelData));
-            return InitializeA3DCopyAndAdaptBrepModelData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DPhysicalPropertiesData(ref A3DPhysicalPropertiesData s);
-        public static bool Initialize(out A3DPhysicalPropertiesData s)
-        {
-            s = new A3DPhysicalPropertiesData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DPhysicalPropertiesData));
-            return InitializeA3DPhysicalPropertiesData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoBodyData(ref A3DTopoBodyData s);
-        public static bool Initialize(out A3DTopoBodyData s)
-        {
-            s = new A3DTopoBodyData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoBodyData));
-            return InitializeA3DTopoBodyData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoContextData(ref A3DTopoContextData s);
-        public static bool Initialize(out A3DTopoContextData s)
-        {
-            s = new A3DTopoContextData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoContextData));
-            return InitializeA3DTopoContextData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoSingleWireBodyData(ref A3DTopoSingleWireBodyData s);
-        public static bool Initialize(out A3DTopoSingleWireBodyData s)
-        {
-            s = new A3DTopoSingleWireBodyData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoSingleWireBodyData));
-            return InitializeA3DTopoSingleWireBodyData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoBrepDataData(ref A3DTopoBrepDataData s);
-        public static bool Initialize(out A3DTopoBrepDataData s)
-        {
-            s = new A3DTopoBrepDataData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoBrepDataData));
-            return InitializeA3DTopoBrepDataData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoConnexData(ref A3DTopoConnexData s);
-        public static bool Initialize(out A3DTopoConnexData s)
-        {
-            s = new A3DTopoConnexData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoConnexData));
-            return InitializeA3DTopoConnexData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoShellData(ref A3DTopoShellData s);
-        public static bool Initialize(out A3DTopoShellData s)
-        {
-            s = new A3DTopoShellData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoShellData));
-            return InitializeA3DTopoShellData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoFaceData(ref A3DTopoFaceData s);
-        public static bool Initialize(out A3DTopoFaceData s)
-        {
-            s = new A3DTopoFaceData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoFaceData));
-            return InitializeA3DTopoFaceData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoLoopData(ref A3DTopoLoopData s);
-        public static bool Initialize(out A3DTopoLoopData s)
-        {
-            s = new A3DTopoLoopData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoLoopData));
-            return InitializeA3DTopoLoopData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoCoEdgeData(ref A3DTopoCoEdgeData s);
-        public static bool Initialize(out A3DTopoCoEdgeData s)
-        {
-            s = new A3DTopoCoEdgeData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoCoEdgeData));
-            return InitializeA3DTopoCoEdgeData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoEdgeData(ref A3DTopoEdgeData s);
-        public static bool Initialize(out A3DTopoEdgeData s)
-        {
-            s = new A3DTopoEdgeData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoEdgeData));
-            return InitializeA3DTopoEdgeData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoWireEdgeData(ref A3DTopoWireEdgeData s);
-        public static bool Initialize(out A3DTopoWireEdgeData s)
-        {
-            s = new A3DTopoWireEdgeData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoWireEdgeData));
-            return InitializeA3DTopoWireEdgeData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoUniqueVertexData(ref A3DTopoUniqueVertexData s);
-        public static bool Initialize(out A3DTopoUniqueVertexData s)
-        {
-            s = new A3DTopoUniqueVertexData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoUniqueVertexData));
-            return InitializeA3DTopoUniqueVertexData(ref s);
-        }
-        [DllImport("Exchange.layer", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        private static extern bool InitializeA3DTopoMultipleVertexData(ref A3DTopoMultipleVertexData s);
-        public static bool Initialize(out A3DTopoMultipleVertexData s)
-        {
-            s = new A3DTopoMultipleVertexData();
-            s.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoMultipleVertexData));
-            return InitializeA3DTopoMultipleVertexData(ref s);
-        }
+    public static int DLL_MAJORVERSION = 13;
+    public static int DLL_MINORVERSION = 2;
+    public static ushort DEFAULT_LAYER = ushort.MaxValue;
+    public static byte DEFAULT_TRANSPARENCY = 255;
+    public static double DEFAULT_LINE_WIDTH = 0.1;
+    public static uint DEFAULT_COLOR_INDEX = uint.MaxValue;
+    public static uint DEFAULT_PATTERN_INDEX = uint.MaxValue;
+    public static ushort DEFAULT_STYLE_INDEX = ushort.MaxValue;
+    public static uint DEFAULT_LINEPATTERN_INDEX = uint.MaxValue;
+    public static uint DEFAULT_MATERIAL_INDEX = uint.MaxValue;
+    public static uint DEFAULT_PICTURE_INDEX = uint.MaxValue;
+    public static uint DEFAULT_TEXTURE_DEFINITION_INDEX = uint.MaxValue;
+    public static uint DEFAULT_TEXTURE_APPLICATION_INDEX = uint.MaxValue;
+    public static ushort DEFAULT_NO_UNIT = ushort.MaxValue;
+    public static uint LOOP_UNKNOWN_OUTER_INDEX = uint.MaxValue;
+    public static void Initialize(out A3DVector2dData d ) { 
+        d = new A3DVector2dData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DVector2dData));
+    }
+    public static void Initialize(out A3DVector3dData d ) { 
+        d = new A3DVector3dData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DVector3dData));
+    }
+    public static void Initialize(out A3DIntervalData d ) { 
+        d = new A3DIntervalData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DIntervalData));
+    }
+    public static void Initialize(out A3DDomainData d ) { 
+        d = new A3DDomainData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDomainData));
+        API.Initialize( out d.m_sMax );
+        API.Initialize( out d.m_sMin );
+    }
+    public static void Initialize(out A3DBoundingBoxData d ) { 
+        d = new A3DBoundingBoxData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DBoundingBoxData));
+        API.Initialize( out d.m_sMax );
+        API.Initialize( out d.m_sMin );
+    }
+    public static void Initialize(out A3DParameterizationData d ) { 
+        d = new A3DParameterizationData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DParameterizationData));
+        API.Initialize( out d.m_sInterval );
+    }
+    public static void Initialize(out A3DUVParameterizationData d ) { 
+        d = new A3DUVParameterizationData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DUVParameterizationData));
+        API.Initialize( out d.m_sUVDomain );
+    }
+    public static void Initialize(out A3DTessBaseData d ) { 
+        d = new A3DTessBaseData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTessBaseData));
+    }
+    public static void Initialize(out A3DTessFaceData d ) { 
+        d = new A3DTessFaceData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTessFaceData));
+    }
+    public static void Initialize(out A3DTess3DData d ) { 
+        d = new A3DTess3DData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTess3DData));
+    }
+    public static void Initialize(out A3DTess3DWireData d ) { 
+        d = new A3DTess3DWireData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTess3DWireData));
+    }
+    public static void Initialize(out A3DTessMarkupData d ) { 
+        d = new A3DTessMarkupData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTessMarkupData));
+    }
+    public static void Initialize(out A3DGraphicsData d ) { 
+        d = new A3DGraphicsData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphicsData));
+    }
+    public static void Initialize(out A3DGraphStyleData d ) { 
+        d = new A3DGraphStyleData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphStyleData));
+    }
+    public static void Initialize(out A3DGraphRgbColorData d ) { 
+        d = new A3DGraphRgbColorData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphRgbColorData));
+    }
+    public static void Initialize(out A3DGraphLinePatternData d ) { 
+        d = new A3DGraphLinePatternData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphLinePatternData));
+    }
+    public static void Initialize(out A3DGraphMaterialData d ) { 
+        d = new A3DGraphMaterialData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphMaterialData));
+    }
+    public static void Initialize(out A3DGraphPictureData d ) { 
+        d = new A3DGraphPictureData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphPictureData));
+    }
+    public static void Initialize(out A3DGraphDottingPatternData d ) { 
+        d = new A3DGraphDottingPatternData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphDottingPatternData));
+    }
+    public static void Initialize(out A3DGraphHatchingPatternLineData d ) { 
+        d = new A3DGraphHatchingPatternLineData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphHatchingPatternLineData));
+        API.Initialize( out d.m_sOffset );
+        API.Initialize( out d.m_sStart );
+    }
+    public static void Initialize(out A3DGraphHatchingPatternData d ) { 
+        d = new A3DGraphHatchingPatternData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphHatchingPatternData));
+    }
+    public static void Initialize(out A3DGraphSolidPatternData d ) { 
+        d = new A3DGraphSolidPatternData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphSolidPatternData));
+    }
+    public static void Initialize(out A3DGraphVPicturePatternData d ) { 
+        d = new A3DGraphVPicturePatternData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphVPicturePatternData));
+    }
+    public static void Initialize(out A3DGraphCameraData d ) { 
+        d = new A3DGraphCameraData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphCameraData));
+        API.Initialize( out d.m_sLocation );
+        API.Initialize( out d.m_sLookAt );
+        API.Initialize( out d.m_sUp );
+    }
+    public static void Initialize(out A3DGraphAmbientLightData d ) { 
+        d = new A3DGraphAmbientLightData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphAmbientLightData));
+    }
+    public static void Initialize(out A3DGraphPointLightData d ) { 
+        d = new A3DGraphPointLightData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphPointLightData));
+        API.Initialize( out d.m_sLocation );
+    }
+    public static void Initialize(out A3DGraphSpotLightData d ) { 
+        d = new A3DGraphSpotLightData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphSpotLightData));
+        API.Initialize( out d.m_sDirection );
+        API.Initialize( out d.m_sLocation );
+    }
+    public static void Initialize(out A3DGraphDirectionalLightData d ) { 
+        d = new A3DGraphDirectionalLightData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphDirectionalLightData));
+        API.Initialize( out d.m_sDirection );
+    }
+    public static void Initialize(out A3DGraphSceneDisplayParametersData d ) { 
+        d = new A3DGraphSceneDisplayParametersData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphSceneDisplayParametersData));
+        API.Initialize( out d.m_sRotationCenter );
+    }
+    public static void Initialize(out A3DMiscCascadedAttributesData d ) { 
+        d = new A3DMiscCascadedAttributesData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscCascadedAttributesData));
+        API.Initialize( out d.m_sStyle );
+    }
+    public static void Initialize(out A3DMiscGeneralTransformationData d ) { 
+        d = new A3DMiscGeneralTransformationData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscGeneralTransformationData));
+    }
+    public static void Initialize(out A3DMiscCartesianTransformationData d ) { 
+        d = new A3DMiscCartesianTransformationData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscCartesianTransformationData));
+        API.Initialize( out d.m_sOrigin );
+        API.Initialize( out d.m_sScale );
+        API.Initialize( out d.m_sXVector );
+        API.Initialize( out d.m_sYVector );
+    }
+    public static void Initialize(out A3DMiscEntityReferenceData d ) { 
+        d = new A3DMiscEntityReferenceData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscEntityReferenceData));
+    }
+    public static void Initialize(out A3DMiscReferenceOnTopologyData d ) { 
+        d = new A3DMiscReferenceOnTopologyData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscReferenceOnTopologyData));
+    }
+    public static void Initialize(out A3DMiscReferenceOnTessData d ) { 
+        d = new A3DMiscReferenceOnTessData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscReferenceOnTessData));
+    }
+    public static void Initialize(out A3DMiscReferenceOnCsysItemData d ) { 
+        d = new A3DMiscReferenceOnCsysItemData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscReferenceOnCsysItemData));
+    }
+    public static void Initialize(out A3DMiscPhysicMaterialData d ) { 
+        d = new A3DMiscPhysicMaterialData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscPhysicMaterialData));
+    }
+    public static void Initialize(out A3DMiscMaterialFiberData d ) { 
+        d = new A3DMiscMaterialFiberData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialFiberData));
+    }
+    public static void Initialize(out A3DMiscMaterialHoneyCombData d ) { 
+        d = new A3DMiscMaterialHoneyCombData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialHoneyCombData));
+    }
+    public static void Initialize(out A3DMiscMaterialIsotropicData d ) { 
+        d = new A3DMiscMaterialIsotropicData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialIsotropicData));
+    }
+    public static void Initialize(out A3DMiscMaterialOrthotropic2DData d ) { 
+        d = new A3DMiscMaterialOrthotropic2DData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialOrthotropic2DData));
+    }
+    public static void Initialize(out A3DMiscMaterialOrthotropic3DData d ) { 
+        d = new A3DMiscMaterialOrthotropic3DData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialOrthotropic3DData));
+    }
+    public static void Initialize(out A3DMiscMaterialAnisotropicData d ) { 
+        d = new A3DMiscMaterialAnisotropicData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialAnisotropicData));
+    }
+    public static void Initialize(out A3DMiscMaterialPropertiesData d ) { 
+        d = new A3DMiscMaterialPropertiesData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialPropertiesData));
+        API.Initialize( out d.m_sOrthotropic3D );
+    }
+    public static void Initialize(out A3DAsmModelFileData d ) { 
+        d = new A3DAsmModelFileData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmModelFileData));
+    }
+    public static void Initialize(out A3DAsmProductOccurrenceData d ) { 
+        d = new A3DAsmProductOccurrenceData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceData));
+    }
+    public static void Initialize(out A3DAsmProductOccurrenceDataSLW d ) { 
+        d = new A3DAsmProductOccurrenceDataSLW();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataSLW));
+    }
+    public static void Initialize(out A3DAsmProductOccurrenceDataCat d ) { 
+        d = new A3DAsmProductOccurrenceDataCat();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataCat));
+    }
+    public static void Initialize(out A3DAsmProductOccurrenceDataCV5 d ) { 
+        d = new A3DAsmProductOccurrenceDataCV5();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataCV5));
+    }
+    public static void Initialize(out A3DAsmProductOccurrenceDataUg d ) { 
+        d = new A3DAsmProductOccurrenceDataUg();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataUg));
+    }
+    public static void Initialize(out A3DAsmProductOccurrenceDataProe d ) { 
+        d = new A3DAsmProductOccurrenceDataProe();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataProe));
+    }
+    public static void Initialize(out A3DAsmProductOccurrenceDataInv d ) { 
+        d = new A3DAsmProductOccurrenceDataInv();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataInv));
+    }
+    public static void Initialize(out A3DAsmProductOccurrenceDataJT d ) { 
+        d = new A3DAsmProductOccurrenceDataJT();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmProductOccurrenceDataJT));
+    }
+    public static void Initialize(out A3DAsmPartDefinitionData d ) { 
+        d = new A3DAsmPartDefinitionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmPartDefinitionData));
+        API.Initialize( out d.m_sBoundingBox );
+    }
+    public static void Initialize(out A3DAsmLayerFilterItemData d ) { 
+        d = new A3DAsmLayerFilterItemData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmLayerFilterItemData));
+    }
+    public static void Initialize(out A3DAsmEntityFilterItemData d ) { 
+        d = new A3DAsmEntityFilterItemData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmEntityFilterItemData));
+    }
+    public static void Initialize(out A3DAsmFilterData d ) { 
+        d = new A3DAsmFilterData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DAsmFilterData));
+        API.Initialize( out d.m_sEntityFilterItem );
+        API.Initialize( out d.m_sLayerFilterItem );
+    }
+    public static void Initialize(out A3DRWParamsGeneralData d ) { 
+        d = new A3DRWParamsGeneralData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsGeneralData));
+    }
+    public static void Initialize(out A3DRWParamsPmiData d ) { 
+        d = new A3DRWParamsPmiData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsPmiData));
+    }
+    public static void Initialize(out A3DRWParamsTessellationData d ) { 
+        d = new A3DRWParamsTessellationData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsTessellationData));
+    }
+    public static void Initialize(out A3DRWParamsSearchDirData d ) { 
+        d = new A3DRWParamsSearchDirData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsSearchDirData));
+    }
+    public static void Initialize(out A3DRWParamsAssemblyData d ) { 
+        d = new A3DRWParamsAssemblyData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsAssemblyData));
+    }
+    public static void Initialize(out A3DRWParamsMultiEntriesData d ) { 
+        d = new A3DRWParamsMultiEntriesData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsMultiEntriesData));
+    }
+    public static void Initialize(out A3DRWParamsCatiaV4Data d ) { 
+        d = new A3DRWParamsCatiaV4Data();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsCatiaV4Data));
+    }
+    public static void Initialize(out A3DRWParamsCatiaV5Data d ) { 
+        d = new A3DRWParamsCatiaV5Data();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsCatiaV5Data));
+    }
+    public static void Initialize(out A3DRWParamsUnigraphicsData d ) { 
+        d = new A3DRWParamsUnigraphicsData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsUnigraphicsData));
+    }
+    public static void Initialize(out A3DRWParamsProEData d ) { 
+        d = new A3DRWParamsProEData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsProEData));
+        d.m_eFamilyTables = A3DProEFamilyTables.A3DProEFamTabOrUseTessellation;
+        d.m_bBoolOpUseGenericIfNoTess = false;
+        d.m_bFlexCompUseGenericIfNoTess = false;
+        d.m_bHideSkeletons = false;
+    }
+    public static void Initialize(out A3DRWValidationPropertiesThresholdData d ) { 
+        d = new A3DRWValidationPropertiesThresholdData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWValidationPropertiesThresholdData));
+        d.m_dGEOMPercentVolume = 0.5;
+        d.m_dGEOMPercentSurfaceArea = 0.5;
+        d.m_dGEOMPercentIndependentSurfaceArea = 0.5;
+        d.m_dGEOMPercentIndependentCurveLength = 0.5;
+        d.m_dGEOMDeviationCentroid = 0.1;
+        d.m_dGEOMDeviationIndependentSurfaceCentroid = 0.1;
+        d.m_dGEOMDeviationIndependentCurveCentroid = 0.1;
+        d.m_dGEOMDeviationPointSetCentroid = 0.1;
+        d.m_dGEOMDeviationBoundingBox = 0.1;
+        d.m_dPMIPercentAffectedArea = 0.5;
+        d.m_dPMIPercentAffectedCurveLength = 0.5;
+        d.m_dPMIPercentCurveLength = 0.5;
+        d.m_dPMIPercentSurfaceArea = 0.5;
+        d.m_dPMIDeviationCurveCentroid = 0.1;
+        d.m_dPMIDeviationSurfaceCentroid = 0.1;
+        d.m_dASMDeviationNotionalSolidsCentroid = 0.1;
+    }
+    public static void Initialize(out A3DRWParamsStepData d ) { 
+        d = new A3DRWParamsStepData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsStepData));
+        API.Initialize( out d.m_sValidationPropertiesThreshold );
+        d.m_eNameFromNAUO = A3DEStepNameFromNAUO.kA3DStepNameFromNAUO_DESCRIPTION;
+        d.m_bSplitSHELL_BASED_SURFACE_MODEL = true;
+        d.m_bHealOrientations = false;
+    }
+    public static void Initialize(out A3DRWParamsIGESData d ) { 
+        d = new A3DRWParamsIGESData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsIGESData));
+    }
+    public static void Initialize(out A3DRWParamsIFCData d ) { 
+        d = new A3DRWParamsIFCData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsIFCData));
+        d.m_bFACETED_BREPAsOneFace = true;
+    }
+    public static void Initialize(out A3DRWParamsJTData d ) { 
+        d = new A3DRWParamsJTData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsJTData));
+        d.m_eReadTessellationLevelOfDetail = A3DEJTReadTessellationLevelOfDetail.kA3DJTTessLODHigh;
+    }
+    public static void Initialize(out A3DRWParamsParasolidData d ) { 
+        d = new A3DRWParamsParasolidData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsParasolidData));
+    }
+    public static void Initialize(out A3DRWParamsSolidworksData d ) { 
+        d = new A3DRWParamsSolidworksData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsSolidworksData));
+        d.m_bLoadAllConfigsData = false;
+        d.m_usDisplayVisibleDatum = 0;
+    }
+    public static void Initialize(out A3DRWParamsInventorData d ) { 
+        d = new A3DRWParamsInventorData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsInventorData));
+        d.m_bUseTessForFile = true;
+    }
+    public static void Initialize(out A3DRWParamsRhinoData d ) { 
+        d = new A3DRWParamsRhinoData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsRhinoData));
+        d.m_bForceRenderedModeColors = false;
+    }
+    public static void Initialize(out A3DRWParamsRevitData d ) { 
+        d = new A3DRWParamsRevitData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsRevitData));
+        d.m_ePhysicalProperties = EA3DRevitPhysicalProperties.kA3DRevitPhysicalProperties_NotComputed;
+    }
+    public static void Initialize(out A3DRWParamsSpecificLoadData d ) { 
+        d = new A3DRWParamsSpecificLoadData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsSpecificLoadData));
+        API.Initialize( out d.m_sCatiaV4 );
+        API.Initialize( out d.m_sCatiaV5 );
+        API.Initialize( out d.m_sIFC );
+        API.Initialize( out d.m_sIGES );
+        API.Initialize( out d.m_sInventor );
+        API.Initialize( out d.m_sJT );
+        API.Initialize( out d.m_sParasolid );
+        API.Initialize( out d.m_sProE );
+        API.Initialize( out d.m_sRevit );
+        API.Initialize( out d.m_sRhino );
+        API.Initialize( out d.m_sSolidworks );
+        API.Initialize( out d.m_sStep );
+        API.Initialize( out d.m_sUnigraphics );
+    }
+    public static void Initialize(out A3DRWParamsIncrementalLoadData d ) { 
+        d = new A3DRWParamsIncrementalLoadData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsIncrementalLoadData));
+    }
+    public static void Initialize(out A3DRWParamsLoadData d ) { 
+        d = new A3DRWParamsLoadData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsLoadData));
+        API.Initialize( out d.m_sAssembly );
+        API.Initialize( out d.m_sGeneral );
+        API.Initialize( out d.m_sIncremental );
+        API.Initialize( out d.m_sMultiEntries );
+        API.Initialize( out d.m_sPmi );
+        API.Initialize( out d.m_sSpecifics );
+        API.Initialize( out d.m_sTessellation );
+    }
+    public static void Initialize(out A3DStream3DPDFData d ) { 
+        d = new A3DStream3DPDFData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DStream3DPDFData));
+    }
+    public static void Initialize(out A3DRWParamsExportPrcData d ) { 
+        d = new A3DRWParamsExportPrcData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportPrcData));
+    }
+    public static void Initialize(out A3DRWParamsExportU3DData d ) { 
+        d = new A3DRWParamsExportU3DData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportU3DData));
+    }
+    public static void Initialize(out A3DRWParamsExportStepData d ) { 
+        d = new A3DRWParamsExportStepData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportStepData));
+    }
+    public static void Initialize(out A3DRWParamsExportJTData d ) { 
+        d = new A3DRWParamsExportJTData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportJTData));
+        d.m_eWriteGeomTessMode = A3DEWriteGeomTessMode.kA3DWriteGeomAndTess;
+        d.m_bWriteHiddenObjects = false;
+        d.m_bWritePMI = true;
+        d.m_eJTVersion = A3DEJTVersion.kA3DE_JT81;
+    }
+    public static void Initialize(out A3DRWParamsExportIgesData d ) { 
+        d = new A3DRWParamsExportIgesData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportIgesData));
+    }
+    public static void Initialize(out A3DRWParamsExportStlData d ) { 
+        d = new A3DRWParamsExportStlData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportStlData));
+        d.m_eExportUnit = A3DEUnits.kA3DUnitMillimeter;
+    }
+    public static void Initialize(out A3DRWParamsExport3mfData d ) { 
+        d = new A3DRWParamsExport3mfData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExport3mfData));
+        API.Initialize( out d.m_sTessellation );
+        d.m_bKeepCurrentTessellation = true;
+    }
+    public static void Initialize(out A3DRWParamsExportXMLData d ) { 
+        d = new A3DRWParamsExportXMLData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportXMLData));
+        d.m_bExportMetadata = true;
+        d.m_bExportTransformations = true;
+        d.m_bExportColorMaterial = true;
+        d.m_bExportProductInformationByFormat = false;
+    }
+    public static void Initialize(out A3DRWParamsExportObjData d ) { 
+        d = new A3DRWParamsExportObjData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportObjData));
+    }
+    public static void Initialize(out A3DRWParamsExportFbxData d ) { 
+        d = new A3DRWParamsExportFbxData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportFbxData));
+    }
+    public static void Initialize(out A3DSewOptionsData d ) { 
+        d = new A3DSewOptionsData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSewOptionsData));
+    }
+    public static void Initialize(out A3DFaceUVPointInsideManagerData d ) { 
+        d = new A3DFaceUVPointInsideManagerData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFaceUVPointInsideManagerData));
+    }
+    public static void Initialize(out A3DProjectedPointCloudData d ) { 
+        d = new A3DProjectedPointCloudData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DProjectedPointCloudData));
+        API.Initialize( out d.m_sPt );
+        API.Initialize( out d.m_sUV );
+    }
+    public static void Initialize(out A3DProjectPointCloudManagerDataFromRI d ) { 
+        d = new A3DProjectPointCloudManagerDataFromRI();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DProjectPointCloudManagerDataFromRI));
+    }
+    public static void Initialize(out A3DPlanarSectionData d ) { 
+        d = new A3DPlanarSectionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DPlanarSectionData));
+        API.Initialize( out d.m_sDirection );
+        API.Initialize( out d.m_sOrigin );
+    }
+    public static void Initialize(out A3DCompareInputData d ) { 
+        d = new A3DCompareInputData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCompareInputData));
+    }
+    public static void Initialize(out A3DCompareOutputData d ) { 
+        d = new A3DCompareOutputData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCompareOutputData));
+    }
+    public static void Initialize(out A3DMultiPlanarSectionData d ) { 
+        d = new A3DMultiPlanarSectionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMultiPlanarSectionData));
+        API.Initialize( out d.m_sExtrudeDirection );
+        API.Initialize( out d.m_sProfileNormal );
+    }
+    public static void Initialize(out A3DHLRViewPlaneData d ) { 
+        d = new A3DHLRViewPlaneData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DHLRViewPlaneData));
+    }
+    public static void Initialize(out A3DHLRCurveData d ) { 
+        d = new A3DHLRCurveData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DHLRCurveData));
+    }
+    public static void Initialize(out A3DHLRSectionFaceData d ) { 
+        d = new A3DHLRSectionFaceData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DHLRSectionFaceData));
+    }
+    public static void Initialize(out A3DHLRRepresentationItemData d ) { 
+        d = new A3DHLRRepresentationItemData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DHLRRepresentationItemData));
+    }
+    public static void Initialize(out A3DHLROptionsData d ) { 
+        d = new A3DHLROptionsData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DHLROptionsData));
+    }
+    public static void Initialize(out A3DTransfoRepresentationItemData d ) { 
+        d = new A3DTransfoRepresentationItemData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTransfoRepresentationItemData));
+    }
+    public static void Initialize(out A3DCollisionGroupData d ) { 
+        d = new A3DCollisionGroupData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCollisionGroupData));
+    }
+    public static void Initialize(out A3DCollisionParameterData d ) { 
+        d = new A3DCollisionParameterData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCollisionParameterData));
+    }
+    public static void Initialize(out A3DCollisionResultData d ) { 
+        d = new A3DCollisionResultData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCollisionResultData));
+    }
+    public static void Initialize(out A3DMkpLeaderData d ) { 
+        d = new A3DMkpLeaderData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpLeaderData));
+    }
+    public static void Initialize(out A3DMkpAnnotationItemData d ) { 
+        d = new A3DMkpAnnotationItemData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpAnnotationItemData));
+    }
+    public static void Initialize(out A3DMkpAnnotationSetData d ) { 
+        d = new A3DMkpAnnotationSetData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpAnnotationSetData));
+    }
+    public static void Initialize(out A3DMkpAnnotationReferenceData d ) { 
+        d = new A3DMkpAnnotationReferenceData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpAnnotationReferenceData));
+    }
+    public static void Initialize(out A3DMkpViewData d ) { 
+        d = new A3DMkpViewData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpViewData));
+    }
+    public static void Initialize(out A3DMkpViewFlagsData d ) { 
+        d = new A3DMkpViewFlagsData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpViewFlagsData));
+    }
+    public static void Initialize(out A3DMiscMarkupLinkedItemData d ) { 
+        d = new A3DMiscMarkupLinkedItemData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMarkupLinkedItemData));
+    }
+    public static void Initialize(out A3DMkpMarkupData d ) { 
+        d = new A3DMkpMarkupData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpMarkupData));
+    }
+    public static void Initialize(out A3DMkpRTFFieldData d ) { 
+        d = new A3DMkpRTFFieldData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMkpRTFFieldData));
+    }
+    public static void Initialize(out A3DFontKeyData d ) { 
+        d = new A3DFontKeyData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFontKeyData));
+    }
+    public static void Initialize(out A3DFontData d ) { 
+        d = new A3DFontData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFontData));
+    }
+    public static void Initialize(out A3DGraphTextureTransformationData d ) { 
+        d = new A3DGraphTextureTransformationData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphTextureTransformationData));
+    }
+    public static void Initialize(out A3DGraphTextureDefinitionData d ) { 
+        d = new A3DGraphTextureDefinitionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphTextureDefinitionData));
+    }
+    public static void Initialize(out A3DGraphTextureApplicationData d ) { 
+        d = new A3DGraphTextureApplicationData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGraphTextureApplicationData));
+    }
+    public static void Initialize(out A3DDrawCallbacksData d ) { 
+        d = new A3DDrawCallbacksData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawCallbacksData));
+    }
+    public static void Initialize(out A3DDrawingModelData d ) { 
+        d = new A3DDrawingModelData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingModelData));
+    }
+    public static void Initialize(out A3DDrawingSheetFormatData d ) { 
+        d = new A3DDrawingSheetFormatData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingSheetFormatData));
+        API.Initialize( out d.m_sSize );
+    }
+    public static void Initialize(out A3DDrawingSheetData d ) { 
+        d = new A3DDrawingSheetData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingSheetData));
+        API.Initialize( out d.m_sRefPoint );
+        API.Initialize( out d.m_sSize );
+    }
+    public static void Initialize(out A3DDrawingClipFrameData d ) { 
+        d = new A3DDrawingClipFrameData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingClipFrameData));
+        API.Initialize( out d.m_sRectangularBox );
+    }
+    public static void Initialize(out A3DDrawingViewData d ) { 
+        d = new A3DDrawingViewData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingViewData));
+        API.Initialize( out d.m_sOffsetLocation );
+        API.Initialize( out d.m_sOriginOnSheet );
+    }
+    public static void Initialize(out A3DDrawingBlockBasicData d ) { 
+        d = new A3DDrawingBlockBasicData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingBlockBasicData));
+    }
+    public static void Initialize(out A3DDrawingBlockOperatorData d ) { 
+        d = new A3DDrawingBlockOperatorData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingBlockOperatorData));
+    }
+    public static void Initialize(out A3DDrawingCurveData d ) { 
+        d = new A3DDrawingCurveData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingCurveData));
+        API.Initialize( out d.m_sTrimInterval );
+    }
+    public static void Initialize(out A3DDrawingFilledAreaData d ) { 
+        d = new A3DDrawingFilledAreaData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingFilledAreaData));
+    }
+    public static void Initialize(out A3DDrawingPictureData d ) { 
+        d = new A3DDrawingPictureData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingPictureData));
+        API.Initialize( out d.m_sPosition );
+        API.Initialize( out d.m_sSize );
+    }
+    public static void Initialize(out A3DDrawingVerticesData d ) { 
+        d = new A3DDrawingVerticesData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DDrawingVerticesData));
+    }
+    public static void Initialize(out A3DThumbnailData d ) { 
+        d = new A3DThumbnailData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DThumbnailData));
+    }
+    public static void Initialize(out A3DFileInformationData d ) { 
+        d = new A3DFileInformationData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFileInformationData));
+    }
+    public static void Initialize(out A3DFileContextData d ) { 
+        d = new A3DFileContextData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFileContextData));
+    }
+    public static void Initialize(out A3DRWParamsExportParasolidData d ) { 
+        d = new A3DRWParamsExportParasolidData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportParasolidData));
+    }
+    public static void Initialize(out A3DRWParamsTranslateToPkPartsData d ) { 
+        d = new A3DRWParamsTranslateToPkPartsData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsTranslateToPkPartsData));
+        d.m_eHealing = A3DETranslateToPkPartsHealing.kA3DE_HEALING_ONLY_IF_NOT_PARASOLID;
+        d.m_eComputeAccurateEdges = A3DETranslateToPkPartsAccurate.kA3DE_ACCURATE_ONLY_IF_NOT_PARASOLID;
+        d.m_bExportNormalsWithTessellation = true;
+    }
+    public static void Initialize(out A3DRWParamsExportAcisData d ) { 
+        d = new A3DRWParamsExportAcisData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRWParamsExportAcisData));
+    }
+    public static void Initialize(out A3DRiRepresentationItemData d ) { 
+        d = new A3DRiRepresentationItemData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiRepresentationItemData));
+    }
+    public static void Initialize(out A3DRiSetData d ) { 
+        d = new A3DRiSetData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiSetData));
+    }
+    public static void Initialize(out A3DRiPointSetData d ) { 
+        d = new A3DRiPointSetData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiPointSetData));
+    }
+    public static void Initialize(out A3DRiDirectionData d ) { 
+        d = new A3DRiDirectionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiDirectionData));
+        API.Initialize( out d.m_sDirection );
+        API.Initialize( out d.m_sOrigin );
+    }
+    public static void Initialize(out A3DRiCoordinateSystemData d ) { 
+        d = new A3DRiCoordinateSystemData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiCoordinateSystemData));
+    }
+    public static void Initialize(out A3DRiCurveData d ) { 
+        d = new A3DRiCurveData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiCurveData));
+    }
+    public static void Initialize(out A3DRiPlaneData d ) { 
+        d = new A3DRiPlaneData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiPlaneData));
+    }
+    public static void Initialize(out A3DRiBrepModelData d ) { 
+        d = new A3DRiBrepModelData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiBrepModelData));
+    }
+    public static void Initialize(out A3DRiPolyBrepModelData d ) { 
+        d = new A3DRiPolyBrepModelData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiPolyBrepModelData));
+    }
+    public static void Initialize(out A3DRiPolyWireData d ) { 
+        d = new A3DRiPolyWireData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRiPolyWireData));
+    }
+    public static void Initialize(out A3DFRMFeatureTreeData d ) { 
+        d = new A3DFRMFeatureTreeData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMFeatureTreeData));
+    }
+    public static void Initialize(out A3DFRMParameterData d ) { 
+        d = new A3DFRMParameterData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMParameterData));
+    }
+    public static void Initialize(out A3DFRMFeatureTypeData d ) { 
+        d = new A3DFRMFeatureTypeData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMFeatureTypeData));
+    }
+    public static void Initialize(out A3DFRMStringData d ) { 
+        d = new A3DFRMStringData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMStringData));
+    }
+    public static void Initialize(out A3DFRMDoubleData d ) { 
+        d = new A3DFRMDoubleData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMDoubleData));
+    }
+    public static void Initialize(out A3DFRMIntegerData d ) { 
+        d = new A3DFRMIntegerData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMIntegerData));
+    }
+    public static void Initialize(out A3DFRMFeatureLinkedItemData d ) { 
+        d = new A3DFRMFeatureLinkedItemData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMFeatureLinkedItemData));
+    }
+    public static void Initialize(out A3DFRMFeatureData d ) { 
+        d = new A3DFRMFeatureData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMFeatureData));
+        API.Initialize( out d.m_sType );
+    }
+    public static void Initialize(out A3DFRMFeatureGeomEntitiesData d ) { 
+        d = new A3DFRMFeatureGeomEntitiesData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DFRMFeatureGeomEntitiesData));
+    }
+    public static void Initialize(out A3DCrvNurbsData d ) { 
+        d = new A3DCrvNurbsData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvNurbsData));
+    }
+    public static void Initialize(out A3DCrvLineData d ) { 
+        d = new A3DCrvLineData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvLineData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DCrvCircleData d ) { 
+        d = new A3DCrvCircleData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvCircleData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DCrvEllipseData d ) { 
+        d = new A3DCrvEllipseData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvEllipseData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DCrvParabolaData d ) { 
+        d = new A3DCrvParabolaData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvParabolaData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DCrvHyperbolaData d ) { 
+        d = new A3DCrvHyperbolaData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvHyperbolaData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DCrvPolyLineData d ) { 
+        d = new A3DCrvPolyLineData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvPolyLineData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DCrvCompositeData d ) { 
+        d = new A3DCrvCompositeData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvCompositeData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DCrvEquationData d ) { 
+        d = new A3DCrvEquationData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvEquationData));
+        API.Initialize( out d.m_sMaxInterval );
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DCrvTransformData d ) { 
+        d = new A3DCrvTransformData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvTransformData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DCrvOnSurfData d ) { 
+        d = new A3DCrvOnSurfData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvOnSurfData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DCrvOffsetData d ) { 
+        d = new A3DCrvOffsetData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvOffsetData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+        API.Initialize( out d.m_sVector );
+    }
+    public static void Initialize(out A3DCrvHelixPitchCstData d ) { 
+        d = new A3DCrvHelixPitchCstData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvHelixPitchCstData));
+        API.Initialize( out d.m_sDirection );
+        API.Initialize( out d.m_sOrigin );
+        API.Initialize( out d.m_sStartPoint );
+    }
+    public static void Initialize(out A3DCrvHelixPitchVarData d ) { 
+        d = new A3DCrvHelixPitchVarData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvHelixPitchVarData));
+        API.Initialize( out d.m_sStartPoint );
+        API.Initialize( out d.m_sUnitU );
+        API.Initialize( out d.m_sUnitZ );
+    }
+    public static void Initialize(out A3DCrvHelixData d ) { 
+        d = new A3DCrvHelixData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvHelixData));
+        API.Initialize( out d.m_sCstHelixData );
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+        API.Initialize( out d.m_sVarHelixData );
+    }
+    public static void Initialize(out A3DCrossingPointsCrvIntersectionData d ) { 
+        d = new A3DCrossingPointsCrvIntersectionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrossingPointsCrvIntersectionData));
+        API.Initialize( out d.m_sPosition );
+        API.Initialize( out d.m_sTangent );
+        API.Initialize( out d.m_sUVPosition1 );
+        API.Initialize( out d.m_sUVPosition2 );
+    }
+    public static void Initialize(out A3DCrvIntersectionData d ) { 
+        d = new A3DCrvIntersectionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvIntersectionData));
+        API.Initialize( out d.m_sEndLimitPoint );
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sStartLimitPoint );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DCrvBlend02BoundaryData d ) { 
+        d = new A3DCrvBlend02BoundaryData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCrvBlend02BoundaryData));
+        API.Initialize( out d.m_sEndLimitPoint );
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sStartLimitPoint );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfNurbsData d ) { 
+        d = new A3DSurfNurbsData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfNurbsData));
+    }
+    public static void Initialize(out A3DSurfSphereData d ) { 
+        d = new A3DSurfSphereData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfSphereData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfCylinderData d ) { 
+        d = new A3DSurfCylinderData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfCylinderData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfTorusData d ) { 
+        d = new A3DSurfTorusData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfTorusData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfRevolutionData d ) { 
+        d = new A3DSurfRevolutionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfRevolutionData));
+        API.Initialize( out d.m_sDirection );
+        API.Initialize( out d.m_sOrigin );
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfExtrusionData d ) { 
+        d = new A3DSurfExtrusionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfExtrusionData));
+        API.Initialize( out d.m_sDirection );
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfOffsetData d ) { 
+        d = new A3DSurfOffsetData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfOffsetData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfPlaneData d ) { 
+        d = new A3DSurfPlaneData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfPlaneData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfBlend01Data d ) { 
+        d = new A3DSurfBlend01Data();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfBlend01Data));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfBlend02Data d ) { 
+        d = new A3DSurfBlend02Data();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfBlend02Data));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfBlend03Data d ) { 
+        d = new A3DSurfBlend03Data();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfBlend03Data));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfConeData d ) { 
+        d = new A3DSurfConeData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfConeData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfCylindricalData d ) { 
+        d = new A3DSurfCylindricalData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfCylindricalData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfRuledData d ) { 
+        d = new A3DSurfRuledData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfRuledData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfPipeData d ) { 
+        d = new A3DSurfPipeData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfPipeData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfTransformData d ) { 
+        d = new A3DSurfTransformData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfTransformData));
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DSurfFromCurvesData d ) { 
+        d = new A3DSurfFromCurvesData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DSurfFromCurvesData));
+        API.Initialize( out d.m_sOrigin );
+        API.Initialize( out d.m_sParam );
+        API.Initialize( out d.m_sTrsf );
+    }
+    public static void Initialize(out A3DGlobalData d ) { 
+        d = new A3DGlobalData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DGlobalData));
+    }
+    public static void Initialize(out A3DMDPosition3DData d ) { 
+        d = new A3DMDPosition3DData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDPosition3DData));
+        API.Initialize( out d.m_sPosition );
+    }
+    public static void Initialize(out A3DMDPosition2DData d ) { 
+        d = new A3DMDPosition2DData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDPosition2DData));
+        API.Initialize( out d.m_sPosition );
+    }
+    public static void Initialize(out A3DMDPositionReferenceData d ) { 
+        d = new A3DMDPositionReferenceData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDPositionReferenceData));
+        API.Initialize( out d.m_sOffsetToReference );
+    }
+    public static void Initialize(out A3DMDLeaderSymbolData d ) { 
+        d = new A3DMDLeaderSymbolData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDLeaderSymbolData));
+    }
+    public static void Initialize(out A3DMDMarkupLeaderStubData d ) { 
+        d = new A3DMDMarkupLeaderStubData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDMarkupLeaderStubData));
+    }
+    public static void Initialize(out A3DMDLeaderDefinitionData d ) { 
+        d = new A3DMDLeaderDefinitionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDLeaderDefinitionData));
+    }
+    public static void Initialize(out A3DMDTextPropertiesData d ) { 
+        d = new A3DMDTextPropertiesData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDTextPropertiesData));
+    }
+    public static void Initialize(out A3DMarkupDefinitionData d ) { 
+        d = new A3DMarkupDefinitionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupDefinitionData));
+    }
+    public static void Initialize(out A3DMDDimensionValueFormatData d ) { 
+        d = new A3DMDDimensionValueFormatData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionValueFormatData));
+    }
+    public static void Initialize(out A3DMDDimensionSimpleToleranceFormatData d ) { 
+        d = new A3DMDDimensionSimpleToleranceFormatData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionSimpleToleranceFormatData));
+    }
+    public static void Initialize(out A3DMDDimensionCombinedToleranceFormatData d ) { 
+        d = new A3DMDDimensionCombinedToleranceFormatData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionCombinedToleranceFormatData));
+    }
+    public static void Initialize(out A3DMDDimensionValueData d ) { 
+        d = new A3DMDDimensionValueData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionValueData));
+    }
+    public static void Initialize(out A3DMDDimensionSecondPartData d ) { 
+        d = new A3DMDDimensionSecondPartData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionSecondPartData));
+    }
+    public static void Initialize(out A3DMDDimensionForeshortenedData d ) { 
+        d = new A3DMDDimensionForeshortenedData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionForeshortenedData));
+    }
+    public static void Initialize(out A3DMDDimensionLineSymbolData d ) { 
+        d = new A3DMDDimensionLineSymbolData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionLineSymbolData));
+    }
+    public static void Initialize(out A3DMDDimensionLineData d ) { 
+        d = new A3DMDDimensionLineData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionLineData));
+    }
+    public static void Initialize(out A3DMDDimensionFunnelData d ) { 
+        d = new A3DMDDimensionFunnelData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionFunnelData));
+    }
+    public static void Initialize(out A3DMDDimensionExtremityData d ) { 
+        d = new A3DMDDimensionExtremityData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionExtremityData));
+    }
+    public static void Initialize(out A3DMDDimensionExtentionLineData d ) { 
+        d = new A3DMDDimensionExtentionLineData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDDimensionExtentionLineData));
+        API.Initialize( out d.m_sExtremity1 );
+        API.Initialize( out d.m_sExtremity2 );
+    }
+    public static void Initialize(out A3DMarkupDimensionData d ) { 
+        d = new A3DMarkupDimensionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupDimensionData));
+        API.Initialize( out d.m_sOffSet );
+    }
+    public static void Initialize(out A3DMarkupRoughnessData d ) { 
+        d = new A3DMarkupRoughnessData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupRoughnessData));
+    }
+    public static void Initialize(out A3DMarkupBalloonData d ) { 
+        d = new A3DMarkupBalloonData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupBalloonData));
+    }
+    public static void Initialize(out A3DMarkupFastenerData d ) { 
+        d = new A3DMarkupFastenerData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupFastenerData));
+        API.Initialize( out d.m_sAxisVector );
+        API.Initialize( out d.m_sIndexVector );
+        API.Initialize( out d.m_sOptionalVector );
+    }
+    public static void Initialize(out A3DMarkupLocatorData d ) { 
+        d = new A3DMarkupLocatorData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupLocatorData));
+        API.Initialize( out d.m_sHotSpot );
+        API.Initialize( out d.m_sNormalDirection );
+        API.Initialize( out d.m_sPinDirection );
+        API.Initialize( out d.m_sPunchDirection );
+    }
+    public static void Initialize(out A3DMarkupMeasurementPointData d ) { 
+        d = new A3DMarkupMeasurementPointData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupMeasurementPointData));
+        API.Initialize( out d.m_sCoordinationVector );
+        API.Initialize( out d.m_sLocation );
+        API.Initialize( out d.m_sMeasurementVector );
+        API.Initialize( out d.m_sNormalVector );
+    }
+    public static void Initialize(out A3DMDTextPositionData d ) { 
+        d = new A3DMDTextPositionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDTextPositionData));
+        API.Initialize( out d.m_sBaseVector );
+        API.Initialize( out d.m_sPosition );
+        API.Initialize( out d.m_sUpVector );
+    }
+    public static void Initialize(out A3DMarkupTextData d ) { 
+        d = new A3DMarkupTextData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupTextData));
+    }
+    public static void Initialize(out A3DMarkupCoordinateData d ) { 
+        d = new A3DMarkupCoordinateData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupCoordinateData));
+    }
+    public static void Initialize(out A3DMarkupRichTextData d ) { 
+        d = new A3DMarkupRichTextData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupRichTextData));
+    }
+    public static void Initialize(out A3DMarkupDatumData d ) { 
+        d = new A3DMarkupDatumData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupDatumData));
+    }
+    public static void Initialize(out A3DMDFCFDraftingRowData d ) { 
+        d = new A3DMDFCFDraftingRowData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCFDraftingRowData));
+    }
+    public static void Initialize(out A3DMDFCValueData d ) { 
+        d = new A3DMDFCValueData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCValueData));
+    }
+    public static void Initialize(out A3DMDFCTolerancePerUnitData d ) { 
+        d = new A3DMDFCTolerancePerUnitData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCTolerancePerUnitData));
+    }
+    public static void Initialize(out A3DMDFCProjectedZoneData d ) { 
+        d = new A3DMDFCProjectedZoneData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCProjectedZoneData));
+        API.Initialize( out d.m_sLength );
+    }
+    public static void Initialize(out A3DMDFCFToleranceValueData d ) { 
+        d = new A3DMDFCFToleranceValueData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCFToleranceValueData));
+        API.Initialize( out d.m_sValue );
+    }
+    public static void Initialize(out A3DMDFCFRowDatumData d ) { 
+        d = new A3DMDFCFRowDatumData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCFRowDatumData));
+    }
+    public static void Initialize(out A3DMDFCFDrawingRowData d ) { 
+        d = new A3DMDFCFDrawingRowData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCFDrawingRowData));
+    }
+    public static void Initialize(out A3DMDFCFIndicatorData d ) { 
+        d = new A3DMDFCFIndicatorData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFCFIndicatorData));
+    }
+    public static void Initialize(out A3DMDFeatureControlFrameData d ) { 
+        d = new A3DMDFeatureControlFrameData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDFeatureControlFrameData));
+    }
+    public static void Initialize(out A3DMDToleranceSizeValueData d ) { 
+        d = new A3DMDToleranceSizeValueData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDToleranceSizeValueData));
+        API.Initialize( out d.m_sMainValue );
+    }
+    public static void Initialize(out A3DMDToleranceSizeData d ) { 
+        d = new A3DMDToleranceSizeData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMDToleranceSizeData));
+    }
+    public static void Initialize(out A3DMarkupGDTData d ) { 
+        d = new A3DMarkupGDTData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupGDTData));
+    }
+    public static void Initialize(out A3DMarkupSpotWeldingData d ) { 
+        d = new A3DMarkupSpotWeldingData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupSpotWeldingData));
+        API.Initialize( out d.m_sApproachVector );
+        API.Initialize( out d.m_sClampingVector );
+        API.Initialize( out d.m_sNormalVector );
+    }
+    public static void Initialize(out A3DMarkupLineWeldingData d ) { 
+        d = new A3DMarkupLineWeldingData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMarkupLineWeldingData));
+    }
+    public static void Initialize(out A3DMathFct1DPolynomData d ) { 
+        d = new A3DMathFct1DPolynomData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct1DPolynomData));
+    }
+    public static void Initialize(out A3DMathFct1DTrigonometricData d ) { 
+        d = new A3DMathFct1DTrigonometricData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct1DTrigonometricData));
+    }
+    public static void Initialize(out A3DMathFct1DFractionData d ) { 
+        d = new A3DMathFct1DFractionData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct1DFractionData));
+    }
+    public static void Initialize(out A3DMathFct1DArctanCosData d ) { 
+        d = new A3DMathFct1DArctanCosData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct1DArctanCosData));
+    }
+    public static void Initialize(out A3DMathFct1DCombinationData d ) { 
+        d = new A3DMathFct1DCombinationData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct1DCombinationData));
+    }
+    public static void Initialize(out A3DMathFct3DLinearData d ) { 
+        d = new A3DMathFct3DLinearData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct3DLinearData));
+    }
+    public static void Initialize(out A3DMathFct3DNonLinearData d ) { 
+        d = new A3DMathFct3DNonLinearData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMathFct3DNonLinearData));
+    }
+    public static void Initialize(out A3DRootBaseData d ) { 
+        d = new A3DRootBaseData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRootBaseData));
+    }
+    public static void Initialize(out A3DRootBaseWithGraphicsData d ) { 
+        d = new A3DRootBaseWithGraphicsData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DRootBaseWithGraphicsData));
+    }
+    public static void Initialize(out A3DMiscSingleAttributeData d ) { 
+        d = new A3DMiscSingleAttributeData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscSingleAttributeData));
+        d.m_usUnit = DEFAULT_NO_UNIT;
+    }
+    public static void Initialize(out A3DMiscAttributeData d ) { 
+        d = new A3DMiscAttributeData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscAttributeData));
+    }
+    public static void Initialize(out A3DMiscAttributeBasicUnitData d ) { 
+        d = new A3DMiscAttributeBasicUnitData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscAttributeBasicUnitData));
+    }
+    public static void Initialize(out A3DMiscAttributeUnitData d ) { 
+        d = new A3DMiscAttributeUnitData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscAttributeUnitData));
+    }
+    public static void Initialize(out A3DCopyAndAdaptBrepModelData d ) { 
+        d = new A3DCopyAndAdaptBrepModelData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DCopyAndAdaptBrepModelData));
+    }
+    public static void Initialize(out A3DPhysicalPropertiesData d ) { 
+        d = new A3DPhysicalPropertiesData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DPhysicalPropertiesData));
+        API.Initialize( out d.m_sGravityCenter );
+        API.Initialize( out d.m_sSurfacicGravityCenter );
+        d.m_dAccuracyLevel = 0.99;
+        d.m_bIncludeHiddenRIs = false;
+    }
+    public static void Initialize(out A3DTopoBodyData d ) { 
+        d = new A3DTopoBodyData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoBodyData));
+    }
+    public static void Initialize(out A3DTopoContextData d ) { 
+        d = new A3DTopoContextData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoContextData));
+    }
+    public static void Initialize(out A3DTopoSingleWireBodyData d ) { 
+        d = new A3DTopoSingleWireBodyData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoSingleWireBodyData));
+    }
+    public static void Initialize(out A3DTopoBrepDataData d ) { 
+        d = new A3DTopoBrepDataData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoBrepDataData));
+        API.Initialize( out d.m_sBoundingBox );
+    }
+    public static void Initialize(out A3DTopoConnexData d ) { 
+        d = new A3DTopoConnexData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoConnexData));
+    }
+    public static void Initialize(out A3DTopoShellData d ) { 
+        d = new A3DTopoShellData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoShellData));
+    }
+    public static void Initialize(out A3DTopoFaceData d ) { 
+        d = new A3DTopoFaceData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoFaceData));
+        API.Initialize( out d.m_sSurfaceDomain );
+    }
+    public static void Initialize(out A3DTopoLoopData d ) { 
+        d = new A3DTopoLoopData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoLoopData));
+    }
+    public static void Initialize(out A3DTopoCoEdgeData d ) { 
+        d = new A3DTopoCoEdgeData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoCoEdgeData));
+    }
+    public static void Initialize(out A3DTopoEdgeData d ) { 
+        d = new A3DTopoEdgeData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoEdgeData));
+        API.Initialize( out d.m_sInterval );
+    }
+    public static void Initialize(out A3DTopoWireEdgeData d ) { 
+        d = new A3DTopoWireEdgeData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoWireEdgeData));
+        API.Initialize( out d.m_sInterval );
+    }
+    public static void Initialize(out A3DTopoUniqueVertexData d ) { 
+        d = new A3DTopoUniqueVertexData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoUniqueVertexData));
+        API.Initialize( out d.m_sPoint );
+    }
+    public static void Initialize(out A3DTopoMultipleVertexData d ) { 
+        d = new A3DTopoMultipleVertexData();
+        d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DTopoMultipleVertexData));
+    }
         public delegate A3DStatus PFA3DTessBaseGet(IntPtr pTessBase, ref A3DTessBaseData pData);
         public static PFA3DTessBaseGet A3DTessBaseGet = Marshal.GetDelegateForFunctionPointer<PFA3DTessBaseGet>(Library.A3DGetProcAddress("A3DTessBaseGet", 1));
         public delegate A3DStatus PFA3DTessBaseSet(IntPtr pTessBase, ref A3DTessBaseData pData);

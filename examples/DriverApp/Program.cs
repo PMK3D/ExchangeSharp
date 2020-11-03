@@ -1,9 +1,6 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using TS3D.Exchange;
 using TS3D.Exchange.Direct;
@@ -62,7 +59,7 @@ namespace DriverApp
         }
         static void Main(string[] args)
         {   
-            string exchange_folder = "";
+            string exchange_folder = null;
             string input_file = null;
             for(var arg = 0; arg < args.Length; ++arg ) {
                 if( arg < args.Length-1 ) {
@@ -79,63 +76,25 @@ namespace DriverApp
                 return;
             }
 
-            try {
-                Library.SetExchangeLibraryFolder(exchange_folder);
-            } catch(System.TypeInitializationException) {
-                Console.WriteLine("Unable to load \"Exchange.layer\".");
-                Console.WriteLine("Please be sure the folder containing \"Exchange.layer\" is included in");
-                Console.Write("the environment variable \"");
-                if( System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform( OSPlatform.Windows ) ) {
-                    Console.Write("PATH");
-                } else if( System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ) {
-                    Console.Write("LD_LIBRARY_PATH");
-                } else if( System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.OSX) ) {
-                    Console.Write("DYLD_LIBRARY_PATH");
-                }
-                Console.WriteLine("\",");
-                Console.WriteLine("or it is located in the current working directory.");
-                return;
-            }
 
             try {
-                if(A3DStatus.A3D_SUCCESS != API.A3DLicPutUnifiedLicense(HOOPS_LICENSE.KEY) ) {
-                    Console.WriteLine("Unable to unlock HOOPS Exchange." );
-                    return;
-                }
-            } catch(System.TypeInitializationException) {
-                Console.WriteLine("Unable to load Exchange.");
-                Console.WriteLine("Please specify the Exchange bin folder using the command line option '--exchange'.");
-                Console.Write("Alternatively, set the environment variable \"");
-                if( System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform( OSPlatform.Windows ) ) {
-                    Console.Write("PATH");
-                } else if( System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ) {
-                    Console.Write("LD_LIBRARY_PATH");
-                } else if( System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.OSX) ) {
-                    Console.Write("DYLD_LIBRARY_PATH");
-                }
-                Console.WriteLine("\",");
-                Console.WriteLine("to include the Exchange bin folder.");
+                Library.Initialize( HOOPS_LICENSE.KEY, exchange_folder );
+            } catch( Library.InitializationException e ) {
+                Console.WriteLine( e.Message );
                 return;
             }
-
-            int major_version, minor_version;
-            API.A3DDllGetVersion( out major_version, out minor_version );
-            API.A3DDllInitialize( major_version, minor_version );
 
             API.A3DDllSetCallbacksReport( 
                 Marshal.GetFunctionPointerForDelegate( new API.A3DCallbackReportMessage( MessageCallback ) ),
                 Marshal.GetFunctionPointerForDelegate( new API.A3DCallbackReportMessage( WarningCallback ) ),
                 Marshal.GetFunctionPointerForDelegate( new API.A3DCallbackReportMessage( ErrorCallback ) ) );
 
-            
-            Test.PerformStructSizeTests();
-
             A3DRWParamsLoadData load_params;
             API.Initialize(out load_params);
             IntPtr model_file;
-            var status = API.A3DAsmModelFileLoadFromFile(input_file, ref load_params, out model_file ) ;
-            if(A3DStatus.A3D_SUCCESS != status) {
+            if(A3DStatus.A3D_SUCCESS != API.A3DAsmModelFileLoadFromFile(input_file, ref load_params, out model_file )) {
                 Console.WriteLine( "Failed to load input file." );
+                return;
             }
 
             var model_file_data = new A3DAsmModelFileWrapper( model_file );
@@ -144,6 +103,7 @@ namespace DriverApp
             var po = Marshal.ReadIntPtr(model_file_data.m_ppPOccurrences);
             var result = GetAllPartInstances(po, owners);
             Console.WriteLine( "There are " + result.Count + " part instances." );
+
         }
     }
 }
