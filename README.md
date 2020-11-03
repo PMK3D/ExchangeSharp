@@ -1,5 +1,5 @@
 # ExchangeSharp
-based C# language binding for HOOPS Exchange. 
+C# language binding for HOOPS Exchange. 
 
 It can be built and used on the following platforms:
  - Windows
@@ -100,11 +100,6 @@ In order to build and use ExchangeSharp, the following software components are r
 1. Copy `hoops_license.cs` to this folder.
 1. `dotnet build`
 1. `dotnet run --exchange "/path/to/exchange/bin/win64" "/path/to/exchange/samples/data/prc/helloworld.prc"`
-
-# What is `ExchangeCppLayer` and why is it needed?
-A fundamental part of Exchange is the use of C-style structs passed as `void*` to the API. To ensure memory is handled correctly, the caller must first initialize the struct size field using the `A3D_INITIALIZE_DATA` macro. This macro is declared in the header and is therefore inaccessible outside a C/C++ module that includes it.
-
-In order to ensure correct struct sizing, `ExchangeCppLayer` is used to validate struct sized coming from C# and calls the "official" `A3D_INITIALIZE_DATA`.
 
 # What is `Classes.cs`?
 Similar to the [ExchangeToolkit](https://labs.techsoft3d.com/project/exchange-toolkit/), ExchangeSharp includes classes with the postfix "Wrapper". These classes call `API.Initialize` and `Get` in the constructor, and they free upon destruction. Using these classes results in code that looks like this:
