@@ -50,6 +50,7 @@ This approach has several advantages.
 
 1. Memory: Data is not copied. It is directly mapped using `struct` objects. (See `ExchangeSharp/Direct/Structs.cs`)
 1. Speed: There is no "middle" code. When you call an Exchange function using C#, you are directly invoking the code and nothing between. (See `ExchangeSharp/Direct/API.cs`)
+1. Stability: Since it is based on the Exchange C API there will seldom be major changes to the interface.
 1. Familiar: The code you write will look familiar:
 ```csharp
 A3DAsmModelFileData d;
