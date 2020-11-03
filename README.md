@@ -87,8 +87,8 @@ In order to build and use ExchangeSharp, the following software components are r
 ## Building ExchangeSharp.dll
 1. Be sure you have Exchange installed and licensed correctly. 
  	1. Unpack the archive.
- 	1. Place hoops_license.h _and_ hoops_license.cs in the `include` folder.
-	1. Building and running the sample applications contained within.
+ 	1. Place `hoops_license.h` _and_ `hoops_license.cs` in the `include` folder.
+	1. Build and run the sample applications contained within.
 1. Clone the ExchangeSharp repository.
 1. Build ExchangeSharp
 	1. Change to the `ExchangeSharp` folder.
@@ -96,10 +96,12 @@ In order to build and use ExchangeSharp, the following software components are r
 	1. `ExchangeSharp.dll` can be found in the `bin/Debug/netcoreapp3.1` folder.
 
 ## Building and Running the Examples
-1. Change to `examples/DriverApp`
-1. Copy `hoops_license.cs` to this folder.
-1. `dotnet build`
-1. `dotnet run --exchange "/path/to/exchange/bin/win64" "/path/to/exchange/samples/data/prc/helloworld.prc"`
+The `examples` folder contains projects that illustrate basic use of ExchangeSharp. To build each project:
+1. Copy `hoops_license.cs` to the example's folder you want to build.
+1. Change your current working directory to the example's folder.
+1. Use the command `dotnet build` to build
+1. Run using `dotnet run`. Most examples take the command line argument `--exchange <exchange_bin_dir>`.
+	1. Alternatively you can edit update your environment variable to include the Exchange bin folder for your platform (`PATH`, `LD_LIBRARY_PATH`, `DYLD_LIBRARY_PATH`).
 
 # What is `Classes.cs`?
 Similar to the [ExchangeToolkit](https://labs.techsoft3d.com/project/exchange-toolkit/), ExchangeSharp includes classes with the postfix "Wrapper". These classes call `API.Initialize` and `Get` in the constructor, and they free upon destruction. Using these classes results in code that looks like this:
