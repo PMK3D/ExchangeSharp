@@ -216,7 +216,6 @@ namespace TS3D.Exchange.Direct
     public static void Initialize(out A3DMiscMaterialPropertiesData d ) { 
         d = new A3DMiscMaterialPropertiesData();
         d.m_usStructSize = (UInt16)Marshal.SizeOf(typeof(A3DMiscMaterialPropertiesData));
-        API.Initialize( out d.m_sOrthotropic3D );
     }
     public static void Initialize(out A3DAsmModelFileData d ) { 
         d = new A3DAsmModelFileData();
@@ -1448,9 +1447,9 @@ namespace TS3D.Exchange.Direct
         public static PFA3DMiscUTF8ToUTF16 A3DMiscUTF8ToUTF16 = Marshal.GetDelegateForFunctionPointer<PFA3DMiscUTF8ToUTF16>(Library.A3DGetProcAddress("A3DMiscUTF8ToUTF16", 1));
         public delegate A3DStatus PFA3DMiscUTF16ToUTF8([MarshalAs(UnmanagedType.LPStr)] string pcInputBuffer, IntPtr acOutputBuffer);
         public static PFA3DMiscUTF16ToUTF8 A3DMiscUTF16ToUTF8 = Marshal.GetDelegateForFunctionPointer<PFA3DMiscUTF16ToUTF8>(Library.A3DGetProcAddress("A3DMiscUTF16ToUTF8", 1));
-        public delegate byte PFA3DMiscGetErrorMsg(A3DStatus arg1);
+        public delegate IntPtr PFA3DMiscGetErrorMsg(A3DStatus arg1);
         public static PFA3DMiscGetErrorMsg A3DMiscGetErrorMsg = Marshal.GetDelegateForFunctionPointer<PFA3DMiscGetErrorMsg>(Library.A3DGetProcAddress("A3DMiscGetErrorMsg", 1));
-        public delegate byte PFA3DMiscGetEntityTypeMsg(A3DEEntityType eType);
+        public delegate IntPtr PFA3DMiscGetEntityTypeMsg(A3DEEntityType eType);
         public static PFA3DMiscGetEntityTypeMsg A3DMiscGetEntityTypeMsg = Marshal.GetDelegateForFunctionPointer<PFA3DMiscGetEntityTypeMsg>(Library.A3DGetProcAddress("A3DMiscGetEntityTypeMsg", 1));
         public delegate A3DStatus PFA3DMiscGetMaterialProperties(IntPtr pEntity, ref A3DMiscMaterialPropertiesData pMaterialPropertiesData);
         public static PFA3DMiscGetMaterialProperties A3DMiscGetMaterialProperties = Marshal.GetDelegateForFunctionPointer<PFA3DMiscGetMaterialProperties>(Library.A3DGetProcAddress("A3DMiscGetMaterialProperties", 1));

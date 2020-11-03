@@ -22,8 +22,12 @@ If you are going to use ExchangeSharp, you will need a basic understanding of th
 ## Description
 This is a direct C# language binding for HOOPS Exchange implemented in the namespace `TS3D.Exchange.Direct`. 
 
+> Functionality found in `A3DSDKDraw.h` is _not_ included.
+
+ExchangeSharp was created using `libclang` to parse the Exchange headers. By traversing the declarations, we have reasonable certainty for complete coverage.
+
 ### What do you mean by "Direct"?
-ExchangeSharp utilitizes the [P/Invoke](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) approach for providing a cross-platform is binding for the C# language. It does this by declaring all of the data types used by the native Exchange library in a compatible C# form.
+ExchangeSharp utilitizes the [P/Invoke](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) approach for providing a cross-platform binding for the C# language. It does this by declaring all of the data types used by the native Exchange library in a compatible C# form.
 
 "Direct" implies that the C# syntax you will use to access Exchange will closely resemble its C counterpart. Functions are looked up in the Exchaange library and directly invoked.
 
@@ -44,8 +48,8 @@ I put this first because I don't think you'd read it if it came afer the advanta
 #### Advantages 
 This approach has several advantages.
 
-1. Memory: Data is not copied. It is directly mapped using `struct` objects.
-1. Speed: There is no "middle" code. When you call an Exchange function using C#, you are directly invoking the code and nothing between.
+1. Memory: Data is not copied. It is directly mapped using `struct` objects. (See `ExchangeSharp/Direct/Structs.cs`)
+1. Speed: There is no "middle" code. When you call an Exchange function using C#, you are directly invoking the code and nothing between. (See `ExchangeSharp/Direct/API.cs`)
 1. Familiar: The code you write will look familiar:
 ```csharp
 A3DAsmModelFileData d;
@@ -77,7 +81,7 @@ if( A3DStatus.A3D_SUCCESS == API.A3DAsmModelFileGet( model_file, ref d ) ) {
 
 ## Prerequisites
 In order to build and use ExchangeSharp, the following software components are required:
-* [HOOPS Exchange 2020](https://developer.techsoft3d.com/hoops/exchange/downloads/latest/)
+* [HOOPS Exchange 2020 SP2](https://developer.techsoft3d.com/hoops/exchange/downloads/latest/) (or binary compatible version)
 * [.NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## Building ExchangeSharp.dll
@@ -93,10 +97,24 @@ In order to build and use ExchangeSharp, the following software components are r
 
 ## Building and Running the Examples
 1. Change to `examples/DriverApp`
+1. Copy `hoops_license.cs` to this folder.
 1. `dotnet build`
 1. `dotnet run --exchange "/path/to/exchange/bin/win64" "/path/to/exchange/samples/data/prc/helloworld.prc"`
 
+# What is `ExchangeCppLayer` and why is it needed?
+A fundamental part of Exchange is the use of C-style structs passed as `void*` to the API. To ensure memory is handled correctly, the caller must first initialize the struct size field using the `A3D_INITIALIZE_DATA` macro. This macro is declared in the header and is therefore inaccessible outside a C/C++ module that includes it.
 
+In order to ensure correct struct sizing, `ExchangeCppLayer` is used to validate struct sized coming from C# and calls the "official" `A3D_INITIALIZE_DATA`.
+
+# What is `Classes.cs`?
+Similar to the [ExchangeToolkit](https://labs.techsoft3d.com/project/exchange-toolkit/), ExchangeSharp includes classes with the postfix "Wrapper". These classes call `API.Initialize` and `Get` in the constructor, and they free upon destruction. Using these classes results in code that looks like this:
+
+```csharp
+A3DAsmModelFileWrapper d( model_file );
+// Use object here
+```
+
+Structs that do not have corresponding `Get` function (`A3DVector3dData` for example) are wrapped as well. Code provided in the `examples` folder make use of these wrapper classes in order to make the implementation more concise.
 
 
 
