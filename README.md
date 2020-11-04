@@ -88,7 +88,7 @@ In order to build and use ExchangeSharp, the following software components are r
  	* Place `hoops_license.h` _and_ `hoops_license.cs` in the `include` folder.
 	* Build and run the sample applications contained within.
 
-* [.NET Core](https://dotnet.microsoft.com/download/dotnet-core)
+* [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ## Building ExchangeSharp.dll
 1. Clone the ExchangeSharp repository.
@@ -109,8 +109,13 @@ The `examples` folder contains projects that illustrate basic use of ExchangeSha
 Similar to the [ExchangeToolkit](https://labs.techsoft3d.com/project/exchange-toolkit/), ExchangeSharp includes classes with the postfix "Wrapper". These classes call `API.Initialize` and `Get` in the constructor, and they free upon destruction. Using these classes results in code that looks like this:
 
 ```csharp
-A3DAsmModelFileWrapper d( model_file );
+var d = new A3DAsmModelFileWrapper( model_file );
 // Use object here
+for( int idx = 0; idx < d.m_uiPOccurrencesSize; ++idx ) {
+    var po = Marshal.ReadIntPtr(d.m_ppPOccurrences, idx * Marshal.SizeOf( typeof(IntPtr) ) );
+    var po_d = new A3DAsmProductOccurrenceWrapper( po );
+    // use Product Occurrence data...
+}
 ```
 
 Structs that do not have corresponding `Get` function (`A3DVector3dData` for example) are wrapped as well. Code provided in the `examples` folder make use of these wrapper classes in order to make the implementation more concise.
