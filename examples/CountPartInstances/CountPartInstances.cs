@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using TS3D.Exchange;
 using TS3D.Exchange.Direct;
 
-namespace DriverApp
+namespace CountPartInstances
 {
     using InstancePath = List<IntPtr>;
     using InstancePathArray = List<List<IntPtr> >;

@@ -1,7 +1,8 @@
 # Description
-This is a sample application that illustrates how to use the ExchangeSharp library.
+This sample traverses the product structure and prints the name of each node.
 
 ## Details
-This application initializes Exchange, then walks the product structure to find all part instances.
+This sample also prints the entity type, illustrating how to marshal an IntPtr to a string object.
+
 
 
