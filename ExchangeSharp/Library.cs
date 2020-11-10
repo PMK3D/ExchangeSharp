@@ -114,7 +114,7 @@ namespace TS3D.Exchange
             } else if( RuntimeInformation.IsOSPlatform(OSPlatform.OSX) ) {
                 return "libA3DLIBS.dylib";
             } else if( RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) {
-                return "linux64";
+                return "libA3DLIBS.so";
             }
             return "unknown_platform";
         }
