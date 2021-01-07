@@ -6607,7 +6607,8 @@ namespace TS3D.Exchange.Direct
         public A3DMiscSingleAttributeWrapper()
         {
             API.Initialize(out _d);
-        }
+         }
+ 
 
         ~A3DMiscSingleAttributeWrapper()
         {
@@ -6616,7 +6617,7 @@ namespace TS3D.Exchange.Direct
         public bool m_bTitleIsInt => _d.m_bTitleIsInt;
         public string m_pcTitle => _d.m_pcTitle;
         public A3DEModellerAttributeType m_eType=>_d.m_eType;
-        public string m_pcData => _d.m_pcData;
+        public IntPtr m_pcData => _d.m_pcData;  // PETE_K changed from a string, to accomodate different value types
         public ushort m_usUnit=>_d.m_usUnit;
 
         private A3DMiscSingleAttributeData _d;

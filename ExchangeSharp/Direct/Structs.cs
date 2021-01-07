@@ -3223,7 +3223,7 @@ namespace TS3D.Exchange.Direct
         [MarshalAs(UnmanagedType.I1)] public bool m_bTitleIsInt;
         [MarshalAs(UnmanagedType.LPStr)] public string m_pcTitle;
         public A3DEModellerAttributeType m_eType;
-        [MarshalAs(UnmanagedType.LPStr)] public string m_pcData;
+        public IntPtr m_pcData;
         public ushort m_usUnit;
     }
 
